@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: com.typesafe.play:play-iteratees_2.10:2.2.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../repository/local/com.typesafe.play/play-iteratees_2.10/2.2.5/jars/play-iteratees_2.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
