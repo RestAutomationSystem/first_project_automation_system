@@ -1,0 +1,13 @@
+@(users:List[UserTest])
+
+@import helper._
+
+<ul>
+@for(user<-users){
+<li>
+@user.name
+@user.email
+ @user.password
+</li>
+}
+</ul>

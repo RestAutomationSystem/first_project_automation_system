@@ -1,0 +1,45 @@
+ @(form:Form[Application.Register])
+ @main(null){
+ <div class="row">
+  <div class="span4"></div>
+  <div class="span4">
+  
+		<div class="announcements">
+ <ul class="nav nav-tabs">
+  <li class="active">
+    <a href="@routes.Application.register">Sign up</a>
+  </li>
+  <li><a href="@routes.Application.login">Sign in</a></li>
+</ul>
+
+ @helper.form(routes.Application.register) {
+       
+<h1>Sign up</h1>
+  @if(form.hasGlobalErrors) { 
+                <p class="error">
+                    @form.globalError.message
+                </p>
+   }
+
+<p>
+<input type="text" name="name" placeholder="Name" value="@form("name").value" />
+</p>            
+<p>
+<input type="email" name="email" placeholder="Email" value="@form("email").value" />
+</p>
+<p>
+<input type="password" name="password" placeholder="Password"/>
+</p>
+<p>
+<input type="password" name="password2" placeholder="Confirm password"/>
+</p>
+
+<p>
+<button class="btn action-btn btn-success"  type="submit" >Register</button>
+<a href="@routes.Application.login">Sign in</a>
+</p>
+}
+</div>
+</div>
+</div>
+}
