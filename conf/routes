@@ -13,6 +13,14 @@ GET    /register                          	controllers.Application.registerForm(
 POST   /register                          	controllers.Application.register()
 GET    /list                          		controllers.Application.list()
 
+
+#Restaurants
+GET    /restaurants                          	controllers.Restaurants.index()
+POST    /restaurants                          	controllers.Restaurants.newRestaurant()
+GET    /restaurants/:id/delete                 controllers.Restaurants.deleteRestaurant(id: Long)
+POST    /restaurants/:id                        controllers.Restaurants.updateRestaurant(id: Long)
+GET    /restaurants/:id                         controllers.Restaurants.restaurantPage(id: Long)
+
 # Signup
 GET     /signup                     controllers.SignUp.blank()
 #GET     /users/fakeuser             controllers.SignUp.edit()

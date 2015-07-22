@@ -5,7 +5,7 @@ import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
 import models.UserTest;
-
+import models.Enums.RoleTypes;
 import play.mvc.Http.MultipartFormData;
 import play.mvc.Http.MultipartFormData.FilePart;
 import play.data.*;
@@ -97,7 +97,6 @@ public class Application extends Controller {
     
     public static Result confirm(String email) {
     	UserTest u=UserTest.find.ref(email);
-    	u.active=true;
     	u.update();
     	return redirect(
 				routes.Application.login()

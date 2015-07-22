@@ -1,0 +1,8 @@
+users:
+
+    - !!models.UserTest
+        email:      admin@sample.com
+        name:       Admin Main
+        password:   admin11
+        role:       1
+                       

@@ -1,0 +1,69 @@
+@(user:UserTest,restaurants:List[Restaurant],restaurantForm:Form[Restaurant])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(restaurants.size()>0){
+<h3>My Restaurants</h3>
+<table class="table">
+@for(restaurant<-restaurants){
+<tr>
+<td>
+<div id="restaurant@restaurant.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="restaurantDescriptionTitle item" id="@restaurant.id">@restaurant.name</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.Restaurants.deleteRestaurant(restaurant.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+<div id="alert-success@restaurant.id" class="alert alert-success">
+successfully saved
+</div>
+<div class="nicPanels" id="restaurantNicPanel@restaurant.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@restaurant.id" style="width: 525px;">
+@if(restaurant.description!=null){
+@Html(restaurant.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.Restaurants.restaurantPage(restaurant.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Go to class</button>
+                          
+							}
+</td>
+</tr>
+}
+</table>
+}
+
+<fieldset>
+<legend>Add new restaurant</legend>
+<div class="createForm">
+@form(routes.Restaurants.newRestaurant()){
+<p>
+<input type="text" name="name" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+</div>
+</div>
+}

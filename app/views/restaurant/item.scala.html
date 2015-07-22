@@ -1,0 +1,67 @@
+@(user:UserTest,restaurant:Restaurant)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+     
+    </div>
+    <div class="span9">
+@restaurant.name
+@restaurant.description
+
+</div>
+</div>
+</div>
+
+
+
+}
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.alert-success').hide();
+	$('.nicPanels').hide();
+	
+	var annAddTextAreaNicEditor = new nicEditor({
+		fullPanel : true,
+		iconsPath : '@routes.Assets.at("javascripts/nicEdit/nicEditorIcons.gif")'	
+	});
+	  annAddTextAreaNicEditor.setPanel('annAddTextAreaNicPanel');
+	  annAddTextAreaNicEditor.addInstance('annAddTextArea');
+	
+	$('.announcementTitle').editable(
+			function(value, settings) {
+				var announcementTitleid=$(this).attr('id');
+				 var toRemove = 'announcementTitle';
+				 var id = announcementTitleid.replace(toRemove,'');
+				 $('#alert-success'+id).hide();
+					
+				var result=value;
+				myJsRoutes.controllers.Announcements.updateTitle().ajax({
+					data: {id:id,value:value},
+				    success : function(data) {
+					result=data;
+					$('#alert-success'+id).show();
+				    }
+				});
+				return(result);
+			});
+	
+	$('.restaurantInformations').click(function(e) {
+		$('.restaurantInformations').closest('li').removeClass('active');
+		var restaurantInformationid=$(this).attr('id');
+		 var toRemove = 'restaurantInformation';
+		 var id = restaurantInformationid.replace(toRemove,'');
+		
+		myJsRoutes.controllers.RestaurantInformations.getRestaurantInformation(id).ajax({
+		    success : function(data) {
+			$('.contentBar').html(data);
+			$('#'+restaurantInformationid).closest('li').addClass('active');
+		    }
+		});
+		return false;
+	});
+});
+</script>

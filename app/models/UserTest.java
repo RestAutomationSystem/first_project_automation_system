@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import models.Enums.RoleTypes;
 import javax.persistence.*;
 import play.db.ebean.*;
 
@@ -23,20 +24,20 @@ public class UserTest extends Model{
 
     public String password;
     public String name;
-    public int age;
-
-    public boolean active;
-
-    public UserTest(){
-        active=false;
-    }
+    
+	public int role;
+	
 
     public UserTest(String name,String email,String password){
         this.email=email;
         this.name=name;
         this.password=password;
-        this.active=false;
+        this.role=2;
     }
+	
+	public static boolean isAdmin(String email){
+		return (find.byId(email).role==1);
+	}
 
     public static Finder<String, UserTest> find=new Finder<String, UserTest>(String.class, UserTest.class);
 
@@ -45,7 +46,7 @@ public class UserTest extends Model{
     }
 
     public static UserTest authenticate(String email,String password){
-        return find.where().eq("active", true).eq("email", email).eq("password", password).findUnique();
+        return find.where().eq("email", email).eq("password", password).findUnique();
     }
 
     public static UserTest create(String name,String email,String password){
