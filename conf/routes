@@ -1,0 +1,32 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+GET    /login                          		controllers.Application.login()
+GET    /confirm                          	controllers.Application.confirm(email:String)
+POST    /login                         	    controllers.Application.authenticate()
+GET		/logout								controllers.Application.logout()
+GET    /register                          	controllers.Application.registerForm()
+POST   /register                          	controllers.Application.register()
+GET    /list                          		controllers.Application.list()
+
+# Signup
+GET     /signup                     controllers.SignUp.blank()
+#GET     /users/fakeuser             controllers.SignUp.edit()
+POST    /signup                     controllers.SignUp.submit()
+
+# Contact
+GET     /contacts                   controllers.Contacts.blank()
+GET     /contacts/fakecontact       controllers.Contacts.edit()
+GET    /contacts                   controllers.Contacts.submit()
+
+# Wizard
+GET     /wizard/:step               controllers.Wizard.step(step:Int)
+POST    /wizard/:step               controllers.Wizard.submit(step:Int)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
