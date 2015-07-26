@@ -1,6 +1,6 @@
 package controllers;
 
-import models.UserTest;
+import models.User;
 import play.mvc.Result;
 import play.mvc.Security;
 import play.mvc.Http.Context;
@@ -25,7 +25,7 @@ public class Secured extends Security.Authenticator{
 	}
 	
 	public static boolean isAdmin() {
-	    return UserTest.isAdmin(
+	    return User.isAdmin(
 	        Context.current().request().username()
 	    );
 	}

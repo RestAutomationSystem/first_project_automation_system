@@ -1,4 +1,4 @@
-@(user:UserTest,restaurants:List[Restaurant],restaurantForm:Form[Restaurant])
+@(user:User,restaurants:List[Restaurant],restaurantForm:Form[Restaurant])
 
 
 
@@ -17,7 +17,7 @@
 
   <div class="row" style="margin-left: 20px;">
   <div class="row" style="margin-left: 20px;">
-<h4><span class="restaurantDescriptionTitle item" id="@restaurant.id">@restaurant.name</span></h4>
+<h4><span class="restaurantDescriptionTitle item" id="@restaurant.id">@restaurant.title</span></h4>
 <span class="action" style="margin-left:5px;">
 <a href="@routes.Restaurants.deleteRestaurant(restaurant.id)"><i class="icon-remove"></i></a>
 </span>
@@ -57,6 +57,12 @@ successfully saved
 </p>
 <p>
 <textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<input id="startDate" type="text" class="datepicker" name="start_time">
+</p>
+<p>
+<input id="endDate" type="text" class="datepicker" name="end_time">
 </p>
 <p>
 <button class="btn btn-primary" type="submit">Create</button>

@@ -8,7 +8,7 @@ import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 
 @Entity
-public class RestaurantSection extends Model{
+public class Kitchen extends Model{
 
 	@Id
 	@Version
@@ -30,10 +30,11 @@ public class RestaurantSection extends Model{
 	@Formats.DateTime(pattern="H:i")
 	public Date end_time;	
 	
+	
 	@ManyToOne
 	public Restaurant restaurant;
 	
-	public RestaurantSection(String title,String description,String image,Restaurant restaurant,Date start_time,Date end_time){
+	public Kitchen(String title,String description,String image,Restaurant restaurant,Date start_time,Date end_time){
 		this.title=title;
 		this.description=description;
 		this.image=image;
@@ -42,28 +43,28 @@ public class RestaurantSection extends Model{
 		this.end_time=end_time;
 	}
 	
-	public static Finder<Integer,RestaurantSection> find=new Finder<Integer, RestaurantSection>(Integer.class, RestaurantSection.class);
+	public static Finder<Integer,Kitchen> find=new Finder<Integer, Kitchen>(Integer.class, Kitchen.class);
 	
 	
-	 public static List<RestaurantSection> findAll() {
+	 public static List<Kitchen> findAll() {
 	        return find.all();
 	    }
 	 
 	
 	public static void create(String title,String description,String image,Restaurant restaurant,Date start_time,Date end_time){
-		RestaurantSection newRestaurantSection=new RestaurantSection(title, description,image,restaurant,start_time,end_time);
-		newRestaurantSection.save();
+		Kitchen newKitchen=new Kitchen(title, description,image,restaurant,start_time,end_time);
+		newKitchen.save();
 	}
 	
 	public static void update(int id,String title,String description,String image,Date start_time,Date end_time){
-		RestaurantSection section=RestaurantSection.find.ref(id);
+		Kitchen kitchen=Kitchen.find.ref(id);
 		System.out.println("id:"+id);
-		section.title=title;
-		section.description=description;
-		section.image=image;
-		section.start_time=start_time;
-		section.end_time=end_time;
-		section.update();
+		kitchen.title=title;
+		kitchen.description=description;
+		kitchen.image=image;
+		kitchen.start_time=start_time;
+		kitchen.end_time=end_time;
+		kitchen.update();
 		
 		
 	}

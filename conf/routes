@@ -17,23 +17,10 @@ GET    /list                          		controllers.Application.list()
 #Restaurants
 GET    /restaurants                          	controllers.Restaurants.index()
 POST    /restaurants                          	controllers.Restaurants.newRestaurant()
-GET    /restaurants/:id/delete                 controllers.Restaurants.deleteRestaurant(id: Long)
-POST    /restaurants/:id                        controllers.Restaurants.updateRestaurant(id: Long)
-GET    /restaurants/:id                         controllers.Restaurants.restaurantPage(id: Long)
+GET    /restaurants/:id/delete                 controllers.Restaurants.deleteRestaurant(id: Integer)
+POST    /restaurants/:id                        controllers.Restaurants.updateRestaurant(id: Integer)
+GET    /restaurants/:id                         controllers.Restaurants.restaurantPage(id: Integer)
 
-# Signup
-GET     /signup                     controllers.SignUp.blank()
-#GET     /users/fakeuser             controllers.SignUp.edit()
-POST    /signup                     controllers.SignUp.submit()
-
-# Contact
-GET     /contacts                   controllers.Contacts.blank()
-GET     /contacts/fakecontact       controllers.Contacts.edit()
-GET    /contacts                   controllers.Contacts.submit()
-
-# Wizard
-GET     /wizard/:step               controllers.Wizard.step(step:Int)
-POST    /wizard/:step               controllers.Wizard.submit(step:Int)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,6 +1,6 @@
 users:
 
-    - !!models.UserTest
+    - !!models.User
         email:      admin@sample.com
         name:       Admin Main
         password:   admin11

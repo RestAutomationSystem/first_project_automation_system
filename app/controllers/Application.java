@@ -4,7 +4,7 @@ import play.*;
 import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
-import models.UserTest;
+import models.User;
 import models.Enums.RoleTypes;
 import play.mvc.Http.MultipartFormData;
 import play.mvc.Http.MultipartFormData.FilePart;
@@ -22,7 +22,7 @@ public class Application extends Controller {
         public String password;
 
         public String validate() {
-            if (UserTest.authenticate(email, password) == null) {
+            if (User.authenticate(email, password) == null) {
                 return "Invalid user or password";
             }
             return null;
@@ -45,11 +45,16 @@ public class Application extends Controller {
     }
 
     public static Result index() {
-	if(session("email")==null)
-        return redirect(routes.Application.registerForm());
+	if(session("email")!=null){
+	if(User.isAdmin(session("email")))
+        return redirect(routes.Restaurants.index());
 	else
-	 return ok( "Hello"+session("email"));
-    }
+	 return redirect(routes.Application.login());
+    }else{
+	return redirect(routes.Application.login());
+	}
+	
+	}
 	
 	
 	public static Result login() {
@@ -60,7 +65,7 @@ public class Application extends Controller {
     }
     
     public static Result list() {
-        return ok(list.render(UserTest.findAll()));
+        return ok(list.render(User.findAll()));
     }
     
     public static Result registerForm() {
@@ -73,9 +78,9 @@ public class Application extends Controller {
         	return ok(register.render(form(Register.class)));
     	}
     	else{
-    		UserTest newUserTest=UserTest.create(regForm.get().name,regForm.get().email,regForm.get().password);
-    		JsonNode personJson = Json.toJson(newUserTest); 
-    		Logger.debug("UserTest created: "+regForm.get().name+" "+regForm.get().email);
+    		User newUser=User.create(regForm.get().name,regForm.get().email,regForm.get().password);
+    		JsonNode personJson = Json.toJson(newUser); 
+    		Logger.debug("User created: "+regForm.get().name+" "+regForm.get().email);
     		return ok(personJson);
     		
     //return ok( registerSuccess.render( ));
@@ -96,7 +101,7 @@ public class Application extends Controller {
     }
     
     public static Result confirm(String email) {
-    	UserTest u=UserTest.find.ref(email);
+    	User u=User.find.ref(email);
     	u.update();
     	return redirect(
 				routes.Application.login()

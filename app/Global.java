@@ -8,7 +8,7 @@ public class Global extends GlobalSettings {
     @Override
     public void onStart(Application app) {
         // Check if the database is empty
-    	if(Ebean.find(UserTest.class).findRowCount() == 0) {
+    	if(Ebean.find(User.class).findRowCount() == 0) {
             
             Map<String,List<Object>> all = (Map<String,List<Object>>)Yaml.load("initial-data.yml");
 
@@ -18,7 +18,7 @@ public class Global extends GlobalSettings {
             
         }
 		
-		/*if (UserTest.find.findRowCount() == 0) {
+		/*if (User.find.findRowCount() == 0) {
             Ebean.save((List) Yaml.load("initial-data.yml"));
         }*/
     }

@@ -1,10 +1,9 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import javax.persistence.*;
-
+import play.data.format.*;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 
@@ -14,29 +13,32 @@ public class Restaurant extends Model{
 	@Id
 	@Version
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public Long id;
+	public int id;
 	
 	@Required
-	public String name;
+	public String title;
 	
 	@Column(columnDefinition="TEXT")
 	public String description;
 	
-	public String image;
+	public String status;
 	
-	public String contact;
+	@Formats.DateTime(pattern="H:i")
+	public Date start_time;
 	
-	@Column(columnDefinition="TEXT")
-	public String address;
+	@Formats.DateTime(pattern="H:i")
+	public Date end_time;	
 	
 	
-	public Restaurant(String name,String description,String image){
-		this.name=name;
+	public Restaurant(String title,String description,String status,Date start_time,Date end_time){
+		this.title=title;
 		this.description=description;
-		this.image=image;
+		this.status=status;
+		this.start_time=start_time;
+		this.end_time=end_time;
 	}
 	
-	public static Finder<Long,Restaurant> find=new Finder<Long, Restaurant>(Long.class, Restaurant.class);
+	public static Finder<Integer,Restaurant> find=new Finder<Integer, Restaurant>(Integer.class, Restaurant.class);
 	
 	
 	 public static List<Restaurant> findAll() {
@@ -44,21 +46,23 @@ public class Restaurant extends Model{
 	    }
 	 
 	
-	public static void create(String name,String description,String image){
-		Restaurant newRestaurant=new Restaurant(name, description,image);
+	public static void create(String title,String description,String status,Date start_time,Date end_time){
+		Restaurant newRestaurant=new Restaurant(title, description,status,start_time,end_time);
 		newRestaurant.save();
 	}
 	
-	public static void update(Long id,String name,String description){
+	public static void update(int id,String title,String description,String status,Date start_time,Date end_time){
 		Restaurant restaurant=Restaurant.find.ref(id);
 		System.out.println("id:"+id);
-		restaurant.name=name;
+		restaurant.title=title;
 		restaurant.description=description;
+		restaurant.status=status;
+		
 		restaurant.update();
 		
 		
 	}
-	public static void delete(Long id){
+	public static void delete(int id){
 		find.ref(id).delete();
 	}
 }

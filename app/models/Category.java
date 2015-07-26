@@ -1,10 +1,9 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import javax.persistence.*;
-
+import play.data.format.*;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 
@@ -14,30 +13,31 @@ public class Category extends Model{
 	@Id
 	@Version
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public Long id;
+	public int id;
 	
 	@Required
-	public String name;
+	public String title;
 	
 	@Column(columnDefinition="TEXT")
 	public String description;
 	
-	@ManyToOne
-	public Menu menu;
+	public String status;
 	
-	@OneToOne()
-    @JoinColumn(name="parent_category")
-    public Category parent_category;
+	@Formats.DateTime(pattern="H:i")
+	public Date start_time;
+	@Formats.DateTime(pattern="H:i")
+	public Date end_time;	
 	
 	
-	public Category(String name,String description,Menu menu,Category parent_category){
-		this.name=name;
+	public Category(String title,String description,String status,Date start_time,Date end_time){
+		this.title=title;
 		this.description=description;
-		this.menu=menu;
-		this.parent_category=parent_category;
+		this.status=status;
+		this.start_time=start_time;
+		this.end_time=end_time;
 	}
 	
-	public static Finder<Long,Category> find=new Finder<Long, Category>(Long.class, Category.class);
+	public static Finder<Integer,Category> find=new Finder<Integer, Category>(Integer.class, Category.class);
 	
 	
 	 public static List<Category> findAll() {
@@ -45,22 +45,23 @@ public class Category extends Model{
 	    }
 	 
 	
-	public static void create(String name,String description,Menu menu,Category parent_category){
-		Category newCategory=new Category(name, description,menu,parent_category);
+	public static void create(String title,String description,String status,Date start_time,Date end_time){
+		Category newCategory=new Category(title, description,status,start_time,end_time);
 		newCategory.save();
 	}
 	
-	public static void update(Long id,String name,String description,Category parent_category){
-		Category restaurant=Category.find.ref(id);
+	public static void update(int id,String title,String description,String status,Date start_time,Date end_time){
+		Category category=Category.find.ref(id);
 		System.out.println("id:"+id);
-		restaurant.name=name;
-		restaurant.parent_category=parent_category;
-		restaurant.description=description;
-		restaurant.update();
+		category.title=title;
+		category.description=description;
+		category.status=status;
+		
+		category.update();
 		
 		
 	}
-	public static void delete(Long id){
+	public static void delete(int id){
 		find.ref(id).delete();
 	}
 }
