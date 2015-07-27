@@ -21,6 +21,21 @@ GET    /restaurants/:id/delete                 controllers.Restaurants.deleteRes
 POST    /restaurants/:id                        controllers.Restaurants.updateRestaurant(id: Integer)
 GET    /restaurants/:id                         controllers.Restaurants.restaurantPage(id: Integer)
 
+#Sections
+GET    /restaurants/:id/sections                          	controllers.Sections.index(id: Integer)
+POST   /restaurants/:id/sections                          	controllers.Sections.newSection(id: Integer)
+GET    /sections/:id/delete                 controllers.Sections.deleteSection(id: Integer)
+POST    /sections/:id                        controllers.Sections.updateSection(id: Integer)
+GET    /sections/:id                         controllers.Sections.sectionPage(id: Integer)
+
+#Places
+GET    /sections/:id/places                          	controllers.Places.index(id: Integer)
+POST   /sections/:id/places                          	controllers.Places.newPlace(id: Integer)
+GET    /places/:id/delete                 controllers.Places.deletePlace(id: Integer)
+POST    /places/:id                        controllers.Places.updatePlace(id: Integer)
+GET    /places/:id                         controllers.Places.placePage(id: Integer)
+
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,4 +1,4 @@
-@(user:User,restaurants:List[Restaurant],restaurantForm:Form[Restaurant])
+@(user:User,restaurant:Restaurant,sections:List[RestaurantSection],sectionForm:Form[RestaurantSection])
 
 
 
@@ -7,28 +7,28 @@
 
       <div class="contentBar">  
 <div class="announcements"> 
-@if(restaurants.size()>0){
-<h3>My Restaurants</h3>
+@if(sections.size()>0){
+<h3>My RestaurantSections</h3>
 <table class="table">
-@for(restaurant<-restaurants){
+@for(section<-sections){
 <tr>
 <td>
-<div id="restaurant@restaurant.id" >
+<div id="section@section.id" >
 
   <div class="row" style="margin-left: 20px;">
   <div class="row" style="margin-left: 20px;">
-<h4><span class="restaurantDescriptionTitle item" id="@restaurant.id">@restaurant.title</span></h4>
+<h4><span class="sectionDescriptionTitle item" id="@section.id">@section.title</span></h4>
 <span class="action" style="margin-left:5px;">
-<a href="@routes.Restaurants.deleteRestaurant(restaurant.id)"><i class="icon-remove"></i></a>
+<a href="@routes.Sections.deleteSection(section.id)"><i class="icon-remove"></i></a>
 </span>
 </div>
 <br/>
 
-<div class="nicPanels" id="restaurantNicPanel@restaurant.id" style="width: 525px;"></div>
+<div class="nicPanels" id="sectionNicPanel@section.id" style="width: 525px;"></div>
 <div id="lecturecontent" class="nicTextContainer">
-<div id="cdContent@restaurant.id" style="width: 525px;">
-@if(restaurant.description!=null){
-@Html(restaurant.description)
+<div id="cdContent@section.id" style="width: 525px;">
+@if(section.description!=null){
+@Html(section.description)
 }
 </div>
 </div>
@@ -36,7 +36,7 @@
 </div>
 </td>
 <td style="padding: 30px;">
-@form(routes.Restaurants.restaurantPage(restaurant.id)) {
+@form(routes.Sections.sectionPage(section.id)) {
                            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
                           
 							}
@@ -47,9 +47,9 @@
 }
 
 <fieldset>
-<legend>Add new restaurant</legend>
+<legend>Add new section</legend>
 <div class="createForm">
-@form(routes.Restaurants.newRestaurant()){
+@form(routes.Sections.newSection(restaurant.id)){
 <p>
 <input type="text" name="title" placeholder="Name">
 </p>

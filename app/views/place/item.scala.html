@@ -1,0 +1,27 @@
+@(user:User,place:Place)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+     
+    </div>
+    <div class="span9">
+	@form(routes.Sections.updateSection(place.id)){
+<input type="text" name="title" value="@place.title"/>
+<textarea name="description">@place.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@place.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@place.end_time.format("dd/MM/yyyy HH:mm")">
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+<div class="span2">
+							</div>
+</div>
+</div>
+
+}

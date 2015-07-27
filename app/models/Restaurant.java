@@ -23,10 +23,10 @@ public class Restaurant extends Model{
 	
 	public String status;
 	
-	@Formats.DateTime(pattern="H:i")
+	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date start_time;
 	
-	@Formats.DateTime(pattern="H:i")
+	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date end_time;	
 	
 	

@@ -1,0 +1,28 @@
+@(user:User,section:RestaurantSection)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+     
+    </div>
+    <div class="span9">
+	@form(routes.Sections.updateSection(section.id)){
+<input type="text" name="title" value="@section.title"/>
+<textarea name="description">@section.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@section.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@section.end_time.format("dd/MM/yyyy HH:mm")">
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+<div class="span2">
+<a href="@routes.Places.index(section.id)" >Секции</a>
+							</div>
+</div>
+</div>
+
+}

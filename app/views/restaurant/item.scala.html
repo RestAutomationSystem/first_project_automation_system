@@ -12,12 +12,16 @@
 	@form(routes.Restaurants.updateRestaurant(restaurant.id)){
 <input type="text" name="title" value="@restaurant.title"/>
 <textarea name="description">@restaurant.description</textarea>
-<input id="startDate" type="text" class="datepicker" name="start_time" value="@restaurant.start_time.format("H:i")">
-<input id="endDate" type="text" class="datepicker" name="end_time" value="@restaurant.end_time.format("H:i")">
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@restaurant.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@restaurant.end_time.format("dd/MM/yyyy HH:mm")">
 
 <input type="submit" value="Сохранить"/>
 }
+
 </div>
+<div class="span2">
+<a href="@routes.Sections.index(restaurant.id)" >Секции</a>
+							</div>
 </div>
 </div>
 
