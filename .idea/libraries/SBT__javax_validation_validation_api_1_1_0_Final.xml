@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="SBT: javax.validation:validation-api:1.1.0.Final">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../repository/local/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar!/" />
+      <root url="jar://D:/../../repository/local/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -25,6 +25,7 @@ public class Application extends Controller {
             if (User.authenticate(email, password) == null) {
                 return "Invalid user or password";
             }
+			
             return null;
         }
     }
@@ -90,13 +91,13 @@ public class Application extends Controller {
     public static Result authenticate() {
     	Form<Login> loginForm = form(Login.class).bindFromRequest();
         if(loginForm.hasErrors()){
-        	return redirect(routes.Application.login());
+        	return ok(login.render(loginForm));
     	}
     	else{
     		session().clear();
     		session("email",loginForm.get().email);
 
-    		return redirect(routes.Application.index());
+    		return redirect(routes.Restaurants.index());
     	}
     }
     

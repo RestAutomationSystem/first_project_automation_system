@@ -20,7 +20,23 @@
 
 </div>
 <div class="span2">
-<a href="@routes.Sections.index(restaurant.id)" >Секции</a>
+
+    @form(routes.Sections.index(restaurant.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Секции</button>
+    }
+
+    @form(routes.Storages.index(restaurant.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Склады</button>
+    }
+
+    @form(routes.Suppliers.index()) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Поставщики</button>
+    }
+
+    @form(routes.Restaurants.index()) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к ресторанам</button>
+
+    }
 							</div>
 </div>
 </div>

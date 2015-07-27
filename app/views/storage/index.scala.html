@@ -1,0 +1,76 @@
+@(user:User,restaurant:Restaurant,storages:List[Storage],storageForm:Form[Storage])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(storages.size()>0){
+<h3>My Storages</h3>
+<table class="table">
+@for(storage<-storages){
+<tr>
+<td>
+<div id="storage@storage.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="storageDescriptionTitle item" id="@storage.id">@storage.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.Storages.deleteStorage(storage.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="storageNicPanel@storage.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@storage.id" style="width: 525px;">
+@if(storage.description!=null){
+@Html(storage.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.Storages.storagePage(storage.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</table>
+}
+
+<fieldset>
+<legend>Add new storage</legend>
+<div class="createForm">
+@form(routes.Storages.newStorage(restaurant.id)){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<input id="startDate" type="text" class="datepicker" name="start_time">
+</p>
+<p>
+<input id="endDate" type="text" class="datepicker" name="end_time">
+</p>
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+    @form(routes.Restaurants.restaurantPage(restaurant.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к ресторану</button>
+    }
+</fieldset>
+</div>
+</div>
+}

@@ -27,9 +27,9 @@ public class Modificator extends Model{
 	public double price_original;
 	public double price_for_sale;
 	
-	@Formats.DateTime(pattern="H:i")
+	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date start_time;
-	@Formats.DateTime(pattern="H:i")
+	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date end_time;	
 	
 	public UnitType unit_type;

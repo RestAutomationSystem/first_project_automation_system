@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="SBT: net.java.dev.jna:jna:3.4.0:test">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../repository/local/net.java.dev.jna/jna/3.4.0/jars/jna.jar!/" />
+      <root url="jar://D:/../../repository/local/net.java.dev.jna/jna/3.4.0/jars/jna.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

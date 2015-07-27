@@ -3,6 +3,6 @@ users:
     - !!models.User
         email:      admin@sample.com
         name:       Admin Main
-        password:   admin11
+        password:   admin
         role:       1
                        

@@ -88,6 +88,8 @@ create table place (
   description               TEXT,
   image                     varchar(255),
   status                    varchar(255),
+  start_time                datetime,
+  end_time                  datetime,
   section_id                integer,
   constraint pk_place primary key (id))
 ;

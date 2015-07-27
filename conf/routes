@@ -35,6 +35,28 @@ GET    /places/:id/delete                 controllers.Places.deletePlace(id: Int
 POST    /places/:id                        controllers.Places.updatePlace(id: Integer)
 GET    /places/:id                         controllers.Places.placePage(id: Integer)
 
+#Suppliers
+GET    /suppliers                          	controllers.Suppliers.index()
+POST    /suppliers                          	controllers.Suppliers.newSupplier()
+GET    /suppliers/:id/delete                 controllers.Suppliers.deleteSupplier(id: Integer)
+POST    /suppliers/:id                        controllers.Suppliers.updateSupplier(id: Integer)
+GET    /suppliers/:id                         controllers.Suppliers.supplierPage(id: Integer)
+
+
+#storages
+GET    /restaurants/:id/storages                          	controllers.Storages.index(id: Integer)
+POST   /restaurants/:id/storages                          	controllers.Storages.newStorage(id: Integer)
+GET    /storages/:id/delete                 controllers.Storages.deleteStorage(id: Integer)
+POST    /storages/:id                        controllers.Storages.updateStorage(id: Integer)
+GET    /storages/:id                         controllers.Storages.storagePage(id: Integer)
+
+
+#Foods
+GET    /storages/:id/foods                          	controllers.Foods.index(id: Integer)
+POST   /storages/:id/foods                          	controllers.Foods.newFood(id: Integer)
+GET    /foods/:id/delete                 controllers.Foods.deleteFood(id: Integer)
+POST    /foods/:id                        controllers.Foods.updateFood(id: Integer)
+GET    /foods/:id                         controllers.Foods.foodPage(id: Integer)
 
 
 # Map static resources from the /public folder to the /assets URL path

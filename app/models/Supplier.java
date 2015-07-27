@@ -24,9 +24,9 @@ public class Supplier extends Model{
 	public String status;	
 	
 	
-	@Formats.DateTime(pattern="H:i")
+	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date start_time;
-	@Formats.DateTime(pattern="H:i")
+	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date end_time;	
 	
 	
@@ -52,12 +52,14 @@ public class Supplier extends Model{
 		newSupplier.save();
 	}
 	
-	public static void update(int id,String title,String description,String status){
+	public static void update(int id,String title,String description,String status,Date start_time,Date end_time){
 		Supplier supplier=Supplier.find.ref(id);
 		System.out.println("id:"+id);
 		supplier.title=title;
 		supplier.description=description;
 		supplier.status=status;
+        supplier.start_time=start_time;
+        supplier.end_time=end_time;
 		supplier.update();
 		
 		

@@ -15,7 +15,7 @@ public class Places extends Controller{
 
 	public static Form<Place> placeForm=form(Place.class);
 	
-	public static Result index(RestaurantSection id) {
+	public static Result index(int id) {
 		return ok(
 				index.render(
 				User.find.where().eq("email", request().username()).findUnique(),
@@ -27,7 +27,7 @@ public class Places extends Controller{
     }
 
 	
-public static Result newPlace(RestaurantSection id) throws ParseException{
+public static Result newPlace(int id) throws ParseException{
 		//Form<Place> filledForm=form(Place.class).bindFromRequest();
 		DynamicForm filledForm=form().bindFromRequest();
 		DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
@@ -35,7 +35,7 @@ public static Result newPlace(RestaurantSection id) throws ParseException{
 		Logger.debug("startDate:"+filledForm.get("start_time"));
        Logger.debug("deadline:"+filledForm.get("end_time"));
       	
-		Place.create(filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")));
+		Place.create(filledForm.get("title"), filledForm.get("description"),"",RestaurantSection.find.byId(id),sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")));
 	
 		
 		return ok(

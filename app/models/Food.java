@@ -13,29 +13,29 @@ public class Food extends Model{
 	@Id
 	@Version
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public int id;
+	private int id;
 	
 	@Required
-	public String title;
+	private String title;
 	
 	@Column(columnDefinition="TEXT")
-	public String description;
+	private String description;
 	
-	public String image;
-	public String status;
-	public double price;
+	private String image;
+	private String status;
+	private double price;
 	
 	
-	@Formats.DateTime(pattern="H:i")
-	public Date start_time;
-	@Formats.DateTime(pattern="H:i")
-	public Date end_time;	
+	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
+	private Date start_time;
+	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
+	private Date end_time;	
 	
 	
 	@ManyToOne
-	public Storage storage;
-	
-	public Supplier supplier;
+    private Storage storage;
+
+    private Supplier supplier;
 	
 	public Food(String title,String description,String image,Storage storage,Date start_time,Date end_time,double price,Supplier supplier){
 		this.title=title;
@@ -60,7 +60,7 @@ public class Food extends Model{
 		newFood.save();
 	}
 	
-	public static void update(int id,String title,String description,String image,Storage storage,Date start_time,Date end_time,double price,Supplier supplier){
+	public static void update(int id,String title,String description,String image,Date start_time,Date end_time,double price,Supplier supplier){
 		Food food=Food.find.ref(id);
 		System.out.println("id:"+id);
 		food.title=title;
@@ -78,4 +78,84 @@ public class Food extends Model{
 	public static void delete(int id){
 		find.ref(id).delete();
 	}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Supplier getSupplier() {
+        return supplier;
+    }
+
+    public void setSupplier(Supplier supplier) {
+        this.supplier = supplier;
+    }
+
+    public Storage getStorage() {
+        return storage;
+    }
+
+    public void setStorage(Storage storage) {
+        this.storage = storage;
+    }
+
+    public Date getEnd_time() {
+        return end_time;
+    }
+
+    public void setEnd_time(Date end_time) {
+        this.end_time = end_time;
+    }
+
+    public Date getStart_time() {
+        return start_time;
+    }
+
+    public void setStart_time(Date start_time) {
+        this.start_time = start_time;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
