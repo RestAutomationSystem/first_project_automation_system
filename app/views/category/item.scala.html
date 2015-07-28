@@ -1,0 +1,29 @@
+@(user:User,category:Category)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+     
+    </div>
+    <div class="span9">
+	@form(routes.Categories.updateCategory(category.id)){
+<input type="text" name="title" value="@category.title"/>
+<textarea name="description">@category.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@category.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@category.end_time.format("dd/MM/yyyy HH:mm")">
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.Categories.index()) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к списку меню</button>
+
+      }
+</div>
+</div>
+
+}

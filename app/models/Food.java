@@ -35,6 +35,7 @@ public class Food extends Model{
 	@ManyToOne
     private Storage storage;
 
+    @OneToOne()
     private Supplier supplier;
 	
 	public Food(String title,String description,String image,Storage storage,Date start_time,Date end_time,double price,Supplier supplier){

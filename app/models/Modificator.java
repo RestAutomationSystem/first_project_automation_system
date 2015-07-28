@@ -70,6 +70,8 @@ public class Modificator extends Model{
 		modificator.price_original=price_original;
 		modificator.price_for_sale=price_for_sale;
 		modificator.unit_type=unit_type;
+        modificator.start_time=start_time;
+        modificator.end_time=end_time;
 		modificator.update();
 		
 		

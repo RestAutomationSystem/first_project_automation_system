@@ -1,0 +1,29 @@
+@(user:User,service:Service,allMenus:List[Menu],rMenus:List[Menu])
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3">
+
+        </div>
+        <div class="span9">
+            @form(routes.Services.setMenus(service.id)){
+            @for(aMenu<-allMenus){
+            @if(rMenus.contains(aMenu)){
+            <input type="checkbox" checked name="menus[]" value="@aMenu.id">@aMenu.title</option>
+            }else{
+            <input type="checkbox" name="menus[]" value="@aMenu.id">@aMenu.title</option>
+
+            }
+
+            }
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Сохранить</button>
+            }
+        </div>
+
+    </div>
+</div>
+
+}

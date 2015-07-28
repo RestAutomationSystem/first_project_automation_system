@@ -1,0 +1,73 @@
+@(user:User,services:List[Service],serviceForm:Form[Service])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(services.size()>0){
+<h3>My Services</h3>
+<table class="table">
+@for(service<-services){
+<tr>
+<td>
+<div id="service@service.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="serviceDescriptionTitle item" id="@service.id">@service.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.Services.deleteService(service.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="serviceNicPanel@service.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@service.id" style="width: 525px;">
+@if(service.description!=null){
+@Html(service.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.Services.servicePage(service.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</table>
+}
+
+<fieldset>
+<legend>Add new service</legend>
+<div class="createForm">
+@form(routes.Services.newService()){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<input id="startDate" type="text" class="datepicker" name="start_time">
+</p>
+<p>
+<input id="endDate" type="text" class="datepicker" name="end_time">
+</p>
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+</div>
+</div>
+}

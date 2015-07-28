@@ -56,7 +56,8 @@ public class Category extends Model{
 		category.title=title;
 		category.description=description;
 		category.status=status;
-		
+        category.start_time=start_time;
+        category.end_time=end_time;
 		category.update();
 		
 		

@@ -13,14 +13,14 @@
 <input type="text" name="title" value="@food.getTitle()"/>
 <textarea name="description">@food.getDescription()</textarea>
 @if(food.getStart_time()!=null){
-<input id="startDate" type="text" class="datepicker" name="start_time" value="@food.getStart_time().format("dd/MM/yyyy HH:mm")">
+<input  type="text" class="datepicker" name="start_time" value="@food.getStart_time().format("dd/MM/yyyy HH:mm")">
  }else{
-        <input id="startDate" type="text" class="datepicker" name="start_time" >
+        <input type="text" class="datepicker" name="start_time" >
 }
 @if(food.getEnd_time()!=null){
-<input id="endDate" type="text" class="datepicker" name="end_time" value="@food.getEnd_time().format("dd/MM/yyyy HH:mm")">
+<input  type="text" class="datepicker" name="end_time" value="@food.getEnd_time().format("dd/MM/yyyy HH:mm")">
 }else{
-        <input id="endDate" type="text" class="datepicker" name="end_time" >
+        <input  type="text" class="datepicker" name="end_time" >
  }
         <p>
             <input  type="text" name="price" value="@food.getPrice()">
@@ -28,7 +28,7 @@
         <p>
             <select  name="supplier_id">
                 @for(supplier<-suppliers){
-                if(food.getSupplier().id==supplier.id){
+                @if(food.getSupplier().id==supplier.id){
                 <option value="@supplier.id" selected="selected">@supplier.title</option>
                 }else{
                 <option value="@supplier.id">@supplier.title</option>

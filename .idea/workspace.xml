@@ -20,15 +20,31 @@
     <file path="/Places.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437976439955" ignored="false" />
     <file path="/a.dummy" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437991358336" ignored="false" />
     <file path="/Place.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437988794938" ignored="false" />
-    <file path="/index.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437996186156" ignored="false" />
-    <file path="/item.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437996400114" ignored="false" />
-    <file path="/routes" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437992775756" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_routing.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437994707817" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_reverseRouting.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437994707817" ignored="false" />
+    <file path="/index.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081589471" ignored="false" />
+    <file path="/item.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438082457586" ignored="false" />
+    <file path="/routes" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081525230" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_routing.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081535879" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_reverseRouting.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081535879" ignored="false" />
     <file path="/Foods.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437995614115" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/food/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437996254059" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/food/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437996534179" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/food/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438053906643" ignored="false" />
     <file path="/Storages.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1437995767530" ignored="false" />
+    <file path="/RestaurantHasService.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438056202591" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/restaurant/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438080648183" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/restaurant/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081504742" ignored="false" />
+    <file path="/Restaurants.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438079252521" ignored="false" />
+    <file path="/services.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438075108979" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/controllers/routes.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081535879" ignored="false" />
+    <file path="/Restaurant.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438073696279" ignored="false" />
+    <file path="/Service.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438073728812" ignored="false" />
+    <file path="/Menu.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438073791624" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/restaurant/services.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438079707636" ignored="false" />
+    <file path="/Services.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438079724139" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/service/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438080855529" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/menu/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438082503398" ignored="false" />
+    <file path="/Categories.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081028926" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/category/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081600708" ignored="false" />
+    <file path="/Menus.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438081771585" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +64,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -82,7 +99,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -93,54 +109,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Menu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="12" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#659#669#0" expanded="true" />
+                <element signature="e#954#969#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kitchen.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Kitchen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="6" selection-start="2139" selection-end="2206" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1184#1199#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Food.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Food.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="82" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1069#1084#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Foods.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Foods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="0" selection-start="3021" selection-end="3021" vertical-scroll-proportion="-29.24">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item.scala.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/food/item.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="49" selection-start="247" selection-end="247" vertical-scroll-proportion="0.22077923">
+            <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/food/index.scala.html">
+      <file leaf-file-name="Category.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/Category.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="26" selection-start="1486" selection-end="1486" vertical-scroll-proportion="-11.333333">
+            <state line="43" column="43" selection-start="984" selection-end="984" vertical-scroll-proportion="0.73997706">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Suppliers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Suppliers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1636" selection-end="1636" vertical-scroll-proportion="-12.58">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -148,54 +162,47 @@
       <file leaf-file-name="Supplier.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Supplier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="16" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#864#883#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/restaurant/index.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/restaurant/item.scala.html">
+      <file leaf-file-name="Storage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="88" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-20.923077">
+            <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/storage/index.scala.html">
+      <file leaf-file-name="RestaurantSection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/RestaurantSection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="91" selection-start="1234" selection-end="1234" vertical-scroll-proportion="-10.960526">
+            <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Place.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Place.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="7" selection-start="1635" selection-end="1697" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1006#1022#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Storages.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Storages.java">
+      <file leaf-file-name="Modificator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Modificator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="91" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.0">
+            <state line="72" column="6" selection-start="2255" selection-end="2330" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1205#1227#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -218,22 +225,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/Places.java" />
-        <option value="$PROJECT_DIR$/app/models/Place.java" />
-        <option value="$PROJECT_DIR$/app/views/place/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/section/item.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/section/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/place/item.scala.html" />
-        <option value="$PROJECT_DIR$/app/controllers/Suppliers.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Restaurants.java" />
+        <option value="$PROJECT_DIR$/app/views/service/item.scala.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Categories.java" />
+        <option value="$PROJECT_DIR$/app/views/restaurant/index.scala.html" />
         <option value="$PROJECT_DIR$/conf/routes" />
-        <option value="$PROJECT_DIR$/app/views/restaurant/item.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/storage/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/models/Food.java" />
-        <option value="$PROJECT_DIR$/app/controllers/Foods.java" />
-        <option value="$PROJECT_DIR$/app/controllers/Storages.java" />
-        <option value="$PROJECT_DIR$/app/models/Supplier.java" />
-        <option value="$PROJECT_DIR$/app/views/food/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/food/item.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/category/index.scala.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Menus.java" />
+        <option value="$PROJECT_DIR$/app/views/menu/categories.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/menu/item.scala.html" />
+        <option value="$PROJECT_DIR$/app/models/Menu.java" />
+        <option value="$PROJECT_DIR$/app/models/Category.java" />
+        <option value="$PROJECT_DIR$/app/models/Service.java" />
+        <option value="$PROJECT_DIR$/app/models/Restaurant.java" />
+        <option value="$PROJECT_DIR$/app/models/Place.java" />
+        <option value="$PROJECT_DIR$/app/models/Modificator.java" />
+        <option value="$PROJECT_DIR$/app/models/Item.java" />
       </list>
     </option>
   </component>
@@ -277,6 +284,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -396,6 +404,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="section" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -462,7 +492,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="food" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="category" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -504,7 +578,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -516,16 +589,17 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/controllers" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="project.structure.side.proportion" value="0.44289044" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -564,6 +638,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -590,19 +677,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -713,23 +787,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.86540604" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.86540604" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22222222" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22135706" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.86540604" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67074525" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19903949" sideWeight="0.86540604" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19903949" sideWeight="0.77864295" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -740,8 +814,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37745097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -817,132 +891,131 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/Sections.java">
+    <entry file="file://$PROJECT_DIR$/app/views/service/item.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+        <state line="8" column="8" selection-start="151" selection-end="312" vertical-scroll-proportion="-5.230769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
+    <entry file="file://$PROJECT_DIR$/app/views/menu/item.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="9" column="91" selection-start="280" selection-end="280" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/section/index.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/views/menu/categories.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="95" selection-start="1909" selection-end="1909" vertical-scroll-proportion="-25.384615">
+        <state line="8" column="76" selection-start="197" selection-end="197" vertical-scroll-proportion="-1.7894737">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Places.java">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Menus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="46" selection-start="0" selection-end="2531" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Restaurants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="140" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="107" selection-start="2885" selection-end="2885" vertical-scroll-proportion="-9.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/restaurant/item.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="88" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-20.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/restaurant/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/storage/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="91" selection-start="1234" selection-end="1234" vertical-scroll-proportion="-10.960526">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Storages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="91" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.0">
+        <state line="98" column="57" selection-start="2869" selection-end="2869" vertical-scroll-proportion="-11.7">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Suppliers.java">
+    <entry file="file://$PROJECT_DIR$/app/models/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1636" selection-end="1636" vertical-scroll-proportion="-12.58">
+        <state line="62" column="15" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#653#659#0" expanded="true" />
+            <element signature="e#950#968#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Foods.java">
+    <entry file="file://$PROJECT_DIR$/app/models/Restaurant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="3021" selection-end="3021" vertical-scroll-proportion="-29.24">
+        <state line="62" column="4" selection-start="1628" selection-end="1703" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/food/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="26" selection-start="1486" selection-end="1486" vertical-scroll-proportion="-11.333333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Food.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="82" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1069#1084#0" expanded="true" />
+            <element signature="e#664#673#0" expanded="true" />
+            <element signature="e#970#991#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Supplier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="16" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/RestaurantSection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Place.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="7" selection-start="1635" selection-end="1697" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#864#883#0" expanded="true" />
+            <element signature="e#1006#1022#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/food/item.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/models/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="49" selection-start="247" selection-end="247" vertical-scroll-proportion="0.22077923">
+        <state line="62" column="12" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#659#669#0" expanded="true" />
+            <element signature="e#954#969#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Kitchen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="6" selection-start="2139" selection-end="2206" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1184#1199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Modificator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="6" selection-start="2255" selection-end="2330" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1205#1227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="43" selection-start="984" selection-end="984" vertical-scroll-proportion="0.73997706">
           <folding />
         </state>
       </provider>

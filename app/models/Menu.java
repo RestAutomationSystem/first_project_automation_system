@@ -26,7 +26,10 @@ public class Menu extends Model{
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date start_time;
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
-	public Date end_time;	
+	public Date end_time;
+
+    @ManyToMany(cascade=CascadeType.REMOVE)
+    public List<Category> categories=new ArrayList<Category>();
 	
 	
 	public Menu(String title,String description,String status,Date start_time,Date end_time){
@@ -56,7 +59,8 @@ public class Menu extends Model{
 		menu.title=title;
 		menu.description=description;
 		menu.status=status;
-		
+        menu.start_time=start_time;
+        menu.end_time=end_time;
 		menu.update();
 		
 		

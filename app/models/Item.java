@@ -70,6 +70,8 @@ public class Item extends Model{
 		product.price_original=price_original;
 		product.price_for_sale=price_for_sale;
 		product.unit_type=unit_type;
+        product.start_time=start_time;
+        product.end_time=end_time;
 		product.update();
 		
 		

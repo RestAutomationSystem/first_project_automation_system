@@ -21,6 +21,13 @@ GET    /restaurants/:id/delete                 controllers.Restaurants.deleteRes
 POST    /restaurants/:id                        controllers.Restaurants.updateRestaurant(id: Integer)
 GET    /restaurants/:id                         controllers.Restaurants.restaurantPage(id: Integer)
 
+GET    /restaurants/:id/services/               controllers.Restaurants.restaurantServices(id: Integer)
+POST    /restaurants/:id/services/               controllers.Restaurants.setServices(id: Integer)
+
+
+
+
+
 #Sections
 GET    /restaurants/:id/sections                          	controllers.Sections.index(id: Integer)
 POST   /restaurants/:id/sections                          	controllers.Sections.newSection(id: Integer)
@@ -57,6 +64,46 @@ POST   /storages/:id/foods                          	controllers.Foods.newFood(i
 GET    /foods/:id/delete                 controllers.Foods.deleteFood(id: Integer)
 POST    /foods/:id                        controllers.Foods.updateFood(id: Integer)
 GET    /foods/:id                         controllers.Foods.foodPage(id: Integer)
+
+
+#kitchens
+GET    /restaurants/:id/kitchens                          	controllers.Kitchens.index(id: Integer)
+POST   /restaurants/:id/kitchens                          	controllers.Kitchens.newKitchen(id: Integer)
+GET    /kitchens/:id/delete                 controllers.Kitchens.deleteKitchen(id: Integer)
+POST    /kitchens/:id                        controllers.Kitchens.updateKitchen(id: Integer)
+GET    /kitchens/:id                         controllers.Kitchens.kitchenPage(id: Integer)
+
+
+#Services
+GET    /services                          	controllers.Services.index()
+POST    /services                          	controllers.Services.newService()
+GET    /services/:id/delete                 controllers.Services.deleteService(id: Integer)
+POST    /services/:id                        controllers.Services.updateService(id: Integer)
+GET    /services/:id                         controllers.Services.servicePage(id: Integer)
+
+GET    /services/:id/menus/               controllers.Services.serviceMenus(id: Integer)
+POST    /services/:id/menus/               controllers.Services.setMenus(id: Integer)
+
+
+
+#Menus
+GET    /menus                          	controllers.Menus.index()
+POST    /menus                          	controllers.Menus.newMenu()
+GET    /menus/:id/delete                 controllers.Menus.deleteMenu(id: Integer)
+POST    /menus/:id                        controllers.Menus.updateMenu(id: Integer)
+GET    /menus/:id                         controllers.Menus.menuPage(id: Integer)
+
+GET    /menus/:id/categories/               controllers.Menus.menuCategories(id: Integer)
+POST    /menus/:id/categories/               controllers.Menus.setCategories(id: Integer)
+
+
+
+#Categories
+GET    /categories                          	controllers.Categories.index()
+POST    /categories                          	controllers.Categories.newCategory()
+GET    /categories/:id/delete                 controllers.Categories.deleteCategory(id: Integer)
+POST    /categories/:id                        controllers.Categories.updateCategory(id: Integer)
+GET    /categories/:id                         controllers.Categories.categoryPage(id: Integer)
 
 
 # Map static resources from the /public folder to the /assets URL path

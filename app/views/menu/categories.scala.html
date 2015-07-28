@@ -1,0 +1,29 @@
+@(user:User,menu:Menu,allCategories:List[Category],rCategories:List[Category])
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3">
+
+        </div>
+        <div class="span9">
+            @form(routes.Menus.setCategories(menu.id)){
+            @for(aCategory<-allCategories){
+            @if(rCategories.contains(aCategory)){
+            <input type="checkbox" checked name="menus[]" value="@aCategory.id">@aCategory.title</option>
+            }else{
+            <input type="checkbox" name="menus[]" value="@aCategory.id">@aCategory.title</option>
+
+            }
+
+            }
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Сохранить</button>
+            }
+        </div>
+
+    </div>
+</div>
+
+}

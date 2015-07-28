@@ -61,6 +61,8 @@ public class Place extends Model{
 		table.title=title;
 		table.description=description;
 		table.image=image;
+        table.start_time=start_time;
+        table.end_time=end_time;
 		table.update();
 		
 		

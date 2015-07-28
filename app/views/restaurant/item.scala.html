@@ -6,7 +6,9 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span3">
-     
+        @form(routes.Restaurants.restaurantServices(restaurant.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Сервисы</button>
+        }
     </div>
     <div class="span9">
 	@form(routes.Restaurants.updateRestaurant(restaurant.id)){
@@ -28,6 +30,12 @@
     @form(routes.Storages.index(restaurant.id)) {
     <button type="submit" class="btn btn-primary btn-medium courceCellButton">Склады</button>
     }
+
+    @form(routes.Kitchens.index(restaurant.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Кухни</button>
+    }
+
+
 
     @form(routes.Suppliers.index()) {
     <button type="submit" class="btn btn-primary btn-medium courceCellButton">Поставщики</button>

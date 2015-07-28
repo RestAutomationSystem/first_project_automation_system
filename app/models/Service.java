@@ -26,7 +26,10 @@ public class Service extends Model{
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date start_time;
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
-	public Date end_time;	
+	public Date end_time;
+
+    @ManyToMany(cascade=CascadeType.REMOVE)
+    public List<Menu> menus=new ArrayList<Menu>();
 	
 	
 	public Service(String title,String description,String status,Date start_time,Date end_time){
@@ -56,7 +59,8 @@ public class Service extends Model{
 		service.title=title;
 		service.description=description;
 		service.status=status;
-		
+        service.start_time=start_time;
+        service.end_time=end_time;
 		service.update();
 		
 		

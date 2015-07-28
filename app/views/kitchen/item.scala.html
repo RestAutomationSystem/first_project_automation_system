@@ -1,0 +1,31 @@
+@(user:User,kitchen:Kitchen)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+     
+    </div>
+    <div class="span9">
+	@form(routes.Kitchens.updateKitchen(kitchen.id)){
+<input type="text" name="title" value="@kitchen.title"/>
+<textarea name="description">@kitchen.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@kitchen.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@kitchen.end_time.format("dd/MM/yyyy HH:mm")">
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+<div class="span2">
+
+    @form(routes.Kitchens.index(kitchen.restaurant.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к кухням</button>
+    }
+							</div>
+</div>
+</div>
+
+}

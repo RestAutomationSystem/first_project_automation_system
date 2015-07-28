@@ -1,0 +1,73 @@
+@(user:User,categorys:List[Category],categoryForm:Form[Category])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(categorys.size()>0){
+<h3>My Categorys</h3>
+<table class="table">
+@for(category<-categorys){
+<tr>
+<td>
+<div id="category@category.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="categoryDescriptionTitle item" id="@category.id">@category.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.Categories.deleteCategory(category.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="categoryNicPanel@category.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@category.id" style="width: 525px;">
+@if(category.description!=null){
+@Html(category.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.Categories.categoryPage(category.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</table>
+}
+
+<fieldset>
+<legend>Add new category</legend>
+<div class="createForm">
+@form(routes.Categories.newCategory()){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<input id="startDate" type="text" class="datepicker" name="start_time">
+</p>
+<p>
+<input id="endDate" type="text" class="datepicker" name="end_time">
+</p>
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+</div>
+</div>
+}
