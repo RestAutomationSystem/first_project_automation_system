@@ -1,0 +1,29 @@
+@(user:User,unitType:UnitType)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="span3">
+
+      </div>
+    <div class="span9">
+	@form(routes.UnitTypes.updateUnitType(unitType.id)){
+<input type="text" name="title" value="@unitType.title"/>
+<textarea name="description">@unitType.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@unitType.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@unitType.end_time.format("dd/MM/yyyy HH:mm")">
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.UnitTypes.index()) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к сервисам</button>
+
+      }
+</div>
+</div>
+
+}

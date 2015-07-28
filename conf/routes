@@ -105,6 +105,20 @@ GET    /categories/:id/delete                 controllers.Categories.deleteCateg
 POST    /categories/:id                        controllers.Categories.updateCategory(id: Integer)
 GET    /categories/:id                         controllers.Categories.categoryPage(id: Integer)
 
+#Items
+GET    /items                          	controllers.Items.index()
+POST    /items                          	controllers.Items.newItem()
+GET    /items/:id/delete                 controllers.Items.deleteItem(id: Integer)
+POST    /items/:id                        controllers.Items.updateItem(id: Integer)
+GET    /items/:id                         controllers.Items.itemPage(id: Integer)
+
+
+#UnitTypes
+GET    /unitTypes                          	controllers.UnitTypes.index()
+POST    /unitTypes                          	controllers.UnitTypes.newUnitType()
+GET    /unitTypes/:id/delete                 controllers.UnitTypes.deleteUnitType(id: Integer)
+POST    /unitTypes/:id                        controllers.UnitTypes.updateUnitType(id: Integer)
+GET    /unitTypes/:id                         controllers.UnitTypes.unitTypePage(id: Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,0 +1,45 @@
+@(user:User,item:Item,units:List[UnitType])
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="span3">
+
+      </div>
+    <div class="span9">
+	@form(routes.Items.updateItem(item.id)){
+<input type="text" name="title" value="@item.title"/>
+<textarea name="description">@item.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@item.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@item.end_time.format("dd/MM/yyyy HH:mm")">
+        <p>
+            <select  name="unit_type">
+                @for(unit<-units){
+                @if(item.unit_type.id==unit.id){
+                <option value="@unit.id" selected="selected">@unit.title</option>
+                }else{
+                <option value="@unit.id">@unit.title</option>
+                }
+                }
+            </select>
+        </p>
+        <p>
+            <input type="text" name="price_original" placeholder="Original price">
+        </p>
+        <p>
+            <input type="text" name="price_for_sale" placeholder="Price for sale">
+        </p>
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.Items.index()) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к сервисам</button>
+
+      }
+</div>
+</div>
+
+}
