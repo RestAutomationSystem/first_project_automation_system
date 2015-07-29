@@ -21,9 +21,6 @@ GET    /restaurants/:id/delete                 controllers.Restaurants.deleteRes
 POST    /restaurants/:id                        controllers.Restaurants.updateRestaurant(id: Integer)
 GET    /restaurants/:id                         controllers.Restaurants.restaurantPage(id: Integer)
 
-GET    /restaurants/:id/services/               controllers.Restaurants.restaurantServices(id: Integer)
-POST    /restaurants/:id/services/               controllers.Restaurants.setServices(id: Integer)
-
 
 
 
@@ -75,43 +72,45 @@ GET    /kitchens/:id                         controllers.Kitchens.kitchenPage(id
 
 
 #Services
-GET    /services                          	controllers.Services.index()
-POST    /services                          	controllers.Services.newService()
+GET    /restaurants/:id/services                          	controllers.Services.index(id: Integer)
+POST    /restaurants/:id/services                          	controllers.Services.newService(id: Integer)
 GET    /services/:id/delete                 controllers.Services.deleteService(id: Integer)
 POST    /services/:id                        controllers.Services.updateService(id: Integer)
 GET    /services/:id                         controllers.Services.servicePage(id: Integer)
 
-GET    /services/:id/menus/               controllers.Services.serviceMenus(id: Integer)
-POST    /services/:id/menus/               controllers.Services.setMenus(id: Integer)
-
 
 
 #Menus
-GET    /menus                          	controllers.Menus.index()
-POST    /menus                          	controllers.Menus.newMenu()
+GET    /services/:id/menus                          	controllers.Menus.index(id: Integer)
+POST    /services/:id/menus                          	controllers.Menus.newMenu(id: Integer)
 GET    /menus/:id/delete                 controllers.Menus.deleteMenu(id: Integer)
 POST    /menus/:id                        controllers.Menus.updateMenu(id: Integer)
 GET    /menus/:id                         controllers.Menus.menuPage(id: Integer)
 
-GET    /menus/:id/categories/               controllers.Menus.menuCategories(id: Integer)
-POST    /menus/:id/categories/               controllers.Menus.setCategories(id: Integer)
-
-
 
 #Categories
-GET    /categories                          	controllers.Categories.index()
-POST    /categories                          	controllers.Categories.newCategory()
+GET    /menus/:id/categories                          	controllers.Categories.index(id: Integer)
+POST    /menus/:id/categories                          	controllers.Categories.newCategory(id: Integer)
 GET    /categories/:id/delete                 controllers.Categories.deleteCategory(id: Integer)
 POST    /categories/:id                        controllers.Categories.updateCategory(id: Integer)
 GET    /categories/:id                         controllers.Categories.categoryPage(id: Integer)
 
+POST   /categories/:id/newchild                controllers.Categories.newChildCategory(id: Integer)
+
 #Items
-GET    /items                          	controllers.Items.index()
-POST    /items                          	controllers.Items.newItem()
+GET    /categories/:id/items                          	controllers.Items.index(id: Integer)
+POST   /categories/:id/items                          	controllers.Items.newItem(id: Integer)
 GET    /items/:id/delete                 controllers.Items.deleteItem(id: Integer)
 POST    /items/:id                        controllers.Items.updateItem(id: Integer)
 GET    /items/:id                         controllers.Items.itemPage(id: Integer)
 
+
+#Modificators
+GET    /items/:id/modificators                          	controllers.Modificators.index(id: Integer)
+POST    /items/:id/modificators                          	controllers.Modificators.newModificator(id: Integer)
+GET    /modificators/:id/delete                 controllers.Modificators.deleteModificator(id: Integer)
+POST    /modificators/:id                        controllers.Modificators.updateModificator(id: Integer)
+GET    /modificators/:id                         controllers.Modificators.modificatorPage(id: Integer)
 
 #UnitTypes
 GET    /unitTypes                          	controllers.UnitTypes.index()

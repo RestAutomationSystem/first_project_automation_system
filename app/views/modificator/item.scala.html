@@ -1,0 +1,45 @@
+@(user:User,modificator:Modificator,units:List[UnitType])
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="span3">
+
+      </div>
+    <div class="span9">
+	@form(routes.Modificators.updateModificator(modificator.id)){
+<input type="text" name="title" value="@modificator.title"/>
+<textarea name="description">@modificator.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@modificator.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@modificator.end_time.format("dd/MM/yyyy HH:mm")">
+        <p>
+            <select  name="unit_type">
+                @for(unit<-units){
+                @if(modificator.unit_type.id==unit.id){
+                <option value="@unit.id" selected="selected">@unit.title</option>
+                }else{
+                <option value="@unit.id">@unit.title</option>
+                }
+                }
+            </select>
+        </p>
+        <p>
+            <input type="text" name="price_original" value="@modificator.price_original" placeholder="Original price">
+        </p>
+        <p>
+            <input type="text" name="price_for_sale" value="@modificator.price_for_sale" placeholder="Price for sale">
+        </p>
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.Modificators.index(modificator.item.id)) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к модификаторам</button>
+
+      }
+</div>
+</div>
+
+}

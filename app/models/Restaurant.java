@@ -29,8 +29,6 @@ public class Restaurant extends Model{
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date end_time;
 
-    @ManyToMany(cascade=CascadeType.REMOVE)
-    public List<Service> services=new ArrayList<Service>();
 	
 	
 	public Restaurant(String title,String description,String status,Date start_time,Date end_time){

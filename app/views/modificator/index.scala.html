@@ -1,4 +1,4 @@
-@(user:User,category:Category,items:List[Item],itemForm:Form[Item],units:List[UnitType])
+@(user:User,item:Item,modificators:List[Modificator],modificatorForm:Form[Modificator],units:List[UnitType])
 
 
 
@@ -7,28 +7,28 @@
 
       <div class="contentBar">  
 <div class="announcements"> 
-@if(items.size()>0){
-<h3>My Items</h3>
+@if(modificators.size()>0){
+<h3>My Modificators</h3>
 <table class="table">
-@for(item<-items){
+@for(modificator<-modificators){
 <tr>
 <td>
-<div id="item@item.id" >
+<div id="modificator@modificator.id" >
 
   <div class="row" style="margin-left: 20px;">
   <div class="row" style="margin-left: 20px;">
-<h4><span class="itemDescriptionTitle item" id="@item.id">@item.title</span></h4>
+<h4><span class="modificatorDescriptionTitle modificator" id="@modificator.id">@modificator.title</span></h4>
 <span class="action" style="margin-left:5px;">
-<a href="@routes.Items.deleteItem(item.id)"><i class="icon-remove"></i></a>
+<a href="@routes.Modificators.deleteModificator(modificator.id)"><i class="icon-remove"></i></a>
 </span>
 </div>
 <br/>
 
-<div class="nicPanels" id="itemNicPanel@item.id" style="width: 525px;"></div>
+<div class="nicPanels" id="modificatorNicPanel@modificator.id" style="width: 525px;"></div>
 <div id="lecturecontent" class="nicTextContainer">
-<div id="cdContent@item.id" style="width: 525px;">
-@if(item.description!=null){
-@Html(item.description)
+<div id="cdContent@modificator.id" style="width: 525px;">
+@if(modificator.description!=null){
+@Html(modificator.description)
 }
 </div>
 </div>
@@ -36,7 +36,7 @@
 </div>
 </td>
 <td style="padding: 30px;">
-@form(routes.Items.itemPage(item.id)) {
+@form(routes.Modificators.modificatorPage(modificator.id)) {
                            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
                           
 							}
@@ -47,9 +47,9 @@
 }
 
 <fieldset>
-<legend>Add new item</legend>
+<legend>Add new modificator</legend>
 <div class="createForm">
-@form(routes.Items.newItem(category.id)){
+@form(routes.Modificators.newModificator(item.id)){
 <p>
 <input type="text" name="title" placeholder="Name">
 </p>
@@ -86,8 +86,9 @@
 }
 </div>
 </fieldset>
-    @form(routes.Categories.categoryPage(category.id)) {
-    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к категории</button>
+    @form(routes.Items.itemPage(item.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к продукту</button>
+
     }
 </div>
 </div>

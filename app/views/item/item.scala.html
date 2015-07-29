@@ -6,7 +6,9 @@
 <div class="container-fluid">
   <div class="row-fluid">
       <div class="span3">
-
+          @form(routes.Modificators.index(item.id)) {
+          <button type="submit" class="btn btn-primary btn-medium courceCellButton">Модификаторы</button>
+          }
       </div>
     <div class="span9">
 	@form(routes.Items.updateItem(item.id)){
@@ -26,17 +28,17 @@
             </select>
         </p>
         <p>
-            <input type="text" name="price_original" placeholder="Original price">
+            <input type="text" name="price_original" value="@item.price_original" placeholder="Original price">
         </p>
         <p>
-            <input type="text" name="price_for_sale" placeholder="Price for sale">
+            <input type="text" name="price_for_sale" value="@item.price_for_sale" placeholder="Price for sale">
         </p>
 <input type="submit" value="Сохранить"/>
 }
 
 </div>
-      @form(routes.Items.index()) {
-      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к сервисам</button>
+      @form(routes.Items.index(item.category.id)) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к продуктам</button>
 
       }
 </div>

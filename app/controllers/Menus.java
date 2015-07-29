@@ -18,18 +18,19 @@ public class Menus extends Controller{
 
     public static Form<Menu> menuForm=form(Menu.class);
 
-    public static Result index() {
+    public static Result index(int id) {
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
-                        Menu.findAll(),
+                        Service.find.byId(id),
+                        Menu.findByService(id),
                         menuForm
                 )
         );
     }
 
 
-    public static Result newMenu() throws ParseException{
+    public static Result newMenu(int id) throws ParseException{
         //Form<Menu> filledForm=form(Menu.class).bindFromRequest();
         DynamicForm filledForm=form().bindFromRequest();
         DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
@@ -37,13 +38,14 @@ public class Menus extends Controller{
         Logger.debug("startDate:"+filledForm.get("start_time"));
         Logger.debug("deadline:"+filledForm.get("end_time"));
 
-        Menu.create(filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")));
+        Menu.create(filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")), Service.find.byId(id));
 
 
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
-                        Menu.findAll(),
+                        Service.find.byId(id),
+                        Menu.findByService(id),
                         menuForm
                 )
         );
@@ -71,6 +73,7 @@ public class Menus extends Controller{
     public static Result updateMenu(int id) throws ParseException{
         //Form<Menu> filledForm=form(Menu.class).bindFromRequest();
         DynamicForm filledForm=form().bindFromRequest();
+        Service service=Menu.find.byId(id).service;
 
         SimpleDateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
@@ -79,7 +82,8 @@ public class Menus extends Controller{
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
-                        Menu.findAll(),
+                        service,
+                        Menu.findByService(service.id),
                         menuForm
                 )
         );
@@ -87,66 +91,20 @@ public class Menus extends Controller{
     }
 
     public static Result deleteMenu(int id) {
+        Service service=Menu.find.byId(id).service;
+
         Menu.delete(id);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
-                        Menu.findAll(),
+                        service,
+                        Menu.findByService(service.id),
                         menuForm
                 )
         );
 
     }
 
-
-    public static Result menuCategories(int id) {
-
-
-        session("category",id+"");
-        return ok(
-                categories.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Menu.find.byId(id),
-                        Category.findAll(),
-                        Menu.find.byId(id).categories
-                )
-        );
-
-
-    }
-
-
-    public static Result setCategories(int id) throws ParseException{
-        //Form<Menu> filledForm=form(Menu.class).bindFromRequest();
-        DynamicForm filledForm=form().bindFromRequest();
-
-        Logger.debug("categoryList:"+filledForm.get());
-
-        Map<String,String[]> keys = request().body().asFormUrlEncoded();
-        Menu menu= Menu.find.byId(id);
-        menu.categories=new ArrayList<Category>();
-
-        for (Map.Entry<String, String[]> entry : keys.entrySet())
-        {
-            System.out.println(entry.getKey() + "/" + entry.getValue());
-            for(int i=0;i<entry.getValue().length;i++){
-                Logger.debug("category:"+entry.getValue()[i]);
-                menu.categories.add(Category.find.byId(Integer.parseInt(entry.getValue()[i])));
-            }
-        }
-
-        menu.update();
-
-
-        return ok(
-                item.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Menu.find.byId(id)
-                )
-        );
-
-    }
-   
 
 
 }

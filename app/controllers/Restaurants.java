@@ -64,53 +64,7 @@ public static Result restaurantPage(int id) {
 	
 }
 
-    public static Result restaurantServices(int id) {
 
-
-        session("service",id+"");
-        return ok(
-                services.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Restaurant.find.byId(id),
-                        Service.findAll(),
-                        Restaurant.find.byId(id).services
-                )
-        );
-
-
-    }
-
-
-    public static Result setServices(int id) throws ParseException{
-        //Form<Restaurant> filledForm=form(Restaurant.class).bindFromRequest();
-        DynamicForm filledForm=form().bindFromRequest();
-
-        Logger.debug("serviceList:"+filledForm.get());
-
-        Map<String,String[]> keys = request().body().asFormUrlEncoded();
-        Restaurant restaurant= Restaurant.find.byId(id);
-        restaurant.services=new ArrayList<Service>();
-
-        for (Map.Entry<String, String[]> entry : keys.entrySet())
-        {
-            System.out.println(entry.getKey() + "/" + entry.getValue());
-            for(int i=0;i<entry.getValue().length;i++){
-                Logger.debug("service:"+entry.getValue()[i]);
-                restaurant.services.add(Service.find.byId(Integer.parseInt(entry.getValue()[i])));
-            }
-        }
-
-        restaurant.update();
-
-
-        return ok(
-                item.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Restaurant.find.byId(id)
-                )
-        );
-
-    }
 
 
     public static Result updateRestaurant(int id) throws ParseException{
@@ -142,7 +96,6 @@ public static Result deleteRestaurant(int id) {
 				);
 		
 }
-
 
 
 }

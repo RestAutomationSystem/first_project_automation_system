@@ -30,11 +30,13 @@ public class Modificator extends Model{
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date start_time;
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
-	public Date end_time;	
-	
+	public Date end_time;
+    @ManyToOne
 	public UnitType unit_type;
+    @ManyToOne
+    public Item item;
 	
-	public Modificator(String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type){
+	public Modificator(String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type,Item item){
 		this.title=title;
 		this.description=description;
 		this.status=status;
@@ -45,6 +47,7 @@ public class Modificator extends Model{
 		this.start_time=start_time;
 		this.end_time=end_time;
 		this.unit_type=unit_type;
+        this.item=item;
 	}
 	
 	public static Finder<Integer,Modificator> find=new Finder<Integer, Modificator>(Integer.class, Modificator.class);
@@ -53,10 +56,13 @@ public class Modificator extends Model{
 	 public static List<Modificator> findAll() {
 	        return find.all();
 	    }
-	 
+
+    public static List<Modificator> findByItem(int id) {
+        return find.where().eq("item.id", id).findList();
+    }
 	
-	public static void create(String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type){
-		Modificator newModificator=new Modificator(title, description,status,image_path,price_original,price_for_sale,start_time,end_time,unit_type);
+	public static void create(String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type,Item item){
+		Modificator newModificator=new Modificator(title, description,status,image_path,price_original,price_for_sale,start_time,end_time,unit_type,item);
 		newModificator.save();
 	}
 	

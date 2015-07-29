@@ -28,16 +28,17 @@ public class Service extends Model{
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date end_time;
 
-    @ManyToMany(cascade=CascadeType.REMOVE)
-    public List<Menu> menus=new ArrayList<Menu>();
+    @ManyToOne
+    public Restaurant restaurant;
 	
 	
-	public Service(String title,String description,String status,Date start_time,Date end_time){
+	public Service(String title,String description,String status,Date start_time,Date end_time,Restaurant restaurant){
 		this.title=title;
 		this.description=description;
 		this.status=status;
 		this.start_time=start_time;
 		this.end_time=end_time;
+        this.restaurant=restaurant;
 	}
 	
 	public static Finder<Integer,Service> find=new Finder<Integer, Service>(Integer.class, Service.class);
@@ -46,10 +47,14 @@ public class Service extends Model{
 	 public static List<Service> findAll() {
 	        return find.all();
 	    }
+
+    public static List<Service> findByRestaurant(int id) {
+        return find.where().eq("restaurant.id", id).findList();
+    }
 	 
 	
-	public static void create(String title,String description,String status,Date start_time,Date end_time){
-		Service newService=new Service(title, description,status,start_time,end_time);
+	public static void create(String title,String description,String status,Date start_time,Date end_time,Restaurant restaurant){
+		Service newService=new Service(title, description,status,start_time,end_time,restaurant);
 		newService.save();
 	}
 	

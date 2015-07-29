@@ -26,16 +26,24 @@ public class Category extends Model{
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
 	public Date start_time;
 	@Formats.DateTime(pattern="dd/MM/yyyy HH:mm")
-	public Date end_time;	
+	public Date end_time;
+
+    @OneToOne
+    public Category parent_category;
+
+    @ManyToOne
+    public Menu menu;
 	
-	
-	public Category(String title,String description,String status,Date start_time,Date end_time){
-		this.title=title;
-		this.description=description;
-		this.status=status;
-		this.start_time=start_time;
-		this.end_time=end_time;
-	}
+	public Category(String title,String description,String status,Date start_time,Date end_time,Category parent_category,Menu menu){
+        this.title=title;
+        this.description=description;
+        this.status=status;
+        this.start_time=start_time;
+        this.end_time=end_time;
+        this.parent_category=parent_category;
+        this.menu=menu;
+    }
+
 	
 	public static Finder<Integer,Category> find=new Finder<Integer, Category>(Integer.class, Category.class);
 	
@@ -43,12 +51,20 @@ public class Category extends Model{
 	 public static List<Category> findAll() {
 	        return find.all();
 	    }
-	 
+
+    public static List<Category> findByMenu(int id) {
+        return find.where().eq("menu.id", id).eq("parent_category", null).findList();
+    }
+
+    public static List<Category> findByCategory(int id) {
+        return find.where().eq("parent_category.id", id).findList();
+    }
 	
-	public static void create(String title,String description,String status,Date start_time,Date end_time){
-		Category newCategory=new Category(title, description,status,start_time,end_time);
+	public static void create(String title,String description,String status,Date start_time,Date end_time,Category parent_category,Menu menu){
+		Category newCategory=new Category(title, description,status,start_time,end_time,parent_category,menu);
 		newCategory.save();
 	}
+
 	
 	public static void update(int id,String title,String description,String status,Date start_time,Date end_time){
 		Category category=Category.find.ref(id);

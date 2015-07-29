@@ -1,4 +1,4 @@
-@(user:User,services:List[Service],serviceForm:Form[Service])
+@(user:User,restaurant:Restaurant,services:List[Service],serviceForm:Form[Service])
 
 
 
@@ -49,7 +49,7 @@
 <fieldset>
 <legend>Add new service</legend>
 <div class="createForm">
-@form(routes.Services.newService()){
+@form(routes.Services.newService(restaurant.id)){
 <p>
 <input type="text" name="title" placeholder="Name">
 </p>
@@ -68,6 +68,9 @@
 }
 </div>
 </fieldset>
+    @form(routes.Restaurants.restaurantPage(restaurant.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к ресторану</button>
+    }
 </div>
 </div>
 }

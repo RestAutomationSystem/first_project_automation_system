@@ -6,7 +6,7 @@
 <div class="container-fluid">
   <div class="row-fluid">
       <div class="span3">
-          @form(routes.Services.serviceMenus(service.id)) {
+          @form(routes.Menus.index(service.id)) {
           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Меню</button>
           }
       </div>
@@ -21,7 +21,7 @@
 }
 
 </div>
-      @form(routes.Services.index()) {
+      @form(routes.Services.index(service.restaurant.id)) {
       <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к сервисам</button>
 
       }
