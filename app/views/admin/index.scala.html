@@ -1,0 +1,40 @@
+@(user:User)
+
+@import helper._
+@main(null){
+    <div class="row">
+        <h3>@user.email</h3>
+        <div class="span4">
+            <div class="announcements">
+                <button class="btn action-btn btn-success" type="submit">
+                    <a href="@routes.AdminPanel.logout()">
+                    <div class="span-button">Выход</div></a></button><br/>
+
+                <button class="btn action-btn btn-success" type="submit">
+                    <a href="@routes.Restaurants.index()">
+                    <div class="span-button">Ресторан</div></a></button>
+
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Меню и товары</div></button>
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Склад</div></button>
+
+
+
+                <button class="btn action-btn btn-success" type="submit">
+                    <a href="@routes.Users.index()">
+                    <div class="span-button">Сотрудники</div></a></button>
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Оборудование</div></button>
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Касса</div></button><br/>
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Отчеты</div></button>
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Журналы событий</div></button>
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Система скидок</div></button>
+            </div>
+        </div>
+    </div>
+}

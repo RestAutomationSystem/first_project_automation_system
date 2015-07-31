@@ -1,0 +1,26 @@
+@(user:User,userForm:Form[User])
+
+@import helper._
+@main(null){
+    <fieldset>
+        <legend>Новый сотрудник</legend>
+        <div class="createForm">
+            @form(routes.Users.newUser()){
+
+            <p>
+                <input type="text" name="name" placeholder="Name"  />
+            </p>
+            <p>
+                <input type="email" name="email" placeholder="Email"  />
+            </p>
+            <p>
+                <input type="password" name="password" placeholder="Password"/>
+            </p>
+            <p>
+                <input type="password" name="password2" placeholder="Confirm password"/>
+            </p>
+                <p><button class="btn btn-primary" type="submit">Создать</button></p>
+            }
+        </div>
+    </fieldset>
+}

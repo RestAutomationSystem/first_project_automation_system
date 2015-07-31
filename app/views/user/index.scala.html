@@ -1,0 +1,37 @@
+@(user:User,emps:List[User],userForm:Form[User])
+
+@import helper._
+@main(null){
+  <div class="contentBar">
+  <div class="announcements">
+      @if(emps.size()>0) {
+        <h3>Сотрудники</h3>
+        @for(emp<-emps){
+            <tr>
+            <td>
+            <div  >
+                <div class="row" style="margin-left: 3px;">
+                    <h4><span class="userDescriptionTitle item">
+                        @emp.name</span></h4>
+                    <span class="action" style="margin-left:5px;">
+                    <a href="@routes.Users.deleteUser(emp.email)">
+                        <i class="icon-remove"></i></a></span>
+                </div>
+
+            </div>
+            </td>
+            <td style="padding: 30px;">
+                @form(routes.Users.userPage(emp.email)) {
+                <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                }
+            </td>
+            </tr>
+        }
+      }
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+          <a href="@routes.Users.addingUserPage()">Добавить</a></button>
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+          <a href="@routes.AdminPanel.index()">Назад</a></button>
+  </div>
+  </div>
+}

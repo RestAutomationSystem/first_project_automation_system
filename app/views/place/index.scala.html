@@ -1,73 +1,36 @@
 @(user:User,section:RestaurantSection,places:List[Place],placesForm:Form[Place])
 
-
-
 @import helper._
 @main(null){
-
-      <div class="contentBar">  
-<div class="announcements"> 
-@if(places.size()>0){
-<h3>My Places</h3>
-<table class="table">
-@for(place<-places){
-<tr>
-<td>
-<div >
-
-  <div class="row" style="margin-left: 20px;">
-  <div class="row" style="margin-left: 20px;">
-<h4><span class="placesDescriptionTitle item">@place.getTitle()</span></h4>
-
-</div>
-<br/>
-
-<div id="lecturecontent" class="nicTextContainer">
-<div>
-@if(place.getDescription()!=null){
-@Html(place.getDescription())
-}
-</div>
-</div>
-</div>
-</div>
-</td>
-<td style="padding: 30px;">
-@form(routes.Places.placePage(place.getId())) {
-                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
-                          
-							}
-</td>
-</tr>
-}
-</table>
-}
-
-<fieldset>
-<legend>Add new places</legend>
-<div class="createForm">
-@form(routes.Places.newPlace(section.id)){
-<p>
-<input type="text" name="title" placeholder="Name">
-</p>
-<p>
-<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
-</p>
-<p>
-<input id="startDate" type="text" class="datepicker" name="start_time">
-</p>
-<p>
-<input id="endDate" type="text" class="datepicker" name="end_time">
-</p>
-<p>
-<button class="btn btn-primary" type="submit">Create</button>
-</p>
-}
-</div>
-    @form(routes.Sections.sectionPage(section.id)) {
-    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к секции</button>
-    }
-</fieldset>
-</div>
-</div>
+    <div class="contentBar">
+    <div class="announcements">
+        @if(places.size()>0){
+            <h3>Столы</h3>
+            <place class="place">
+            @for(place<-places){
+                <tr>
+                <td>
+                <div class="row" style="margin-left: 20px;">
+                    <h4><span class="placesDescriptionTitle item">@place.getTitle()</span></h4>
+                    <div id="lecturecontent" class="nicTextContainer">
+                        @if(place.getDescription()!=null){
+                            @Html(place.getDescription())
+                        }
+                    </div>
+                </div>
+                </td>
+                <td style="padding: 30px;">
+                    @form(routes.Places.placePage(place.getId())) {
+                        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                    }
+                </td>
+                </tr>
+            }
+            </place>
+        }
+        @form(routes.Sections.sectionPage(section.id)) {
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
+        }
+    </div>
+    </div>
 }

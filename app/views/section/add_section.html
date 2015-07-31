@@ -1,0 +1,23 @@
+<fieldset>
+    <legend>Add new section</legend>
+    <div class="createForm">
+        @form(routes.Sections.newSection(restaurant.id)){
+        <p>
+            <input type="text" name="title" placeholder="Name">
+        </p>
+        <p>
+            <textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+        </p>
+        <p>
+            <input id="startDate" type="text" class="datepicker" name="start_time">
+        </p>
+        <p>
+            <input id="endDate" type="text" class="datepicker" name="end_time">
+        </p>
+        <p>
+            <button class="btn btn-primary" type="submit">Create</button>
+        </p>
+        }
+    </div>
+
+</fieldset>

@@ -48,7 +48,9 @@ public class RestaurantSection extends Model{
 	 public static List<RestaurantSection> findAll() {
 	        return find.all();
 	    }
-	 
+    public static List<RestaurantSection> findByRestaurant(int id) {
+        return find.where().eq("restaurant.id", id).findList();
+    }
 	
 	public static void create(String title,String description,String image,Restaurant restaurant,Date start_time,Date end_time){
 		RestaurantSection newRestaurantSection=new RestaurantSection(title, description,image,restaurant,start_time,end_time);

@@ -3,122 +3,131 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /                                   controllers.Application.index()
 
-GET    /login                          		controllers.Application.login()
-GET    /confirm                          	controllers.Application.confirm(email:String)
+GET     /login                              controllers.Application.login()
+GET     /confirm                          	controllers.Application.confirm(email:String)
 POST    /login                         	    controllers.Application.authenticate()
-GET		/logout								controllers.Application.logout()
-GET    /register                          	controllers.Application.registerForm()
-POST   /register                          	controllers.Application.register()
-GET    /list                          		controllers.Application.list()
+GET     /register                          	controllers.Application.registerForm()
+POST    /register                          	controllers.Application.register()
+GET     /list                          		controllers.Application.list()
 
+#Panels
+GET     /admin_panel                        controllers.AdminPanel.index()
+GET		/logout								controllers.AdminPanel.logout()
+#GET		/menus_main							controllers.AdminPanel.menusMain()
+#GET		/stores_main						controllers.AdminPanel.storesMain()
+#GET		/users_main							controllers.AdminPanel.usersMain()
+#GET		/machines_main						controllers.AdminPanel.machinesMain()
+#GET		/cashiers_main						controllers.AdminPanel.cashiersMain()
+#GET		/reports_main						controllers.AdminPanel.reportsMain()
+#GET		/journals_main						controllers.AdminPanel.journalsMain()
+#GET		/discounts_main						controllers.AdminPanel.discountsMain()
+
+#Users
+GET     /users                        controllers.Users.index()
+GET     /new_user                     controllers.Users.addingUserPage()
+POST    /users                        controllers.Users.newUser()
+GET     /users/:email/delete             controllers.Users.deleteUser(email: String)
+POST    /users/:email                    controllers.Users.updateUser(email: String)
+GET     /users/:email                    controllers.Users.userPage(email: String)
 
 #Restaurants
-GET    /restaurants                          	controllers.Restaurants.index()
-POST    /restaurants                          	controllers.Restaurants.newRestaurant()
-GET    /restaurants/:id/delete                 controllers.Restaurants.deleteRestaurant(id: Integer)
-POST    /restaurants/:id                        controllers.Restaurants.updateRestaurant(id: Integer)
-GET    /restaurants/:id                         controllers.Restaurants.restaurantPage(id: Integer)
-
-
-
-
+GET     /restaurants                        controllers.Restaurants.index()
+GET     /new_restaurant                     controllers.Restaurants.addingRestaurantPage()
+POST    /restaurants                        controllers.Restaurants.newRestaurant()
+GET     /restaurants/:id/delete             controllers.Restaurants.deleteRestaurant(id: Integer)
+POST    /restaurants/:id                    controllers.Restaurants.updateRestaurant(id: Integer)
+GET     /restaurants/:id                    controllers.Restaurants.restaurantPage(id: Integer)
 
 #Sections
-GET    /restaurants/:id/sections                          	controllers.Sections.index(id: Integer)
-POST   /restaurants/:id/sections                          	controllers.Sections.newSection(id: Integer)
+GET    /restaurants/:id/sections            controllers.Sections.index(id: Integer)
+GET    /restaurants/:id/new_section         controllers.Sections.addingSectionPage(id: Integer)
+POST   /restaurants/:id/sections            controllers.Sections.newSection(id: Integer)
 GET    /sections/:id/delete                 controllers.Sections.deleteSection(id: Integer)
-POST    /sections/:id                        controllers.Sections.updateSection(id: Integer)
-GET    /sections/:id                         controllers.Sections.sectionPage(id: Integer)
+POST   /sections/:id                        controllers.Sections.updateSection(id: Integer)
+GET    /sections/:id                        controllers.Sections.sectionPage(id: Integer)
 
 #Places
-GET    /sections/:id/places                          	controllers.Places.index(id: Integer)
-POST   /sections/:id/places                          	controllers.Places.newPlace(id: Integer)
-GET    /places/:id/delete                 controllers.Places.deletePlace(id: Integer)
-POST    /places/:id                        controllers.Places.updatePlace(id: Integer)
+GET    /sections/:id/places                controllers.Places.index(id: Integer)
+POST   /sections/:id/places                controllers.Places.newPlace(id: Integer)
+GET    /places/:id/delete                  controllers.Places.deletePlace(id: Integer)
+POST   /places/:id                         controllers.Places.updatePlace(id: Integer)
 GET    /places/:id                         controllers.Places.placePage(id: Integer)
 
 #Suppliers
-GET    /suppliers                          	controllers.Suppliers.index()
-POST    /suppliers                          	controllers.Suppliers.newSupplier()
-GET    /suppliers/:id/delete                 controllers.Suppliers.deleteSupplier(id: Integer)
-POST    /suppliers/:id                        controllers.Suppliers.updateSupplier(id: Integer)
-GET    /suppliers/:id                         controllers.Suppliers.supplierPage(id: Integer)
+GET    /suppliers                          controllers.Suppliers.index()
+POST   /suppliers                          controllers.Suppliers.newSupplier()
+GET    /suppliers/:id/delete               controllers.Suppliers.deleteSupplier(id: Integer)
+POST   /suppliers/:id                      controllers.Suppliers.updateSupplier(id: Integer)
+GET    /suppliers/:id                      controllers.Suppliers.supplierPage(id: Integer)
 
-
-#storages
-GET    /restaurants/:id/storages                          	controllers.Storages.index(id: Integer)
-POST   /restaurants/:id/storages                          	controllers.Storages.newStorage(id: Integer)
-GET    /storages/:id/delete                 controllers.Storages.deleteStorage(id: Integer)
-POST    /storages/:id                        controllers.Storages.updateStorage(id: Integer)
-GET    /storages/:id                         controllers.Storages.storagePage(id: Integer)
-
+#Storages
+GET    /restaurants/:id/storages           controllers.Storages.index(id: Integer)
+GET    /restaurants/:id/new_storage        controllers.Storages.addingStoragePage(id: Integer)
+POST   /restaurants/:id/storages           controllers.Storages.newStorage(id: Integer)
+GET    /storages/:id/delete                controllers.Storages.deleteStorage(id: Integer)
+POST   /storages/:id                       controllers.Storages.updateStorage(id: Integer)
+GET    /storages/:id                       controllers.Storages.storagePage(id: Integer)
 
 #Foods
-GET    /storages/:id/foods                          	controllers.Foods.index(id: Integer)
-POST   /storages/:id/foods                          	controllers.Foods.newFood(id: Integer)
-GET    /foods/:id/delete                 controllers.Foods.deleteFood(id: Integer)
-POST    /foods/:id                        controllers.Foods.updateFood(id: Integer)
-GET    /foods/:id                         controllers.Foods.foodPage(id: Integer)
+GET    /storages/:id/foods                 controllers.Foods.index(id: Integer)
+POST   /storages/:id/foods                 controllers.Foods.newFood(id: Integer)
+GET    /foods/:id/delete                   controllers.Foods.deleteFood(id: Integer)
+POST   /foods/:id                          controllers.Foods.updateFood(id: Integer)
+GET    /foods/:id                          controllers.Foods.foodPage(id: Integer)
 
-
-#kitchens
-GET    /restaurants/:id/kitchens                          	controllers.Kitchens.index(id: Integer)
-POST   /restaurants/:id/kitchens                          	controllers.Kitchens.newKitchen(id: Integer)
-GET    /kitchens/:id/delete                 controllers.Kitchens.deleteKitchen(id: Integer)
-POST    /kitchens/:id                        controllers.Kitchens.updateKitchen(id: Integer)
-GET    /kitchens/:id                         controllers.Kitchens.kitchenPage(id: Integer)
-
+#Kitchens
+GET    /restaurants/:id/kitchens           controllers.Kitchens.index(id: Integer)
+GET    /restaurants/:id/new_kitchen        controllers.Kitchens.addingKitchenPage(id: Integer)
+POST   /restaurants/:id/kitchens           controllers.Kitchens.newKitchen(id: Integer)
+GET    /kitchens/:id/delete                controllers.Kitchens.deleteKitchen(id: Integer)
+POST   /kitchens/:id                       controllers.Kitchens.updateKitchen(id: Integer)
+GET    /kitchens/:id                       controllers.Kitchens.kitchenPage(id: Integer)
 
 #Services
-GET    /restaurants/:id/services                          	controllers.Services.index(id: Integer)
-POST    /restaurants/:id/services                          	controllers.Services.newService(id: Integer)
-GET    /services/:id/delete                 controllers.Services.deleteService(id: Integer)
-POST    /services/:id                        controllers.Services.updateService(id: Integer)
-GET    /services/:id                         controllers.Services.servicePage(id: Integer)
-
-
+GET    /restaurants/:id/services           controllers.Services.index(id: Integer)
+GET    /restaurants/:id/new_service        controllers.Services.addingServicePage(id: Integer)
+POST   /restaurants/:id/services           controllers.Services.newService(id: Integer)
+GET    /services/:id/delete                controllers.Services.deleteService(id: Integer)
+POST   /services/:id                       controllers.Services.updateService(id: Integer)
+GET    /services/:id                       controllers.Services.servicePage(id: Integer)
 
 #Menus
-GET    /services/:id/menus                          	controllers.Menus.index(id: Integer)
-POST    /services/:id/menus                          	controllers.Menus.newMenu(id: Integer)
-GET    /menus/:id/delete                 controllers.Menus.deleteMenu(id: Integer)
-POST    /menus/:id                        controllers.Menus.updateMenu(id: Integer)
-GET    /menus/:id                         controllers.Menus.menuPage(id: Integer)
-
+GET    /services/:id/menus                 controllers.Menus.index(id: Integer)
+POST   /services/:id/menus                 controllers.Menus.newMenu(id: Integer)
+GET    /menus/:id/delete                   controllers.Menus.deleteMenu(id: Integer)
+POST   /menus/:id                          controllers.Menus.updateMenu(id: Integer)
+GET    /menus/:id                          controllers.Menus.menuPage(id: Integer)
 
 #Categories
-GET    /menus/:id/categories                          	controllers.Categories.index(id: Integer)
-POST    /menus/:id/categories                          	controllers.Categories.newCategory(id: Integer)
-GET    /categories/:id/delete                 controllers.Categories.deleteCategory(id: Integer)
-POST    /categories/:id                        controllers.Categories.updateCategory(id: Integer)
-GET    /categories/:id                         controllers.Categories.categoryPage(id: Integer)
-
-POST   /categories/:id/newchild                controllers.Categories.newChildCategory(id: Integer)
+GET    /menus/:id/categories               controllers.Categories.index(id: Integer)
+POST   /menus/:id/categories               controllers.Categories.newCategory(id: Integer)
+GET    /categories/:id/delete              controllers.Categories.deleteCategory(id: Integer)
+POST   /categories/:id                     controllers.Categories.updateCategory(id: Integer)
+GET    /categories/:id                     controllers.Categories.categoryPage(id: Integer)
+POST   /categories/:id/newchild            controllers.Categories.newChildCategory(id: Integer)
 
 #Items
-GET    /categories/:id/items                          	controllers.Items.index(id: Integer)
-POST   /categories/:id/items                          	controllers.Items.newItem(id: Integer)
-GET    /items/:id/delete                 controllers.Items.deleteItem(id: Integer)
-POST    /items/:id                        controllers.Items.updateItem(id: Integer)
-GET    /items/:id                         controllers.Items.itemPage(id: Integer)
-
+GET    /categories/:id/items               controllers.Items.index(id: Integer)
+POST   /categories/:id/items               controllers.Items.newItem(id: Integer)
+GET    /items/:id/delete                   controllers.Items.deleteItem(id: Integer)
+POST   /items/:id                          controllers.Items.updateItem(id: Integer)
+GET    /items/:id                          controllers.Items.itemPage(id: Integer)
 
 #Modificators
-GET    /items/:id/modificators                          	controllers.Modificators.index(id: Integer)
-POST    /items/:id/modificators                          	controllers.Modificators.newModificator(id: Integer)
-GET    /modificators/:id/delete                 controllers.Modificators.deleteModificator(id: Integer)
-POST    /modificators/:id                        controllers.Modificators.updateModificator(id: Integer)
-GET    /modificators/:id                         controllers.Modificators.modificatorPage(id: Integer)
+GET    /items/:id/modificators             controllers.Modificators.index(id: Integer)
+POST   /items/:id/modificators             controllers.Modificators.newModificator(id: Integer)
+GET    /modificators/:id/delete            controllers.Modificators.deleteModificator(id: Integer)
+POST   /modificators/:id                   controllers.Modificators.updateModificator(id: Integer)
+GET    /modificators/:id                   controllers.Modificators.modificatorPage(id: Integer)
 
 #UnitTypes
 GET    /unitTypes                          	controllers.UnitTypes.index()
-POST    /unitTypes                          	controllers.UnitTypes.newUnitType()
-GET    /unitTypes/:id/delete                 controllers.UnitTypes.deleteUnitType(id: Integer)
-POST    /unitTypes/:id                        controllers.UnitTypes.updateUnitType(id: Integer)
-GET    /unitTypes/:id                         controllers.UnitTypes.unitTypePage(id: Integer)
+POST   /unitTypes                          	controllers.UnitTypes.newUnitType()
+GET    /unitTypes/:id/delete                controllers.UnitTypes.deleteUnitType(id: Integer)
+POST   /unitTypes/:id                       controllers.UnitTypes.updateUnitType(id: Integer)
+GET    /unitTypes/:id                       controllers.UnitTypes.unitTypePage(id: Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
-

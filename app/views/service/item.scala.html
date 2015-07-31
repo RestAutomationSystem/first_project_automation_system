@@ -1,31 +1,27 @@
 @(user:User,service:Service)
 
-
 @import helper._
 @main(null){
-<div class="container-fluid">
+  <div class="container-fluid">
   <div class="row-fluid">
-      <div class="span3">
-          @form(routes.Menus.index(service.id)) {
-          <button type="submit" class="btn btn-primary btn-medium courceCellButton">Меню</button>
-          }
+      <div class="span9">
+	        @form(routes.Services.updateService(service.id)){
+                <input type="text" name="title" value="@service.title"/>
+                <textarea name="description">@service.description</textarea>
+<!--                <input id="startDate" type="text" class="datepicker" name="start_time" value="@service.start_time.format("dd/MM/yyyy HH:mm")">
+                <input id="endDate" type="text" class="datepicker" name="end_time" value="@service.end_time.format("dd/MM/yyyy HH:mm")">-->
+                <input type="submit" value="Сохранить"/>
+                <input type="submit" value="Удалить"/>
+            }
       </div>
-    <div class="span9">
-	@form(routes.Services.updateService(service.id)){
-<input type="text" name="title" value="@service.title"/>
-<textarea name="description">@service.description</textarea>
-<input id="startDate" type="text" class="datepicker" name="start_time" value="@service.start_time.format("dd/MM/yyyy HH:mm")">
-<input id="endDate" type="text" class="datepicker" name="end_time" value="@service.end_time.format("dd/MM/yyyy HH:mm")">
 
-<input type="submit" value="Сохранить"/>
-}
-
-</div>
-      @form(routes.Services.index(service.restaurant.id)) {
-      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к сервисам</button>
-
+      @form(routes.Menus.index(service.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Меню</button>
       }
-</div>
-</div>
 
+      @form(routes.Services.index(service.restaurant.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
+      }
+  </div>
+  </div>
 }

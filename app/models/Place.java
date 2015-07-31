@@ -33,7 +33,7 @@ public class Place extends Model{
 	@ManyToOne
 	public RestaurantSection section;
 	
-	public Place(String title,String description,String image,RestaurantSection section, Date start_time, Date end_time){
+	public Place(String title, String description, String image, RestaurantSection section, Date start_time, Date end_time){
 		this.title=title;
 		this.description=description;
 		this.image=image;
@@ -42,31 +42,28 @@ public class Place extends Model{
         this.end_time=end_time;
 	}
 	
-	public static Finder<Integer,Place> find=new Finder<Integer, Place>(Integer.class, Place.class);
-	
-	
-	 public static List<Place> findAll() {
+	public static Finder<Integer, Place> find = new Finder<Integer, Place>(Integer.class, Place.class);
+
+    public static List<Place> findAll() {
 	        return find.all();
 	    }
-	 
-	
+
 	public static void create(String title,String description,String image,RestaurantSection section, Date start_time, Date end_time){
-		Place newPlace=new Place(title, description,image,section,start_time,end_time);
+		Place newPlace = new Place(title, description,image,section,start_time,end_time);
 		newPlace.save();
 	}
 	
-	public static void update(int id,String title,String description,String image, Date start_time, Date end_time){
-		Place table=Place.find.ref(id);
+	public static void update(int id, String title, String description,String image, Date start_time, Date end_time){
+		Place place = Place.find.ref(id);
 		System.out.println("id:"+id);
-		table.title=title;
-		table.description=description;
-		table.image=image;
-        table.start_time=start_time;
-        table.end_time=end_time;
-		table.update();
-		
-		
+		place.title=title;
+		place.description=description;
+		place.image=image;
+        place.start_time=start_time;
+        place.end_time=end_time;
+		place.update();
 	}
+
 	public static void delete(int id){
 		find.ref(id).delete();
 	}
@@ -134,5 +131,4 @@ public class Place extends Model{
     public void setSection(RestaurantSection section) {
         this.section = section;
     }
-
 }

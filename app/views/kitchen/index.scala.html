@@ -1,76 +1,49 @@
 @(user:User,restaurant:Restaurant,kitchens:List[Kitchen],kitchenForm:Form[Kitchen])
 
-
-
 @import helper._
 @main(null){
-
-      <div class="contentBar">  
-<div class="announcements"> 
-@if(kitchens.size()>0){
-<h3>My Kitchens</h3>
-<table class="table">
-@for(kitchen<-kitchens){
-<tr>
-<td>
-<div id="kitchen@kitchen.id" >
-
-  <div class="row" style="margin-left: 20px;">
-  <div class="row" style="margin-left: 20px;">
-<h4><span class="kitchenDescriptionTitle item" id="@kitchen.id">@kitchen.title</span></h4>
-<span class="action" style="margin-left:5px;">
-<a href="@routes.Kitchens.deleteKitchen(kitchen.id)"><i class="icon-remove"></i></a>
-</span>
-</div>
-<br/>
-
-<div class="nicPanels" id="kitchenNicPanel@kitchen.id" style="width: 525px;"></div>
-<div id="lecturecontent" class="nicTextContainer">
-<div id="cdContent@kitchen.id" style="width: 525px;">
-@if(kitchen.description!=null){
-@Html(kitchen.description)
-}
-</div>
-</div>
-</div>
-</div>
-</td>
-<td style="padding: 30px;">
-@form(routes.Kitchens.kitchenPage(kitchen.id)) {
-                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
-                          
-							}
-</td>
-</tr>
-}
-</table>
-}
-
-<fieldset>
-<legend>Add new kitchen</legend>
-<div class="createForm">
-@form(routes.Kitchens.newKitchen(restaurant.id)){
-<p>
-<input type="text" name="title" placeholder="Name">
-</p>
-<p>
-<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
-</p>
-<p>
-<input id="startDate" type="text" class="datepicker" name="start_time">
-</p>
-<p>
-<input id="endDate" type="text" class="datepicker" name="end_time">
-</p>
-<p>
-<button class="btn btn-primary" type="submit">Create</button>
-</p>
-}
-</div>
-    @form(routes.Restaurants.restaurantPage(restaurant.id)) {
-    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к ресторану</button>
+  <div class="contentBar">
+  <div class="announcements">
+    @if(kitchens.size()>0){
+        <h3>Кухни</h3>
+        <place class="place">
+        @for(kitchen<-kitchens){
+            <tr>
+            <td>
+            <div id="kitchen@kitchen.id" >
+            <div class="row" style="margin-left: 20px;">
+                <h4><span class="kitchenDescriptionTitle item" id="@kitchen.id">@kitchen.title</span></h4>
+                <span class="action" style="margin-left:5px;">
+                    <a href="@routes.Kitchens.deleteKitchen(kitchen.id)"><i class="icon-remove"></i></a>
+                </span>
+            <div class="nicPanels" id="kitchenNicPanel@kitchen.id" style="width: 525px;"></div>
+            <div id="lecturecontent" class="nicTextContainer">
+                <div id="cdContent@kitchen.id" style="width: 525px;">
+                    @if(kitchen.description!=null){
+                        @Html(kitchen.description)
+                    }
+                </div>
+            </div>
+            </div>
+            </div>
+            </td>
+            <td style="padding: 30px;">
+                @form(routes.Kitchens.kitchenPage(kitchen.id)) {
+                   <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                }
+            </td>
+            </tr>
+        }
+        </place>
     }
-</fieldset>
-</div>
-</div>
+
+      @form(routes.Kitchens.addingKitchenPage(restaurant.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Добавить</button>
+      }
+
+      @form(routes.Restaurants.restaurantPage(restaurant.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
+      }
+  </div>
+  </div>
 }

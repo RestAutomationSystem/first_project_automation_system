@@ -1,41 +1,27 @@
 @(form:Form[Application.Login])
 
-@main(null){
- <div class="row">
-  <div class="span4"></div>
-  <div class="span4">
-  
-		<div class="announcements">
-  
- <ul class="nav nav-tabs">
-  <li class="active">
-  <a href="@routes.Application.login">Sign in</a>
-  </li>
-  <li> <a href="@routes.Application.register">Sign up</a></li>
-</ul>
+@main(null) {
+    <div class="row">
+        <div class="span4">
+            <div class="announcements">
+                @helper.form(routes.Application.authenticate) {
 
-  
- 
- @helper.form(routes.Application.authenticate) {
-       
-<h1>Sign in</h1>
-  @if(form.hasGlobalErrors) { 
-                <p class="error">
-                    @form.globalError.message
-                </p>
-            }
-<p>Email:admin@@sample.com
-<input type="email" name="email" placeholder="Email" />
-</p>
-<p>Password:admin
-<input type="password" name="password" placeholder="Password"/>
-</p>
-<p>
-<button class="btn action-btn btn-success" type="submit" >Login</button>
-<a href="@routes.Application.register">Sign up</a>
-</p>
-}
-</div>
-</div>
-</div>
+                    <div class="span-authentication"><h1>Авторизация</h1></div>
+                    @if(form.hasGlobalErrors) {
+                        <div class="error"><p class="error">@form.globalError.message</p></div>
+                    }
+                    <p><input type="email" name="email" placeholder="Логин" /></p>
+                    <p><input type="password" name="password" placeholder="Пароль"/></p>
+                    <p>
+                        <button class="btn action-btn btn-success" type="submit">
+                        <div class="span-button">Вход</div></button>
+                    </p>
+                }
+            </div>
+            <p>
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Выключить систему</div></button>
+            </p>
+        </div>
+    </div>
 }

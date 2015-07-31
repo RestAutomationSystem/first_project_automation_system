@@ -1,39 +1,31 @@
 @(user:User,place:Place)
 
-
 @import helper._
 @main(null){
-<div class="container-fluid">
+  <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span3">
-     
-    </div>
     <div class="span9">
 	@form(routes.Sections.updateSection(place.getId())){
-<input type="text" name="title" value="@place.getTitle()"/>
-<textarea name="description">@place.getDescription()</textarea>
-@if(place.getStart_time()!=null){
-<input id="startDate" type="text" class="datepicker" name="start_time" value="@place.getStart_time().format("dd/MM/yyyy HH:mm")">
- }else{
-        <input id="startDate" type="text" class="datepicker" name="start_time" >
-}
-@if(place.getEnd_time()!=null){
-<input id="endDate" type="text" class="datepicker" name="end_time" value="@place.getEnd_time().format("dd/MM/yyyy HH:mm")">
-}else{
-        <input id="endDate" type="text" class="datepicker" name="end_time" >
- }
-
-<input type="submit" value="Сохранить"/>
-}
-
-</div>
-<div class="span2">
-
-    @form(routes.Places.index(place.section.id)) {
-    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к местам</button>
+        <input type="text" name="title" value="@place.getTitle()"/>
+        <textarea name="description">@place.getDescription()</textarea>
+        <!--@if(place.getStart_time()!=null){
+            <input id="startDate" type="text" class="datepicker" name="start_time" value="@place.getStart_time().format("dd/MM/yyyy HH:mm")">
+        }else{
+            <input id="startDate" type="text" class="datepicker" name="start_time" >
+        }
+        @if(place.getEnd_time()!=null){
+            <input id="endDate" type="text" class="datepicker" name="end_time" value="@place.getEnd_time().format("dd/MM/yyyy HH:mm")">
+        }else{
+            <input id="endDate" type="text" class="datepicker" name="end_time" >
+        }-->
+        <input type="submit" value="Сохранить"/>
     }
-							</div>
-</div>
-</div>
-
+    </div>
+    <div class="span2">
+        @form(routes.Places.index(place.section.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
+        }
+    </div>
+ </div>
+ </div>
 }

@@ -45,6 +45,10 @@ public class User extends Model{
         return find.all();
     }
 
+    public static List<User> findAllEmployee(){
+        return find.where().eq("role", 2).findList();
+    }
+
     public static User authenticate(String email,String password){
         return find.where().eq("email", email).eq("password", password).findUnique();
     }
@@ -54,5 +58,17 @@ public class User extends Model{
 
         newUser.save();
 		return newUser;
+    }
+
+    public static void update(String o_email,String name,String password){
+        User user=User.find.byId(o_email);
+        user.name=name;
+        user.password=password;
+
+        user.update();
+    }
+
+    public static void deleteUser(String email){
+        find.byId(email).delete();
     }
 }
