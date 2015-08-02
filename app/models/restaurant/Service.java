@@ -53,9 +53,10 @@ public class Service extends Model{
     }
 	 
 	
-	public static void create(String title,String description,String status,Date start_time,Date end_time,Restaurant restaurant){
+	public static int create(String title,String description,String status,Date start_time,Date end_time,Restaurant restaurant){
 		Service newService=new Service(title, description,status,start_time,end_time,restaurant);
 		newService.save();
+        return newService.id;
 	}
 	
 	public static void update(int id,String title,String description,String status,Date start_time,Date end_time){

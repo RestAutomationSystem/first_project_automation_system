@@ -27,14 +27,17 @@ public class Kitchens extends Controller{
         DynamicForm filledForm=form().bindFromRequest();
         DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
-        Logger.debug("startDate:"+filledForm.get("start_time"));
-        Logger.debug("deadline:"+filledForm.get("end_time"));
-        Date now = new Date();
+       Date now = new Date();
 
         //TODO: data and other parameters
-        Kitchen.create(filledForm.get("title"), filledForm.get("description"),"",
+        int k_id=Kitchen.create(filledForm.get("title"), filledForm.get("description"),"",
             Restaurant.find.byId(id),now,now);
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
+        String desc="Создана новая кухня:"+k_id+" внутри ресторана:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
+        Event event=new Event("KITCHEN",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+        event.save();
+        Logger.info(desc);
         return ok(index.render(
             User.find.where().eq("email", request().username()).findUnique(),
             Restaurant.find.byId(id),Kitchen.findAll(),kitchenForm));
@@ -58,16 +61,36 @@ public class Kitchens extends Controller{
         sdf2.setLenient(false);
         Date now = new Date();
 
-        //TODO: data and other parameters
+        Kitchen kitchen=Kitchen.find.ref(id);
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+        String desc="Изменена кухня:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ kitchen.title+"\nОписание:"+ kitchen.description+"\nСтатус:\nНачало:"+ kitchen.start_time+"\nКонец:"+ kitchen.end_time
+                +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description");
+
+        Event event=new Event("KITCHEN",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
         Kitchen.update(id, filledForm.get("title"), filledForm.get("description"),"",now,now);
 
+        event.save();
+        Logger.info(desc);
         return ok(index.render(
             User.find.where().eq("email", request().username()).findUnique(),
             Kitchen.find.byId(id).restaurant,Kitchen.findAll(),kitchenForm));
     }
 
     public static Result deleteKitchen(int id){
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        Kitchen kitchen=Kitchen.find.ref(id);
+
+        String desc="Удалена кухня:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ kitchen.title+"\nОписание:"+ kitchen.description+"\nСтатус:\nНачало:"+ kitchen.start_time+"\nКонец:"+ kitchen.end_time;
+
+        Event event=new Event("KITCHEN",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
         Kitchen.delete(id);
+        event.save();
+        Logger.info(desc);
+
+
         return ok(index.render(
             User.find.where().eq("email", request().username()).findUnique(),
             Kitchen.find.byId(id).restaurant,Kitchen.findAll(),kitchenForm));

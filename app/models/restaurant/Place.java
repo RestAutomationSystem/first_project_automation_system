@@ -48,9 +48,10 @@ public class Place extends Model{
 	        return find.all();
 	    }
 
-	public static void create(String title,String description,String image,RestaurantSection section, Date start_time, Date end_time){
+	public static int create(String title,String description,String image,RestaurantSection section, Date start_time, Date end_time){
 		Place newPlace = new Place(title, description,image,section,start_time,end_time);
 		newPlace.save();
+        return newPlace.getId();
 	}
 	
 	public static void update(int id, String title, String description,String image, Date start_time, Date end_time){

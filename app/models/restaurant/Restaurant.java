@@ -1,7 +1,8 @@
 package models;
 
 import java.util.*;
-
+import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 import javax.persistence.*;
 import play.data.format.*;
 import play.data.validation.Constraints.Required;
@@ -47,9 +48,10 @@ public class Restaurant extends Model{
 	    }
 	 
 	
-	public static void create(String title,String description,String status,Date start_time,Date end_time){
+	public static int create(String title,String description,String status,Date start_time,Date end_time){
 		Restaurant newRestaurant=new Restaurant(title, description,status,start_time,end_time);
-		newRestaurant.save();
+        newRestaurant.save();
+        return newRestaurant.id;
 	}
 	
 	public static void update(int id,String title,String description,String status,Date start_time,Date end_time){
@@ -61,9 +63,19 @@ public class Restaurant extends Model{
         restaurant.start_time=start_time;
         restaurant.end_time=end_time;
 		restaurant.update();
-		
-		
+
 	}
+
+    public static void update(int id,String title,String description){
+        Restaurant restaurant=Restaurant.find.ref(id);
+        System.out.println("id:"+id);
+        restaurant.title=title;
+        restaurant.description=description;
+
+        restaurant.update();
+
+    }
+
 	public static void delete(int id){
 		find.ref(id).delete();
 	}

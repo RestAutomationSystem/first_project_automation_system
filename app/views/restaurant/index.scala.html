@@ -35,10 +35,14 @@
             </tr>
         }
       }
+      @form(routes.Restaurants.addingRestaurantPage()) {
       <button type="submit" class="btn btn-primary btn-medium courceCellButton">
-          <a href="@routes.Restaurants.addingRestaurantPage()">Добавить</a></button>
+          Добавить</button>
+      }
+      @form(routes.AdminPanel.index()) {
       <button type="submit" class="btn btn-primary btn-medium courceCellButton">
-          <a href="@routes.AdminPanel.index()">Назад</a></button>
+          Назад</button>
+      }
   </div>
   </div>
 }

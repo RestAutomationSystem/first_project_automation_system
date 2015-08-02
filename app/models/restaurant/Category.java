@@ -60,9 +60,10 @@ public class Category extends Model{
         return find.where().eq("parent_category.id", id).findList();
     }
 	
-	public static void create(String title,String description,String status,Date start_time,Date end_time,Category parent_category,Menu menu){
+	public static int create(String title,String description,String status,Date start_time,Date end_time,Category parent_category,Menu menu){
 		Category newCategory=new Category(title, description,status,start_time,end_time,parent_category,menu);
 		newCategory.save();
+        return newCategory.id;
 	}
 
 	

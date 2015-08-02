@@ -63,6 +63,7 @@ POST   /suppliers/:id                      controllers.Suppliers.updateSupplier(
 GET    /suppliers/:id                      controllers.Suppliers.supplierPage(id: Integer)
 
 #Storages
+GET    /storages           controllers.Storages.all()
 GET    /restaurants/:id/storages           controllers.Storages.index(id: Integer)
 GET    /restaurants/:id/new_storage        controllers.Storages.addingStoragePage(id: Integer)
 POST   /restaurants/:id/storages           controllers.Storages.newStorage(id: Integer)

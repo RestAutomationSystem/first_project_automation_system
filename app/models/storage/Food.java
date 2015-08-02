@@ -56,9 +56,10 @@ public class Food extends Model{
 	    }
 	 
 	
-	public static void create(String title,String description,String image,Storage storage,Date start_time,Date end_time,double price,Supplier supplier){
+	public static int create(String title,String description,String image,Storage storage,Date start_time,Date end_time,double price,Supplier supplier){
 		Food newFood=new Food(title, description,image,storage,start_time,end_time,price,supplier);
 		newFood.save();
+        return newFood.getId();
 	}
 	
 	public static void update(int id,String title,String description,String image,Date start_time,Date end_time,double price,Supplier supplier){

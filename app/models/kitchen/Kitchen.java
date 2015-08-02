@@ -51,9 +51,10 @@ public class Kitchen extends Model{
 	    }
 	 
 	
-	public static void create(String title,String description,String image,Restaurant restaurant,Date start_time,Date end_time){
+	public static int create(String title,String description,String image,Restaurant restaurant,Date start_time,Date end_time){
 		Kitchen newKitchen=new Kitchen(title, description,image,restaurant,start_time,end_time);
 		newKitchen.save();
+        return newKitchen.id;
 	}
 	
 	public static void update(int id,String title,String description,String image,Date start_time,Date end_time){

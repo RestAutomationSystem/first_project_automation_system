@@ -27,13 +27,18 @@ public class Services extends Controller{
         DynamicForm filledForm = form().bindFromRequest();
         DateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
-        Logger.debug("startDate:" + filledForm.get("start_time"));
-        Logger.debug("deadline:" + filledForm.get("end_time"));
         Date now = new Date();
 
         //TODO: data and other parameters
-        Service.create(filledForm.get("title"), filledForm.get("description"),"",
+        int s_id=Service.create(filledForm.get("title"), filledForm.get("description"),"",
                 now,now,Restaurant.find.byId(id));
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+        String desc="Создан новый cервис:"+s_id+" внутри ресторана:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
+        Event event=new Event("SERVICE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+        event.save();
+        Logger.info(desc);
 
         return ok(index.render(User.find.where().eq("email", request().username()).findUnique(),
             Restaurant.find.byId(id), Service.findByRestaurant(id), serviceForm));
@@ -57,8 +62,19 @@ public class Services extends Controller{
         sdf2.setLenient(false);
         Date now = new Date();
 
-        //TODO: data and other parameters
+        Service service=Service.find.ref(id);
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+        String desc="Изменен сервис:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ service.title+"\nОписание:"+ service.description+"\nСтатус:\nНачало:"+ service.start_time+"\nКонец:"+ service.end_time
+                +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description");
+
+        Event event=new Event("SERVICE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
         Service.update(id, filledForm.get("title"), filledForm.get("description"),"",now,now);
+        event.save();
+        Logger.info(desc);
+
 
         return ok(index.render(
             User.find.where().eq("email", request().username()).findUnique(),
@@ -67,7 +83,16 @@ public class Services extends Controller{
 
     public static Result deleteService(int id){
         Restaurant restaurant=Service.find.byId(id).restaurant;
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        Service service=Service.find.ref(id);
+
+        String desc="Удален сервис:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ service.title+"\nОписание:"+ service.description+"\nСтатус:\nНачало:"+ service.start_time+"\nКонец:"+ service.end_time;
+
+        Event event=new Event("SERVICE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
         Service.delete(id);
+        event.save();
+        Logger.info(desc);
 
         return ok(index.render(User.find.where().eq("email", request().username()).findUnique(),
             restaurant, Service.findByRestaurant(restaurant.id), serviceForm));

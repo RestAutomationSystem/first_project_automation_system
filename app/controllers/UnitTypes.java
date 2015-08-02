@@ -34,8 +34,6 @@ public class UnitTypes extends Controller{
         DynamicForm filledForm=form().bindFromRequest();
         DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
-        Logger.debug("startDate:"+filledForm.get("start_time"));
-        Logger.debug("deadline:"+filledForm.get("end_time"));
 
         UnitType.create(filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),filledForm.get("amount"));
 

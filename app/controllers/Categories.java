@@ -6,7 +6,7 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
+import java.util.*;
 import play.*;
 import models.*;
 import play.mvc.*;
@@ -38,12 +38,20 @@ public class Categories extends Controller{
         sdf2.setLenient(false);
         Logger.debug("startDate:"+filledForm.get("start_time"));
         Logger.debug("deadline:"+filledForm.get("end_time"));
+        String parent_text="вверхнего уровня";
 
         Category parent=null;
-        if(!filledForm.get("category_id").equals("0"))
+        if(!filledForm.get("category_id").equals("0")) {
             parent=Category.find.byId(Integer.parseInt(filledForm.get("category_id")));
-        Category.create(filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),parent,Menu.find.byId(id));
+            parent_text="внутри категории:"+parent.id;
+        }
+        int c_id=Category.create(filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),parent,Menu.find.byId(id));
 
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        String desc="Создана новая категория:"+c_id+" внутри меню:"+id+" "+parent_text+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
+        Event event=new Event("CATEGORY",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+        event.save();
+        Logger.info(desc);
 
         return ok(
                 index.render(
@@ -61,9 +69,6 @@ public class Categories extends Controller{
         DynamicForm filledForm=form().bindFromRequest();
         DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
-        Logger.debug("startDate:"+filledForm.get("start_time"));
-        Logger.debug("deadline:"+filledForm.get("end_time"));
-
         Category parent=Category.find.byId(id);
 
         Category.create(filledForm.get("title"), filledForm.get("description"), "", sdf2.parse(filledForm.get("start_time")), sdf2.parse(filledForm.get("end_time")), parent,parent.menu);
@@ -112,7 +117,19 @@ public class Categories extends Controller{
         SimpleDateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
 
+
+        Category category=Category.find.ref(id);
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+        String desc="Изменена категория:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ category.title+"\nОписание:"+ category.description+"\nСтатус:\nНачало:"+ category.start_time+"\nКонец:"+ category.end_time
+                +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description");
+
+        Event event=new Event("CATEGORY",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
         Category.update(id, filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")));
+        event.save();
+        Logger.info(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
@@ -126,8 +143,17 @@ public class Categories extends Controller{
 
     public static Result deleteCategory(int id) {
         Menu menu=Category.find.byId(id).menu;
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        Category category=Category.find.ref(id);
+
+        String desc="Удален сервис:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ category.title+"\nОписание:"+ category.description+"\nСтатус:\nНачало:"+ category.start_time+"\nКонец:"+ category.end_time;
+
+        Event event=new Event("CATEGORY",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
 
         Category.delete(id);
+
+        event.save();
+        Logger.info(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),

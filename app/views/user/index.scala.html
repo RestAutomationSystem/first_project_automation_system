@@ -28,10 +28,14 @@
             </tr>
         }
       }
+      @form(routes.Users.addingUserPage()) {
       <button type="submit" class="btn btn-primary btn-medium courceCellButton">
           <a href="@routes.Users.addingUserPage()">Добавить</a></button>
+      }
+      @form(routes.AdminPanel.index()) {
       <button type="submit" class="btn btn-primary btn-medium courceCellButton">
           <a href="@routes.AdminPanel.index()">Назад</a></button>
+      }
   </div>
   </div>
 }

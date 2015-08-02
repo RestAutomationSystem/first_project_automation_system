@@ -15,6 +15,17 @@ create table category (
   constraint pk_category primary key (id))
 ;
 
+create table event (
+  id                        integer auto_increment not null,
+  event_type                varchar(255),
+  description               TEXT,
+  old_value                 varchar(255),
+  new_value                 varchar(255),
+  event_time                datetime,
+  author_email              varchar(40),
+  constraint pk_event primary key (id))
+;
+
 create table food (
   id                        integer auto_increment not null,
   title                     varchar(255),
@@ -82,6 +93,37 @@ create table modificator (
   constraint pk_modificator primary key (id))
 ;
 
+create table order_table (
+  id                        bigint auto_increment not null,
+  description               TEXT,
+  start_time                datetime,
+  end_time                  datetime,
+  status                    tinyint(1) default 0,
+  total                     double,
+  clients_quantity          integer,
+  constraint pk_order_table primary key (id))
+;
+
+create table order_type (
+  id                        integer auto_increment not null,
+  title                     TEXT,
+  description               TEXT,
+  start_time                datetime,
+  end_time                  datetime,
+  status                    tinyint(1) default 0,
+  constraint pk_order_type primary key (id))
+;
+
+create table payment_type (
+  id                        integer auto_increment not null,
+  title                     TEXT,
+  description               TEXT,
+  start_time                datetime,
+  end_time                  datetime,
+  status                    tinyint(1) default 0,
+  constraint pk_payment_type primary key (id))
+;
+
 create table place (
   id                        integer auto_increment not null,
   title                     varchar(255),
@@ -116,6 +158,14 @@ create table restaurant_section (
   constraint pk_restaurant_section primary key (id))
 ;
 
+create table role (
+  title                     TEXT,
+  description               TEXT,
+  start_time                datetime,
+  end_time                  datetime,
+  status                    tinyint(1) default 0)
+;
+
 create table service (
   id                        integer auto_increment not null,
   title                     varchar(255),
@@ -125,6 +175,13 @@ create table service (
   end_time                  datetime,
   restaurant_id             integer,
   constraint pk_service primary key (id))
+;
+
+create table session (
+  description               TEXT,
+  start_time                datetime,
+  end_time                  datetime,
+  status                    tinyint(1) default 0)
 ;
 
 create table storage (
@@ -172,30 +229,32 @@ alter table category add constraint fk_category_parent_category_1 foreign key (p
 create index ix_category_parent_category_1 on category (parent_category_id);
 alter table category add constraint fk_category_menu_2 foreign key (menu_id) references menu (id) on delete restrict on update restrict;
 create index ix_category_menu_2 on category (menu_id);
-alter table food add constraint fk_food_storage_3 foreign key (storage_id) references storage (id) on delete restrict on update restrict;
-create index ix_food_storage_3 on food (storage_id);
-alter table food add constraint fk_food_supplier_4 foreign key (supplier_id) references supplier (id) on delete restrict on update restrict;
-create index ix_food_supplier_4 on food (supplier_id);
-alter table item add constraint fk_item_unit_type_5 foreign key (unit_type_id) references unit_type (id) on delete restrict on update restrict;
-create index ix_item_unit_type_5 on item (unit_type_id);
-alter table item add constraint fk_item_category_6 foreign key (category_id) references category (id) on delete restrict on update restrict;
-create index ix_item_category_6 on item (category_id);
-alter table kitchen add constraint fk_kitchen_restaurant_7 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_kitchen_restaurant_7 on kitchen (restaurant_id);
-alter table menu add constraint fk_menu_service_8 foreign key (service_id) references service (id) on delete restrict on update restrict;
-create index ix_menu_service_8 on menu (service_id);
-alter table modificator add constraint fk_modificator_unit_type_9 foreign key (unit_type_id) references unit_type (id) on delete restrict on update restrict;
-create index ix_modificator_unit_type_9 on modificator (unit_type_id);
-alter table modificator add constraint fk_modificator_item_10 foreign key (item_id) references item (id) on delete restrict on update restrict;
-create index ix_modificator_item_10 on modificator (item_id);
-alter table place add constraint fk_place_section_11 foreign key (section_id) references restaurant_section (id) on delete restrict on update restrict;
-create index ix_place_section_11 on place (section_id);
-alter table restaurant_section add constraint fk_restaurant_section_restaurant_12 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_restaurant_section_restaurant_12 on restaurant_section (restaurant_id);
-alter table service add constraint fk_service_restaurant_13 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_service_restaurant_13 on service (restaurant_id);
-alter table storage add constraint fk_storage_restaurant_14 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_storage_restaurant_14 on storage (restaurant_id);
+alter table event add constraint fk_event_author_3 foreign key (author_email) references user (email) on delete restrict on update restrict;
+create index ix_event_author_3 on event (author_email);
+alter table food add constraint fk_food_storage_4 foreign key (storage_id) references storage (id) on delete restrict on update restrict;
+create index ix_food_storage_4 on food (storage_id);
+alter table food add constraint fk_food_supplier_5 foreign key (supplier_id) references supplier (id) on delete restrict on update restrict;
+create index ix_food_supplier_5 on food (supplier_id);
+alter table item add constraint fk_item_unit_type_6 foreign key (unit_type_id) references unit_type (id) on delete restrict on update restrict;
+create index ix_item_unit_type_6 on item (unit_type_id);
+alter table item add constraint fk_item_category_7 foreign key (category_id) references category (id) on delete restrict on update restrict;
+create index ix_item_category_7 on item (category_id);
+alter table kitchen add constraint fk_kitchen_restaurant_8 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_kitchen_restaurant_8 on kitchen (restaurant_id);
+alter table menu add constraint fk_menu_service_9 foreign key (service_id) references service (id) on delete restrict on update restrict;
+create index ix_menu_service_9 on menu (service_id);
+alter table modificator add constraint fk_modificator_unit_type_10 foreign key (unit_type_id) references unit_type (id) on delete restrict on update restrict;
+create index ix_modificator_unit_type_10 on modificator (unit_type_id);
+alter table modificator add constraint fk_modificator_item_11 foreign key (item_id) references item (id) on delete restrict on update restrict;
+create index ix_modificator_item_11 on modificator (item_id);
+alter table place add constraint fk_place_section_12 foreign key (section_id) references restaurant_section (id) on delete restrict on update restrict;
+create index ix_place_section_12 on place (section_id);
+alter table restaurant_section add constraint fk_restaurant_section_restaurant_13 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_restaurant_section_restaurant_13 on restaurant_section (restaurant_id);
+alter table service add constraint fk_service_restaurant_14 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_service_restaurant_14 on service (restaurant_id);
+alter table storage add constraint fk_storage_restaurant_15 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_storage_restaurant_15 on storage (restaurant_id);
 
 
 
@@ -204,6 +263,8 @@ create index ix_storage_restaurant_14 on storage (restaurant_id);
 SET FOREIGN_KEY_CHECKS=0;
 
 drop table category;
+
+drop table event;
 
 drop table food;
 
@@ -215,13 +276,23 @@ drop table menu;
 
 drop table modificator;
 
+drop table order_table;
+
+drop table order_type;
+
+drop table payment_type;
+
 drop table place;
 
 drop table restaurant;
 
 drop table restaurant_section;
 
+drop table role;
+
 drop table service;
+
+drop table session;
 
 drop table storage;
 

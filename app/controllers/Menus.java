@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Map;
-
+import java.util.*;
 import play.*;
 import models.*;
 import play.mvc.*;
@@ -35,11 +35,14 @@ public class Menus extends Controller{
         DynamicForm filledForm=form().bindFromRequest();
         DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
-        Logger.debug("startDate:"+filledForm.get("start_time"));
-        Logger.debug("deadline:"+filledForm.get("end_time"));
 
-        Menu.create(filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")), Service.find.byId(id));
+        int m_id=Menu.create(filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")), Service.find.byId(id));
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
+        String desc="Создан новый меню:"+m_id+" внутри сервиса:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
+        Event event=new Event("MENU",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+        event.save();
+        Logger.info(desc);
 
         return ok(
                 index.render(
@@ -78,7 +81,18 @@ public class Menus extends Controller{
         SimpleDateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
 
+        Menu menu=Menu.find.ref(id);
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+        String desc="Изменено меню:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ menu.title+"\nОписание:"+ menu.description+"\nСтатус:\nНачало:"+ menu.start_time+"\nКонец:"+ menu.end_time
+                +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description");
+
+        Event event=new Event("MENU",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
         Menu.update(id, filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")));
+        event.save();
+        Logger.info(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
@@ -92,8 +106,16 @@ public class Menus extends Controller{
 
     public static Result deleteMenu(int id) {
         Service service=Menu.find.byId(id).service;
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        Menu menu=Menu.find.ref(id);
+
+        String desc="Удалено меню:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ menu.title+"\nОписание:"+ menu.description+"\nСтатус:\nНачало:"+ menu.start_time+"\nКонец:"+ menu.end_time;
+
+        Event event=new Event("MENU",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
 
         Menu.delete(id);
+        event.save();
+        Logger.info(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),

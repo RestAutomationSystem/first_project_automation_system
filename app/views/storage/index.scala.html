@@ -36,12 +36,14 @@
         }
         </place>
     }
+      @if(restaurant!=null){
       @form(routes.Storages.addingStoragePage(restaurant.id)) {
         <button type="submit" class="btn btn-primary btn-medium courceCellButton">Добавить</button>
       }
 
       @form(routes.Restaurants.restaurantPage(restaurant.id)) {
         <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
+      }
       }
  </div>
  </div>

@@ -3,8 +3,7 @@ package controllers;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 
 import play.*;
 import models.*;
@@ -36,12 +35,14 @@ public class Modificators extends Controller{
         DynamicForm filledForm=form().bindFromRequest();
         DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
-        Logger.debug("startDate:"+filledForm.get("start_time"));
-        Logger.debug("deadline:"+filledForm.get("end_time"));
         UnitType ut=UnitType.find.byId(Integer.parseInt(filledForm.get("unit_type")));
-        Modificator.create(filledForm.get("title"), filledForm.get("description"),"","",Double.parseDouble(filledForm.get("price_original")),Double.parseDouble(filledForm.get("price_for_sale")),sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),ut,Item.find.byId(id));
+        int m_id=Modificator.create(filledForm.get("title"), filledForm.get("description"),"","",Double.parseDouble(filledForm.get("price_original")),Double.parseDouble(filledForm.get("price_for_sale")),sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),ut,Item.find.byId(id));
 
-
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        String desc="Создан новый модификатор:"+m_id+" внутри продукта:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСебестоимость:"+ filledForm.get("price_original")+"\nРозничная цена:"+ filledForm.get("price_for_sale")+"\nЕдиница измерение:"+ ut.title+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
+        Event event=new Event("MODIFICATOR",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+        event.save();
+        Logger.info(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
@@ -81,7 +82,18 @@ public class Modificators extends Controller{
         SimpleDateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
         sdf2.setLenient(false);
         UnitType ut=UnitType.find.byId(Integer.parseInt(filledForm.get("unit_type")));
+
+        Modificator modificator=Modificator.find.ref(id);
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+        String desc="Изменен модификатор:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ modificator.title+"\nОписание:"+ modificator.description+"\nСебестоимость:"+ modificator.price_original+"\nРозничная цена:"+ modificator.price_for_sale+"\nЕдиница измерения:"+ modificator.unit_type.title+"\nСтатус:\nНачало:"+ modificator.start_time+"\nКонец:"+ modificator.end_time
+                +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСебестоимость:"+ filledForm.get("price_original")+"\nРозничная цена:"+ filledForm.get("price_for_sale")+"\nЕдиница измерения:"+ ut.title;
+
+        Event event=new Event("MODIFICATOR",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
         Modificator.update(id, filledForm.get("title"), filledForm.get("description"),"","",Double.parseDouble(filledForm.get("price_original")),Double.parseDouble(filledForm.get("price_for_sale")),sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),ut);
+        event.save();
+        Logger.info(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
@@ -96,8 +108,16 @@ public class Modificators extends Controller{
 
     public static Result deleteModificator(int id) {
         Item item=Modificator.find.byId(id).item;
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        Modificator modificator=Modificator.find.ref(id);
+
+        String desc="Удален продукт:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ modificator.title+"\nОписание:"+ modificator.description+"\nСтатус:\nНачало:"+ modificator.start_time+"\nКонец:"+ modificator.end_time;
+
+        Event event=new Event("MODIFICATOR",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
 
         Modificator.delete(id);
+        event.save();
+        Logger.info(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),

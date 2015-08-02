@@ -53,9 +53,10 @@ public class Menu extends Model{
         return find.where().eq("service.id", id).findList();
     }
 
-	public static void create(String title,String description,String status,Date start_time,Date end_time,Service service){
+	public static int create(String title,String description,String status,Date start_time,Date end_time,Service service){
 		Menu newMenu=new Menu(title, description,status,start_time,end_time,service);
 		newMenu.save();
+        return newMenu.id;
 	}
 	
 	public static void update(int id,String title,String description,String status,Date start_time,Date end_time){

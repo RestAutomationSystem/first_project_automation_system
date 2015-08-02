@@ -6,34 +6,52 @@
         <h3>@user.email</h3>
         <div class="span4">
             <div class="announcements">
+                @form(routes.AdminPanel.logout()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <a href="@routes.AdminPanel.logout()">
-                    <div class="span-button">Выход</div></a></button><br/>
-
+                    Выход
+                </button>
+                    <br/>
+                }
+                @form(routes.Restaurants.index()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <a href="@routes.Restaurants.index()">
-                    <div class="span-button">Ресторан</div></a></button>
-
+                    Ресторан</button>
+                }
+                @form(routes.AdminPanel.index()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <div class="span-button">Меню и товары</div></button>
+                    Меню и товары</button>
+                }
+                @form(routes.Storages.all()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <div class="span-button">Склад</div></button>
-
-
-
+                    Склад</button>
+                }
+                @form(routes.Users.index()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <a href="@routes.Users.index()">
-                    <div class="span-button">Сотрудники</div></a></button>
+                    Сотрудники</button>
+                }
+                @form(routes.UnitTypes.index()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <div class="span-button">Оборудование</div></button>
+                    Единицы измерения</button>
+                }
+                @form(routes.AdminPanel.index()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <div class="span-button">Касса</div></button><br/>
+                    Оборудование</button>
+                }
+                @form(routes.AdminPanel.index()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <div class="span-button">Отчеты</div></button>
+                    Касса</button><br/>
+                }
+                @form(routes.AdminPanel.index()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <div class="span-button">Журналы событий</div></button>
+                    Отчеты</button>
+                }
+                @form(routes.AdminPanel.index()) {
                 <button class="btn action-btn btn-success" type="submit">
-                    <div class="span-button">Система скидок</div></button>
+                    Журналы событий</button>
+                }
+                @form(routes.AdminPanel.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Система скидок</button>
+                }
             </div>
         </div>
     </div>

@@ -47,9 +47,10 @@ public class Supplier extends Model{
 	    }
 	 
 	
-	public static void create(String title,String description,String status,Date start_time,Date end_time){
+	public static int create(String title,String description,String status,Date start_time,Date end_time){
 		Supplier newSupplier=new Supplier(title, description,status,start_time,end_time);
 		newSupplier.save();
+        return newSupplier.id;
 	}
 	
 	public static void update(int id,String title,String description,String status,Date start_time,Date end_time){

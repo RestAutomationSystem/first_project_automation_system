@@ -27,14 +27,18 @@ public class Sections extends Controller{
 		DynamicForm filledForm=form().bindFromRequest();
 		DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		sdf2.setLenient(false);
-		Logger.debug("startDate:"+filledForm.get("start_time"));
-	    Logger.debug("deadline:"+filledForm.get("end_time"));
 		Date now = new Date();
 
 		//TODO: data and other parameters
-		RestaurantSection.create(filledForm.get("title"), filledForm.get("description"),"",
+		int s_id=RestaurantSection.create(filledForm.get("title"), filledForm.get("description"),"",
 			Restaurant.find.byId(id),now,now);
 
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+        String desc="Создана новая cекция:"+s_id+" внутри ресторана:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
+        Event event=new Event("SECTION",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+        event.save();
+        Logger.info(desc);
 		return ok(index.render(
 			User.find.where().eq("email", request().username()).findUnique(),
 			Restaurant.find.byId(id),RestaurantSection.findByRestaurant(id),sectionForm));
@@ -60,7 +64,20 @@ public class Sections extends Controller{
 		Date now = new Date();
 
 		//TODO: data and other parameters
-		RestaurantSection.update(id, filledForm.get("title"), filledForm.get("description"),"",now,now);
+        RestaurantSection seсtion=RestaurantSection.find.ref(id);
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+        String desc="Изменена секция:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ seсtion.title+"\nОписание:"+ seсtion.description+"\nСтатус:\nНачало:"+ seсtion.start_time+"\nКонец:"+ seсtion.end_time
+                +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description");
+
+        Event event=new Event("SECTION",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
+        RestaurantSection.update(id, filledForm.get("title"), filledForm.get("description"),"",now,now);
+        event.save();
+        Logger.info(desc);
+
+
         Restaurant parentR=RestaurantSection.find.byId(id).restaurant;
 		return ok(index.render(
 			User.find.where().eq("email", request().username()).findUnique(),
@@ -69,7 +86,17 @@ public class Sections extends Controller{
 
 	public static Result deleteSection(int id){
 		Restaurant parentR=RestaurantSection.find.byId(id).restaurant;
-		RestaurantSection.delete(id);
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        RestaurantSection section=RestaurantSection.find.ref(id);
+
+        String desc="Удалена секция:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ section.title+"\nОписание:"+ section.description+"\nСтатус:\nНачало:"+ section.start_time+"\nКонец:"+ section.end_time;
+
+        Event event=new Event("SECTION",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
+        RestaurantSection.delete(id);
+        event.save();
+        Logger.info(desc);
+
 
 		return ok(index.render(
 			User.find.where().eq("email", request().username()).findUnique(),

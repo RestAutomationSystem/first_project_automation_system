@@ -61,9 +61,10 @@ public class Modificator extends Model{
         return find.where().eq("item.id", id).findList();
     }
 	
-	public static void create(String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type,Item item){
+	public static int create(String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type,Item item){
 		Modificator newModificator=new Modificator(title, description,status,image_path,price_original,price_for_sale,start_time,end_time,unit_type,item);
 		newModificator.save();
+        return newModificator.id;
 	}
 	
 	public static void update(int id,String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type){

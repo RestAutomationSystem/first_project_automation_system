@@ -61,9 +61,10 @@ public class Item extends Model{
         return find.where().eq("category.id", id).findList();
     }
 
-	public static void create(String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type,Category category){
+	public static int create(String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type,Category category){
 		Item newItem=new Item(title, description,status,image_path,price_original,price_for_sale,start_time,end_time,unit_type,category);
 		newItem.save();
+        return newItem.id;
 	}
 	
 	public static void update(int id,String title,String description,String status,String image_path,double price_original, double price_for_sale,Date start_time,Date end_time,UnitType unit_type){
