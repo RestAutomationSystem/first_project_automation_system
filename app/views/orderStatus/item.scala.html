@@ -1,0 +1,27 @@
+@(user:User,orderStatus:OrderStatus)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="span3">
+
+      </div>
+    <div class="span9">
+	@form(routes.OrderStatuses.updateOrderStatus(orderStatus.id)){
+<input type="text" name="title" value="@orderStatus.title"/>
+<textarea name="description">@orderStatus.description</textarea>
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.OrderStatuses.index()) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к статусам заказов</button>
+
+      }
+</div>
+</div>
+
+}

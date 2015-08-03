@@ -48,9 +48,10 @@ public class UnitType extends Model{
 	    }
 	 
 	
-	public static void create(String title,String description,String status,Date start_time,Date end_time,String amount){
+	public static int create(String title,String description,String status,Date start_time,Date end_time,String amount){
 		UnitType newUnitType=new UnitType(title, description,status,start_time,end_time,amount);
 		newUnitType.save();
+        return  newUnitType.id;
 	}
 	
 	public static void update(int id,String title,String description,String status,Date start_time,Date end_time,String amount){

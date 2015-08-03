@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+import play.data.validation.Constraints.Required;
+
 @Entity
 public class OrderType extends Model {
 
@@ -16,46 +18,43 @@ public class OrderType extends Model {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     public int id;
 
-    @Constraints.Required
-    @Column(columnDefinition="TEXT")
-    private String title;
+    @Required
+    public String title;
 
     @Column(columnDefinition="TEXT")
-    private String description;
+    public String description;
 
-    @Formats.DateTime(pattern="dd/MM/yyyy/H:i")
-    private Date start_time;
+    public boolean status;
 
-    @Formats.DateTime(pattern="dd/MM/yyyy/H:i")
-    private Date end_time;
-
-    private Boolean status;
-
-    public OrderType(String title, String description, Boolean status, Date start_time, Date end_time) {
+    public OrderType(String title, String description, boolean status) {
         this.title = title;
         this.description = description;
         this.status = status;
-        this.start_time = start_time;
-        this.end_time = end_time;
     }
 
     public static Finder<Integer, OrderType> find = new Finder<>(Integer.class, OrderType.class);
 
-    public List<OrderType> findAll() {
+    public static List<OrderType> findAll() {
         return find.all();
     }
 
-    public void update(int id, String title, String description, Boolean status, Date end_time) {
+
+    public static int create(String title,String description,boolean status){
+        OrderType newUnitType=new OrderType(title, description,status);
+        newUnitType.save();
+        return  newUnitType.id;
+    }
+
+    public static void update(int id, String title, String description, boolean status) {
         OrderType orderType = OrderType.find.ref(id);
         System.out.println("id:" + id);
         orderType.title = title;
         orderType.description = description;
         orderType.status = status;
-        orderType.end_time = end_time;
         orderType.update();
     }
 
-    public void delete(int id){
+    public static void delete(int id){
         find.ref(id).delete();
     }
 }

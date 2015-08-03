@@ -98,28 +98,57 @@ create table order_table (
   description               TEXT,
   start_time                datetime,
   end_time                  datetime,
-  status                    tinyint(1) default 0,
+  status_id                 integer,
   total                     double,
   clients_quantity          integer,
+  order_type_id             integer,
+  payment_type_id           integer,
+  place_id                  integer,
   constraint pk_order_table primary key (id))
+;
+
+create table order_item (
+  id                        bigint auto_increment not null,
+  description               TEXT,
+  amount                    integer,
+  price                     double,
+  status                    tinyint(1) default 0,
+  item_id                   integer,
+  order_id                  bigint,
+  constraint pk_order_item primary key (id))
+;
+
+create table order_modificator (
+  id                        bigint auto_increment not null,
+  description               TEXT,
+  amount                    integer,
+  price                     double,
+  status                    tinyint(1) default 0,
+  modificator_id            integer,
+  order_id                  bigint,
+  constraint pk_order_modificator primary key (id))
+;
+
+create table order_status (
+  id                        integer auto_increment not null,
+  title                     varchar(255),
+  description               TEXT,
+  status                    tinyint(1) default 0,
+  constraint pk_order_status primary key (id))
 ;
 
 create table order_type (
   id                        integer auto_increment not null,
-  title                     TEXT,
+  title                     varchar(255),
   description               TEXT,
-  start_time                datetime,
-  end_time                  datetime,
   status                    tinyint(1) default 0,
   constraint pk_order_type primary key (id))
 ;
 
 create table payment_type (
   id                        integer auto_increment not null,
-  title                     TEXT,
+  title                     varchar(255),
   description               TEXT,
-  start_time                datetime,
-  end_time                  datetime,
   status                    tinyint(1) default 0,
   constraint pk_payment_type primary key (id))
 ;
@@ -158,12 +187,14 @@ create table restaurant_section (
   constraint pk_restaurant_section primary key (id))
 ;
 
-create table role (
+create table role_table (
+  id                        integer auto_increment not null,
   title                     TEXT,
   description               TEXT,
   start_time                datetime,
   end_time                  datetime,
-  status                    tinyint(1) default 0)
+  status                    tinyint(1) default 0,
+  constraint pk_role_table primary key (id))
 ;
 
 create table service (
@@ -247,14 +278,30 @@ alter table modificator add constraint fk_modificator_unit_type_10 foreign key (
 create index ix_modificator_unit_type_10 on modificator (unit_type_id);
 alter table modificator add constraint fk_modificator_item_11 foreign key (item_id) references item (id) on delete restrict on update restrict;
 create index ix_modificator_item_11 on modificator (item_id);
-alter table place add constraint fk_place_section_12 foreign key (section_id) references restaurant_section (id) on delete restrict on update restrict;
-create index ix_place_section_12 on place (section_id);
-alter table restaurant_section add constraint fk_restaurant_section_restaurant_13 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_restaurant_section_restaurant_13 on restaurant_section (restaurant_id);
-alter table service add constraint fk_service_restaurant_14 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_service_restaurant_14 on service (restaurant_id);
-alter table storage add constraint fk_storage_restaurant_15 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_storage_restaurant_15 on storage (restaurant_id);
+alter table order_table add constraint fk_order_table_status_12 foreign key (status_id) references order_status (id) on delete restrict on update restrict;
+create index ix_order_table_status_12 on order_table (status_id);
+alter table order_table add constraint fk_order_table_orderType_13 foreign key (order_type_id) references order_type (id) on delete restrict on update restrict;
+create index ix_order_table_orderType_13 on order_table (order_type_id);
+alter table order_table add constraint fk_order_table_paymentType_14 foreign key (payment_type_id) references payment_type (id) on delete restrict on update restrict;
+create index ix_order_table_paymentType_14 on order_table (payment_type_id);
+alter table order_table add constraint fk_order_table_place_15 foreign key (place_id) references place (id) on delete restrict on update restrict;
+create index ix_order_table_place_15 on order_table (place_id);
+alter table order_item add constraint fk_order_item_item_16 foreign key (item_id) references item (id) on delete restrict on update restrict;
+create index ix_order_item_item_16 on order_item (item_id);
+alter table order_item add constraint fk_order_item_order_17 foreign key (order_id) references order_table (id) on delete restrict on update restrict;
+create index ix_order_item_order_17 on order_item (order_id);
+alter table order_modificator add constraint fk_order_modificator_modificator_18 foreign key (modificator_id) references modificator (id) on delete restrict on update restrict;
+create index ix_order_modificator_modificator_18 on order_modificator (modificator_id);
+alter table order_modificator add constraint fk_order_modificator_order_19 foreign key (order_id) references order_table (id) on delete restrict on update restrict;
+create index ix_order_modificator_order_19 on order_modificator (order_id);
+alter table place add constraint fk_place_section_20 foreign key (section_id) references restaurant_section (id) on delete restrict on update restrict;
+create index ix_place_section_20 on place (section_id);
+alter table restaurant_section add constraint fk_restaurant_section_restaurant_21 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_restaurant_section_restaurant_21 on restaurant_section (restaurant_id);
+alter table service add constraint fk_service_restaurant_22 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_service_restaurant_22 on service (restaurant_id);
+alter table storage add constraint fk_storage_restaurant_23 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_storage_restaurant_23 on storage (restaurant_id);
 
 
 
@@ -278,6 +325,12 @@ drop table modificator;
 
 drop table order_table;
 
+drop table order_item;
+
+drop table order_modificator;
+
+drop table order_status;
+
 drop table order_type;
 
 drop table payment_type;
@@ -288,7 +341,7 @@ drop table restaurant;
 
 drop table restaurant_section;
 
-drop table role;
+drop table role_table;
 
 drop table service;
 

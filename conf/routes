@@ -32,6 +32,14 @@ GET     /users/:email/delete             controllers.Users.deleteUser(email: Str
 POST    /users/:email                    controllers.Users.updateUser(email: String)
 GET     /users/:email                    controllers.Users.userPage(email: String)
 
+#Roles
+GET     /roles                        controllers.Roles.index()
+POST    /roles                        controllers.Roles.newRole()
+GET     /roles/:id/delete             controllers.Roles.deleteRole(id: Integer)
+POST    /roles/:id                    controllers.Roles.updateRole(id: Integer)
+GET     /roles/:id                    controllers.Roles.rolePage(id: Integer)
+
+
 #Restaurants
 GET     /restaurants                        controllers.Restaurants.index()
 GET     /new_restaurant                     controllers.Restaurants.addingRestaurantPage()
@@ -129,6 +137,27 @@ POST   /unitTypes                          	controllers.UnitTypes.newUnitType()
 GET    /unitTypes/:id/delete                controllers.UnitTypes.deleteUnitType(id: Integer)
 POST   /unitTypes/:id                       controllers.UnitTypes.updateUnitType(id: Integer)
 GET    /unitTypes/:id                       controllers.UnitTypes.unitTypePage(id: Integer)
+
+#OrderStatuses
+GET    /orderStatuses                          	controllers.OrderStatuses.index()
+POST   /orderStatuses                          	controllers.OrderStatuses.newOrderStatus()
+GET    /orderStatuses/:id/delete                controllers.OrderStatuses.deleteOrderStatus(id: Integer)
+POST   /orderStatuses/:id                       controllers.OrderStatuses.updateOrderStatus(id: Integer)
+GET    /orderStatuses/:id                       controllers.OrderStatuses.orderStatusPage(id: Integer)
+
+#OrderTypes
+GET    /orderTypes                          	controllers.OrderTypes.index()
+POST   /orderTypes                          	controllers.OrderTypes.newOrderType()
+GET    /orderTypes/:id/delete                controllers.OrderTypes.deleteOrderType(id: Integer)
+POST   /orderTypes/:id                       controllers.OrderTypes.updateOrderType(id: Integer)
+GET    /orderTypes/:id                       controllers.OrderTypes.orderTypePage(id: Integer)
+
+#PaymentTypes
+GET    /paymentTypes                          	controllers.PaymentTypes.index()
+POST   /paymentTypes                          	controllers.PaymentTypes.newPaymentType()
+GET    /paymentTypes/:id/delete                controllers.PaymentTypes.deletePaymentType(id: Integer)
+POST   /paymentTypes/:id                       controllers.PaymentTypes.updatePaymentType(id: Integer)
+GET    /paymentTypes/:id                       controllers.PaymentTypes.paymentTypePage(id: Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

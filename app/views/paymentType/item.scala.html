@@ -1,0 +1,27 @@
+@(user:User,paymentType:PaymentType)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="span3">
+
+      </div>
+    <div class="span9">
+	@form(routes.PaymentTypes.updatePaymentType(paymentType.id)){
+<input type="text" name="title" value="@paymentType.title"/>
+<textarea name="description">@paymentType.description</textarea>
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.PaymentTypes.index()) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к платежам</button>
+
+      }
+</div>
+</div>
+
+}

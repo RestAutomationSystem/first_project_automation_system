@@ -3,6 +3,8 @@ package controllers;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
+import java.util.Date;
+
 import play.*;
 import models.*;
 import play.mvc.*;
@@ -38,6 +40,12 @@ public class Users extends Controller{
         else{
         User newUser=User.create(regForm.get().name,regForm.get().email,regForm.get().password);
 
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+            String desc="Создан новый пользователь:"+newUser.email+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nИмя:"+ regForm.get().name+"\nEmail:"+ regForm.get().email+"\nСтатус:";
+            Event event=new Event("USER",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+            event.save();
+            Logger.debug(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
@@ -73,8 +81,19 @@ public class Users extends Controller{
                             User.find.byId(email)));
         }
         else{
-        User.update(email,regForm.get().name,regForm.get().password);
 
+            User user= User.find.byId(email);
+
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+            String desc="Изменен ресторан:"+email+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nИмя:"+ user.name+"\nEmail:"+ user.email+"\nСтатус:"
+                    +"\nНовые значения:\nИмя:"+ regForm.get().name+"\nEmail:"+ email+"\nСтатус:";
+
+            Event event=new Event("USER",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
+            User.update(email,regForm.get().name,regForm.get().password);
+            event.save();
+            Logger.debug(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),
@@ -86,7 +105,16 @@ public class Users extends Controller{
     }
 
     public static Result deleteUser(String email) {
+       DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        User user=User.find.byId(email);
+
+        String desc="Удален пользователь:"+email+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nИмя:"+ user.name+"\nEmail:"+ user.email+"\nСтатус:";
+
+        Event event=new Event("USER",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+
         User.deleteUser(email);
+        event.save();
+        Logger.debug(desc);
         return ok(
                 index.render(
                         User.find.where().eq("email", request().username()).findUnique(),

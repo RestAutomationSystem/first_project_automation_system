@@ -11,7 +11,7 @@ import java.util.List;
 import play.data.validation.Constraints.Required;
 
 @Entity
-public class PaymentType extends Model {
+public class OrderStatus extends Model {
 
     @Id
     @Version
@@ -27,31 +27,32 @@ public class PaymentType extends Model {
 
     public boolean status;
 
-    public PaymentType(String title, String description, boolean status) {
+    public OrderStatus(String title, String description, boolean status) {
         this.title = title;
         this.description = description;
         this.status = status;
     }
 
-    public static Finder<Integer, PaymentType> find = new Finder<>(Integer.class, PaymentType.class);
+    public static Finder<Integer, OrderStatus> find = new Finder<>(Integer.class, OrderStatus.class);
 
-    public static List<PaymentType> findAll() {
+    public static List<OrderStatus> findAll() {
         return find.all();
     }
 
+
     public static int create(String title,String description,boolean status){
-        PaymentType newUnitType=new PaymentType(title, description,status);
-        newUnitType.save();
-        return  newUnitType.id;
+        OrderStatus orderStatus=new OrderStatus(title, description,status);
+        orderStatus.save();
+        return  orderStatus.id;
     }
 
     public static void update(int id, String title, String description, boolean status) {
-        PaymentType paymentType = PaymentType.find.ref(id);
+        OrderStatus orderStatus = OrderStatus.find.ref(id);
         System.out.println("id:" + id);
-        paymentType.title = title;
-        paymentType.description = description;
-        paymentType.status = status;
-        paymentType.update();
+        orderStatus.title = title;
+        orderStatus.description = description;
+        orderStatus.status = status;
+        orderStatus.update();
     }
 
     public static void delete(int id){

@@ -1,0 +1,68 @@
+@(user:User,orderTypes:List[OrderType],orderTypeForm:Form[OrderType])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(orderTypes.size()>0){
+<h3>My OrderTypes</h3>
+<place class="place">
+@for(orderType<-orderTypes){
+<tr>
+<td>
+<div id="orderType@orderType.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="orderTypeDescriptionTitle item" id="@orderType.id">@orderType.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.OrderTypes.deleteOrderType(orderType.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="orderTypeNicPanel@orderType.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@orderType.id" style="width: 525px;">
+@if(orderType.description!=null){
+@Html(orderType.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.OrderTypes.orderTypePage(orderType.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</place>
+}
+
+<fieldset>
+<legend>Add new orderType</legend>
+<div class="createForm">
+@form(routes.OrderTypes.newOrderType()){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+</div>
+</div>
+}
