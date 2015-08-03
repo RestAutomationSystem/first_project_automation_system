@@ -6,36 +6,30 @@
   <div class="announcements">
     @if(storages.size()>0){
         <h3>Склады</h3>
-        <place class="place">
+
         @for(storage<-storages){
-            <tr>
-            <td>
-            <div id="storage@storage.id" >
-            <div class="row" style="margin-left: 20px;">
-                <h4><span class="storageDescriptionTitle item" id="@storage.id">@storage.title</span></h4>
-                <span class="action" style="margin-left:5px;">
-                    <a href="@routes.Storages.deleteStorage(storage.id)"><i class="icon-remove"></i></a>
-                </span>
-                <div class="nicPanels" id="storageNicPanel@storage.id" style="width: 525px;"></div>
-                <div id="lecturecontent" class="nicTextContainer">
-                <div id="cdContent@storage.id" style="width: 525px;">
-                    @if(storage.description!=null){
+      <div class="span8">
+          <span class="span2">
+                <h4>@storage.title</h4>
+          </span>
+          <span class="span5">
+           @if(storage.description!=null){
                         @Html(storage.description)
                     }
-                </div>
-                </div>
-            </div>
-            </div>
-            </td>
-            <td style="padding: 30px;">
-                @form(routes.Storages.storagePage(storage.id)) {
-                    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+          </span>
+           <span class="span">
+                    @form(routes.Storages.storagePage(storage.id)) {
+                    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Изменить</button>
                 }
-            </td>
-            </tr>
+           </span>
+            </div>
+
         }
-        </place>
     }
+      <div class="span4">
+          <br/><br/>
+      </div>
+      <div class="span4">
       @if(restaurant!=null){
       @form(routes.Storages.addingStoragePage(restaurant.id)) {
         <button type="submit" class="btn btn-primary btn-medium courceCellButton">Добавить</button>
@@ -45,6 +39,7 @@
         <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
       }
       }
+      </div>
  </div>
  </div>
 }

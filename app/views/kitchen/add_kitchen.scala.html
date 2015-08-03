@@ -6,13 +6,12 @@
         <legend>Новая кухня</legend>
         <div class="createForm">
             @form(routes.Kitchens.newKitchen(restaurant.id)){
-                <p><input type="text" name="title" placeholder="Name"></p>
-                <p><textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea></p>
-                <p><button class="btn btn-primary" type="submit">Создать</button></p>
+                <p><input type="text" name="title" placeholder="Название"><textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Описание"></textarea></p>
+                <button class="btn btn-primary" type="submit">Создать</button>
             }
 
             @form(routes.Kitchens.index(restaurant.id)){
-                <p><button class="btn btn-primary" type="submit">Назад</button></p>
+                <button class="btn btn-primary" type="submit">Назад</button>
             }
         </div>
     </fieldset>

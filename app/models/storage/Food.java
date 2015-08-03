@@ -43,6 +43,7 @@ public class Food extends Model{
 		this.description=description;
 		this.image=image;
 		this.storage=storage;
+        this.price=price;
 		this.start_time=start_time;
 		this.end_time=end_time;
 		this.supplier=supplier;
@@ -65,14 +66,14 @@ public class Food extends Model{
 	public static void update(int id,String title,String description,String image,Date start_time,Date end_time,double price,Supplier supplier){
 		Food food=Food.find.ref(id);
 		System.out.println("id:"+id);
-		food.title=title;
-		food.description=description;
-		food.image=image;
-		food.start_time=start_time;
-		food.end_time=end_time;
-		food.price=price;
+		food.setTitle(title);
+		food.setDescription(description);
+		food.setImage(image);
+		food.setStart_time(start_time);
+		food.setEnd_time(end_time);
+		food.setPrice(price);
 		
-		food.supplier=supplier;
+		food.setSupplier(supplier);
 		food.update();
 		
 		

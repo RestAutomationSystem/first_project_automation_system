@@ -9,65 +9,42 @@
 <div class="announcements"> 
 @if(unitTypes.size()>0){
 <h3>My UnitTypes</h3>
-<place class="place">
+
 @for(unitType<-unitTypes){
-<tr>
-<td>
-<div id="unitType@unitType.id" >
+    <div class="span8">
+    <span class="span2"><h4>@unitType.title</h4></span>
 
-  <div class="row" style="margin-left: 20px;">
-  <div class="row" style="margin-left: 20px;">
-<h4><span class="unitTypeDescriptionTitle item" id="@unitType.id">@unitType.title</span></h4>
-<span class="action" style="margin-left:5px;">
-<a href="@routes.UnitTypes.deleteUnitType(unitType.id)"><i class="icon-remove"></i></a>
-</span>
-</div>
-<br/>
-
-<div class="nicPanels" id="unitTypeNicPanel@unitType.id" style="width: 525px;"></div>
-<div id="lecturecontent" class="nicTextContainer">
-<div id="cdContent@unitType.id" style="width: 525px;">
+<span class="span5">
 @if(unitType.description!=null){
 @Html(unitType.description)
-}
-</div>
-</div>
-</div>
-</div>
-</td>
-<td style="padding: 30px;">
-@form(routes.UnitTypes.unitTypePage(unitType.id)) {
-                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
-                          
+}</span>
+    <span>
+     @form(routes.UnitTypes.unitTypePage(unitType.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Изменить</button>
+
 							}
-</td>
-</tr>
-}
-</place>
+    </span>
+
+    </div>
 }
 
-<fieldset>
-<legend>Add new unitType</legend>
-<div class="createForm">
-@form(routes.UnitTypes.newUnitType()){
-<p>
-<input type="text" name="title" placeholder="Name">
-</p>
-<p>
-<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
-</p>
-<p>
-<input id="startDate" type="text" class="datepicker" name="start_time">
-</p>
-<p>
-<input id="endDate" type="text" class="datepicker" name="end_time">
-</p>
-<p>
-<button class="btn btn-primary" type="submit">Create</button>
-</p>
 }
-</div>
-</fieldset>
+
+
+    <div class="span4">
+        <br/><br/>
+    </div>
+    <div class="span6">
+        @form(routes.UnitTypes.addingUnitTypePage()) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+            Добавить</button>
+        }
+
+        @form(routes.AdminPanel.index()) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+            Назад</button>
+        }
+    </div>
 </div>
 </div>
 }

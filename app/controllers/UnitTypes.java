@@ -55,7 +55,10 @@ public class UnitTypes extends Controller{
     }
 
 
-
+    public static Result addingUnitTypePage(){
+        return ok(add_unitType.render(User.find.where().eq("email", request().username()).findUnique(),
+                unitTypeForm));
+    }
 
     public static Result unitTypePage(int id) {
 

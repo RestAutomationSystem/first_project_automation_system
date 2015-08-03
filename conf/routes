@@ -58,6 +58,7 @@ GET    /sections/:id                        controllers.Sections.sectionPage(id:
 
 #Places
 GET    /sections/:id/places                controllers.Places.index(id: Integer)
+GET     /sections/:id/new_place            controllers.Places.addingPlacePage(id: Integer)
 POST   /sections/:id/places                controllers.Places.newPlace(id: Integer)
 GET    /places/:id/delete                  controllers.Places.deletePlace(id: Integer)
 POST   /places/:id                         controllers.Places.updatePlace(id: Integer)
@@ -65,6 +66,7 @@ GET    /places/:id                         controllers.Places.placePage(id: Inte
 
 #Suppliers
 GET    /suppliers                          controllers.Suppliers.index()
+GET    /suppliers/new_supplier             controllers.Suppliers.addingSupplierPage()
 POST   /suppliers                          controllers.Suppliers.newSupplier()
 GET    /suppliers/:id/delete               controllers.Suppliers.deleteSupplier(id: Integer)
 POST   /suppliers/:id                      controllers.Suppliers.updateSupplier(id: Integer)
@@ -81,6 +83,7 @@ GET    /storages/:id                       controllers.Storages.storagePage(id: 
 
 #Foods
 GET    /storages/:id/foods                 controllers.Foods.index(id: Integer)
+GET     /storages/:id/new_food            controllers.Foods.addingFoodPage(id: Integer)
 POST   /storages/:id/foods                 controllers.Foods.newFood(id: Integer)
 GET    /foods/:id/delete                   controllers.Foods.deleteFood(id: Integer)
 POST   /foods/:id                          controllers.Foods.updateFood(id: Integer)
@@ -104,6 +107,7 @@ GET    /services/:id                       controllers.Services.servicePage(id: 
 
 #Menus
 GET    /services/:id/menus                 controllers.Menus.index(id: Integer)
+GET    /services/:id/new_menu              controllers.Menus.addingMenuPage(id: Integer)
 POST   /services/:id/menus                 controllers.Menus.newMenu(id: Integer)
 GET    /menus/:id/delete                   controllers.Menus.deleteMenu(id: Integer)
 POST   /menus/:id                          controllers.Menus.updateMenu(id: Integer)
@@ -111,6 +115,8 @@ GET    /menus/:id                          controllers.Menus.menuPage(id: Intege
 
 #Categories
 GET    /menus/:id/categories               controllers.Categories.index(id: Integer)
+GET    /menus/:id/new_category             controllers.Categories.addingCategoryPage(id: Integer)
+GET    /categories/:id/newchild            controllers.Categories.addingChildCategoryPage(id: Integer)
 POST   /menus/:id/categories               controllers.Categories.newCategory(id: Integer)
 GET    /categories/:id/delete              controllers.Categories.deleteCategory(id: Integer)
 POST   /categories/:id                     controllers.Categories.updateCategory(id: Integer)
@@ -119,6 +125,7 @@ POST   /categories/:id/newchild            controllers.Categories.newChildCatego
 
 #Items
 GET    /categories/:id/items               controllers.Items.index(id: Integer)
+GET    /categories/:id/new_item             controllers.Items.addingItemPage(id: Integer)
 POST   /categories/:id/items               controllers.Items.newItem(id: Integer)
 GET    /items/:id/delete                   controllers.Items.deleteItem(id: Integer)
 POST   /items/:id                          controllers.Items.updateItem(id: Integer)
@@ -126,6 +133,7 @@ GET    /items/:id                          controllers.Items.itemPage(id: Intege
 
 #Modificators
 GET    /items/:id/modificators             controllers.Modificators.index(id: Integer)
+GET    /items/:id/new_modificator          controllers.Modificators.addingModificatorPage(id: Integer)
 POST   /items/:id/modificators             controllers.Modificators.newModificator(id: Integer)
 GET    /modificators/:id/delete            controllers.Modificators.deleteModificator(id: Integer)
 POST   /modificators/:id                   controllers.Modificators.updateModificator(id: Integer)
@@ -133,6 +141,7 @@ GET    /modificators/:id                   controllers.Modificators.modificatorP
 
 #UnitTypes
 GET    /unitTypes                          	controllers.UnitTypes.index()
+GET    /unitTypes/new_unitType             controllers.UnitTypes.addingUnitTypePage()
 POST   /unitTypes                          	controllers.UnitTypes.newUnitType()
 GET    /unitTypes/:id/delete                controllers.UnitTypes.deleteUnitType(id: Integer)
 POST   /unitTypes/:id                       controllers.UnitTypes.updateUnitType(id: Integer)

@@ -6,37 +6,30 @@
   <div class="announcements">
     @if(sections.size()>0){
         <h3>Секций</h3>
-        <place class="place">
+
         @for(section<-sections){
-            <tr>
-            <td>
-            <div id="section@section.id" >
-            <div class="row" style="margin-left: 20px;">
-                <h4><span class="sectionDescriptionTitle item" id="@section.id">@section.title</span></h4>
-                <span class="action" style="margin-left:5px;">
-                    <a href="@routes.Sections.deleteSection(section.id)"><i class="icon-remove"></i></a>
-                </span>
-                <div class="nicPanels" id="sectionNicPanel@section.id" style="width: 525px;"></div>
-                <div id="lecturecontent" class="nicTextContainer">
-                    <div id="cdContent@section.id" style="width: 525px;">
+            <div class="span8">
+               <span class="span2">
+                <h4><span class="sectionDescriptionTitle item" id="@section.id">@section.title</h4>
+                  </span>
+                <span class="span5">
                         @if(section.description!=null){
                             @Html(section.description)
                         }
-                    </div>
-                </div>
-            </div>
-            </div>
-            </td>
-            <td>
+                    </span>
+                 <span class="span">
                 @form(routes.Sections.sectionPage(section.id)) {
-                   <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                   <button type="submit" class="btn btn-primary btn-medium courceCellButton">Изменить</button>
                 }
-            </td>
-            </tr>
+            </span>
+                </div>
         }
-        </place>
-    }
 
+    }
+      <div class="span4">
+          <br/><br/>
+      </div>
+      <div class="span4">
     @form(routes.Sections.addingSectionPage(restaurant.id)) {
         <button type="submit" class="btn btn-primary btn-medium courceCellButton">Добавить</button>
     }
@@ -44,6 +37,7 @@
     @form(routes.Restaurants.restaurantPage(restaurant.id)) {
         <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
     }
+      </div>
   </div>
   </div>
 }

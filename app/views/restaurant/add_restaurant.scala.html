@@ -4,14 +4,22 @@
 @main(null){
     <fieldset>
         <legend>Новый ресторан</legend>
-        <div class="createForm">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span15">
             @form(routes.Restaurants.newRestaurant()){
-                <p><input type="text" name="title" placeholder="Name"></p>
-                <p><textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea></p>
-                <p><input id="startDate" type="text" class="datepicker" name="start_time"></p>
-                <p><input id="endDate" type="text" class="datepicker" name="end_time"></p>
-                <p><button class="btn btn-primary" type="submit">Создать</button></p>
+                <p><input type="text" name="title" placeholder="Название"><textarea  name="description" placeholder="Описание"></textarea></p>
+                <p><input id="startDate" type="text" class="datepicker" name="start_time">
+                <input id="endDate" type="text" class="datepicker" name="end_time"></p>
+                <p><button class="btn btn-primary" type="submit">Создать</button>
+
             }
+            @form(routes.AdminPanel.index()){
+               <button class="btn btn-primary" type="submit">Назад</button>
+            </p>
+            }
+                </div>
+            </div>
         </div>
     </fieldset>
 }

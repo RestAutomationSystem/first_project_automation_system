@@ -56,7 +56,10 @@ public class Modificators extends Controller{
     }
 
 
-
+    public static Result addingModificatorPage(int id){
+        return ok(add_modificator.render(User.find.where().eq("email", request().username()).findUnique(),
+                Item.find.byId(id),UnitType.findAll()));
+    }
 
     public static Result modificatorPage(int id) {
 

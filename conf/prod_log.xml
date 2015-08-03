@@ -8,7 +8,7 @@
             <level>DEBUG</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${application.home}/logs/debug_log.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileНазваниеPattern>${application.home}/logs/debug_log.%d{yyyy-MM-dd}.log</fileНазваниеPattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
     </appender>
@@ -22,7 +22,7 @@
             <level>WARN</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${application.home}/logs/warn_log.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileНазваниеPattern>${application.home}/logs/warn_log.%d{yyyy-MM-dd}.log</fileНазваниеPattern>
             <maxHistory>60</maxHistory>
         </rollingPolicy>
     </appender>

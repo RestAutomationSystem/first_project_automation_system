@@ -51,6 +51,10 @@ public class Suppliers extends Controller{
 
     }
 
+    public static Result addingSupplierPage(){
+        return ok(add_supplier.render(User.find.where().eq("email", request().username()).findUnique(),
+                supplierForm));
+    }
 
     public static Result supplierPage(int id) {
 

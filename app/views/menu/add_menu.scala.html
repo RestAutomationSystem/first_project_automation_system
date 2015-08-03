@@ -1,23 +1,28 @@
+@(user:User,service:Service,menuForm:Form[Menu])
+@import helper._
+@main(null){
 <fieldset>
-    <legend>Add new storage</legend>
+    <legend>Добавить меню</legend>
     <div class="createForm">
-        @form(routes.Storages.newStorage(restaurant.id)){
-        <p>
+        @form(routes.Menus.newMenu(service.id)){
+       <p >
             <input type="text" name="title" placeholder="Название">
-        </p>
-        <p>
+
             <textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Описание"></textarea>
         </p>
         <p>
             <input id="startDate" type="text" class="datepicker" name="start_time">
-        </p>
-        <p>
+
             <input id="endDate" type="text" class="datepicker" name="end_time">
         </p>
-        <p>
-            <button class="btn btn-primary" type="submit">Добавить</button>
-        </p>
+
+            <button class="btn btn-primary" type="submit">Создать</button>
+
+        }
+        @form(routes.Menus.index(service.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
         }
     </div>
-
 </fieldset>
+
+       }

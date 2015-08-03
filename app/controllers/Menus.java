@@ -55,7 +55,10 @@ public class Menus extends Controller{
 
     }
 
-
+    public static Result addingMenuPage(int id){
+        return ok(add_menu.render(User.find.where().eq("email", request().username()).findUnique(),
+                Service.find.byId(id),menuForm));
+    }
 
 
     public static Result menuPage(int id) {

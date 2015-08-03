@@ -10,20 +10,22 @@
     </div>
     <div class="span9">
 	@form(routes.Suppliers.updateSupplier(supplier.id)){
-<input type="text" name="title" value="@supplier.title"/>
-<textarea name="description">@supplier.description</textarea>
-<input id="startDate" type="text" class="datepicker" name="start_time" value="@supplier.start_time.format("dd/MM/yyyy HH:mm")">
-<input id="endDate" type="text" class="datepicker" name="end_time" value="@supplier.end_time.format("dd/MM/yyyy HH:mm")">
-
+<p>
+    <input type="text" name="title" value="@supplier.title"/>
+    <textarea name="description">@supplier.description</textarea>
+</p>
+<p>
+    <input id="startDate" type="text" class="datepicker" name="start_time" value="@supplier.start_time.format("dd/MM/yyyy HH:mm")">
+    <input id="endDate" type="text" class="datepicker" name="end_time" value="@supplier.end_time.format("dd/MM/yyyy HH:mm")">
+</p>
 <input type="submit" value="Сохранить"/>
 }
-
+        @form(routes.Suppliers.index()) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к поставщикам</button>
+        }
 </div>
 <div class="span2">
-    @form(routes.Suppliers.index()) {
-    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к поставщикам</button>
 
-    }
 							</div>
 </div>
 </div>

@@ -52,6 +52,11 @@ public class Places extends Controller{
 
 	}
 
+    public static Result addingPlacePage(int id){
+        return ok(add_place.render(User.find.where().eq("email", request().username()).findUnique(),
+                RestaurantSection.find.byId(id)));
+    }
+
 	public static Result placePage(int id) {
 		session("place",id+"");
 			return ok(

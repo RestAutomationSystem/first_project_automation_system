@@ -86,7 +86,24 @@ public class Categories extends Controller{
     }
 
 
+    public static Result addingCategoryPage(int id){
+        List<Category> categoryList= Category.findByMenu(id);
+        if( categoryList==null)
+            categoryList=new ArrayList<Category>();
 
+        return ok(add_category.render(User.find.where().eq("email", request().username()).findUnique(),
+                Menu.find.byId(id),categoryForm,categoryList));
+
+
+    }
+
+    public static Result addingChildCategoryPage(int id){
+        List<Category> categoryList= Category.findByCategory(id);
+        if( categoryList==null)
+            categoryList=new ArrayList<Category>();
+        return ok(add_child_category.render(User.find.where().eq("email", request().username()).findUnique(),
+                Category.find.byId(id),categoryForm,categoryList));
+    }
 
 
     public static Result categoryPage(int id) {

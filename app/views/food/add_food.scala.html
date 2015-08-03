@@ -1,0 +1,40 @@
+@(user:User,storage:Storage,suppliers:List[Supplier])
+
+
+
+@import helper._
+@main(null){
+<fieldset>
+    <legend>Add new foods</legend>
+    <div class="createForm">
+        @form(routes.Foods.newFood(storage.id)){
+        <p>
+            <input type="text" name="title" foodholder="Название">
+
+            <textarea rows="10" cols="30" class="ckeditor" name="description" foodholder="Описание"></textarea>
+        </p>
+        <p>
+            <input id="startDate" type="text" class="datepicker" name="start_time">
+
+            <input id="endDate" type="text" class="datepicker" name="end_time">
+        </p>
+        <p>
+            <input  type="text" name="price">
+
+            <select  name="supplier_id">
+                @for(supplier<-suppliers){
+                <option value="@supplier.id">@supplier.title</option>
+                }
+            </select>
+        </p>
+
+            <button class="btn btn-primary" type="submit">Создать</button>
+
+        }
+        @form(routes.Storages.storagePage(storage.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к складу</button>
+        }
+    </div>
+
+</fieldset>
+        }

@@ -8,7 +8,7 @@
             @form(routes.Users.newUser()){
 
             <p>
-                <input type="text" name="name" placeholder="Name"  />
+                <input type="text" name="name" placeholder="Название"  />
             </p>
             <p>
                 <input type="email" name="email" placeholder="Email"  />
@@ -20,6 +20,10 @@
                 <input type="password" name="password2" placeholder="Confirm password"/>
             </p>
                 <p><button class="btn btn-primary" type="submit">Создать</button></p>
+            }
+            @form(routes.AdminPanel.index()){
+            <button class="btn btn-primary" type="submit">Назад</button>
+            </p>
             }
         </div>
     </fieldset>

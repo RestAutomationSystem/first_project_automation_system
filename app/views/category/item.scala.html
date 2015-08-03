@@ -4,9 +4,7 @@
 @import helper._
 @main(null){
 
-     <hr/>
-        @childs(category,child_cats)
-<hr/>
+
 <div class="container-fluid">
   <div class="row-fluid">
       <div class="span3">
@@ -40,6 +38,18 @@
 }
 
 </div>
+
+      <div class="span4">
+          <br/><br/>
+      </div>
+      <hr/>
+      @childs(category,child_cats)
+      <hr/>
+      <div class="span6">
+          @form(routes.Categories.addingChildCategoryPage(category.id)) {
+          <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+              Добавить подкатегорию</button>
+          }
       @form(routes.Categories.index(category.menu.id)) {
       <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к категориям</button>
 

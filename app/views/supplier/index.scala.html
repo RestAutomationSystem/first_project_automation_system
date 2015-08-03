@@ -9,65 +9,41 @@
 <div class="announcements"> 
 @if(suppliers.size()>0){
 <h3>My Suppliers</h3>
-<place class="place">
+
 @for(supplier<-suppliers){
-<tr>
-<td>
-<div id="supplier@supplier.id" >
-
-  <div class="row" style="margin-left: 20px;">
-  <div class="row" style="margin-left: 20px;">
-<h4><span class="supplierDescriptionTitle item" id="@supplier.id">@supplier.title</span></h4>
-<span class="action" style="margin-left:5px;">
-<a href="@routes.Suppliers.deleteSupplier(supplier.id)"><i class="icon-remove"></i></a>
-</span>
-</div>
-<br/>
-
-<div class="nicPanels" id="supplierNicPanel@supplier.id" style="width: 525px;"></div>
-<div id="lecturecontent" class="nicTextContainer">
-<div id="cdContent@supplier.id" style="width: 525px;">
+    <div class="span8">
+          <span class="span2">
+<h4>@supplier.title</h4>
+      </span>
+          <span class="span5">
 @if(supplier.description!=null){
 @Html(supplier.description)
 }
-</div>
-</div>
-</div>
-</div>
-</td>
-<td style="padding: 30px;">
+    </span>
+           <span class="span">
 @form(routes.Suppliers.supplierPage(supplier.id)) {
-                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Изменить</button>
                           
 							}
-</td>
-</tr>
+    </span>
+</div>
 }
-</place>
 }
 
-<fieldset>
-<legend>Add new supplier</legend>
-<div class="createForm">
-@form(routes.Suppliers.newSupplier()){
-<p>
-<input type="text" name="title" placeholder="Name">
-</p>
-<p>
-<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
-</p>
-<p>
-<input id="startDate" type="text" class="datepicker" name="start_time">
-</p>
-<p>
-<input id="endDate" type="text" class="datepicker" name="end_time">
-</p>
-<p>
-<button class="btn btn-primary" type="submit">Create</button>
-</p>
-}
-</div>
-</fieldset>
+    <div class="span4">
+        <br/><br/>
+    </div>
+    <div class="span4">
+        @form(routes.Suppliers.addingSupplierPage()) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Добавить</button>
+        }
+        @form(routes.AdminPanel.index()) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+            Назад</button>
+        }
+    </div>
+
+
 </div>
 </div>
 }

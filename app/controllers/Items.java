@@ -55,7 +55,10 @@ public class Items extends Controller{
 
     }
 
-
+    public static Result addingItemPage(int id){
+        return ok(add_item.render(User.find.where().eq("email", request().username()).findUnique(),
+                Category.find.byId(id),UnitType.findAll()));
+    }
 
 
     public static Result itemPage(int id) {

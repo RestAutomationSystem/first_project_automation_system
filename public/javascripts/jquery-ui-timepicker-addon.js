@@ -37,8 +37,8 @@
 		this.regional[''] = { // Default regional settings
 			currentText: 'Now',
 			closeText: 'Done',
-			amNames: ['AM', 'A'],
-			pmNames: ['PM', 'P'],
+			amНазваниеs: ['AM', 'A'],
+			pmНазваниеs: ['PM', 'P'],
 			timeFormat: 'HH:mm',
 			timeSuffix: '',
 			timeOnlyTitle: 'Choose Time',
@@ -172,14 +172,14 @@
 				fns = {},
 				overrides, i;
 
-			for (var attrName in this._defaults) {
-				if (this._defaults.hasOwnProperty(attrName)) {
-					var attrValue = $input.attr('time:' + attrName);
+			for (var attrНазвание in this._defaults) {
+				if (this._defaults.hasOwnProperty(attrНазвание)) {
+					var attrValue = $input.attr('time:' + attrНазвание);
 					if (attrValue) {
 						try {
-							inlineSettings[attrName] = eval(attrValue);
+							inlineSettings[attrНазвание] = eval(attrValue);
 						} catch (err) {
-							inlineSettings[attrName] = attrValue;
+							inlineSettings[attrНазвание] = attrValue;
 						}
 					}
 				}
@@ -217,10 +217,10 @@
 				evnts: fns,
 				timepicker: tp_inst // add timepicker as a property of datepicker: $.datepicker._get(dp_inst, 'timepicker');
 			});
-			tp_inst.amNames = $.map(tp_inst._defaults.amNames, function (val) {
+			tp_inst.amНазваниеs = $.map(tp_inst._defaults.amНазваниеs, function (val) {
 				return val.toUpperCase();
 			});
-			tp_inst.pmNames = $.map(tp_inst._defaults.pmNames, function (val) {
+			tp_inst.pmНазваниеs = $.map(tp_inst._defaults.pmНазваниеs, function (val) {
 				return val.toUpperCase();
 			});
 
@@ -814,7 +814,7 @@
 				timezone = timezone.toString();
 			}
 
-			var ampm = o[hour < 12 ? 'amNames' : 'pmNames'][0];
+			var ampm = o[hour < 12 ? 'amНазваниеs' : 'pmНазваниеs'][0];
 
 			// If the update was done in the input field, the input field should not be updated.
 			// If the update was done using the sliders, update the input field.
@@ -824,7 +824,7 @@
 						second !== parseInt(this.second,10) || 
 						millisec !== parseInt(this.millisec,10) || 
 						microsec !== parseInt(this.microsec,10) || 
-						(this.ampm.length > 0 && (hour < 12) !== ($.inArray(this.ampm.toUpperCase(), this.amNames) !== -1)) || 
+						(this.ampm.length > 0 && (hour < 12) !== ($.inArray(this.ampm.toUpperCase(), this.amНазваниеs) !== -1)) ||
 						(this.timezone !== null && timezone !== this.timezone.toString()) // could be numeric or "EST" format, so use toString()
 					);
 
@@ -1169,13 +1169,13 @@
 		var strictParse = function (f, s, o) {
 
 			// pattern for standard and localized AM/PM markers
-			var getPatternAmpm = function (amNames, pmNames) {
+			var getPatternAmpm = function (amНазваниеs, pmНазваниеs) {
 				var markers = [];
-				if (amNames) {
-					$.merge(markers, amNames);
+				if (amНазваниеs) {
+					$.merge(markers, amНазваниеs);
 				}
-				if (pmNames) {
-					$.merge(markers, pmNames);
+				if (pmНазваниеs) {
+					$.merge(markers, pmНазваниеs);
 				}
 				markers = $.map(markers, function (val) {
 					return val.replace(/[.*+?|()\[\]{}\\]/g, '\\$&');
@@ -1223,7 +1223,7 @@
 							case 'z':
 								return '(z|[-+]\\d\\d:?\\d\\d|\\S+)?';
 							case 't':
-								return getPatternAmpm(o.amNames, o.pmNames);
+								return getPatternAmpm(o.amНазваниеs, o.pmНазваниеs);
 							default:    // literal escaped in quotes
 								return '(' + match.replace(/\'/g, "").replace(/(\.|\$|\^|\\|\/|\(|\)|\[|\]|\?|\+|\*)/g, function (m) { return "\\" + m; }) + ')?';
 							}
@@ -1250,8 +1250,8 @@
 						ampm = '';
 						resTime.ampm = '';
 					} else {
-						ampm = $.inArray(treg[order.t].toUpperCase(), $.map(o.amNames, function (x,i) { return x.toUpperCase(); })) !== -1 ? 'AM' : 'PM';
-						resTime.ampm = o[ampm === 'AM' ? 'amNames' : 'pmNames'][0];
+						ampm = $.inArray(treg[order.t].toUpperCase(), $.map(o.amНазваниеs, function (x,i) { return x.toUpperCase(); })) !== -1 ? 'AM' : 'PM';
+						resTime.ampm = o[ampm === 'AM' ? 'amНазваниеs' : 'pmНазваниеs'][0];
 					}
 				}
 
@@ -1336,7 +1336,7 @@
 	 * Public utility to format the time
 	 * @param {string} format format of the time
 	 * @param {Object} time Object not a Date for timezones
-	 * @param {Object} [options] essentially the regional[].. amNames, pmNames, ampm
+	 * @param {Object} [options] essentially the regional[].. amНазваниеs, pmНазваниеs, ampm
 	 * @returns {string} the formatted time
 	 */
 	$.datepicker.formatTime = function (format, time, options) {
@@ -1352,11 +1352,11 @@
 		}, time);
 
 		var tmptime = format,
-			ampmName = options.amNames[0],
+			ampmНазвание = options.amНазваниеs[0],
 			hour = parseInt(time.hour, 10);
 
 		if (hour > 11) {
-			ampmName = options.pmNames[0];
+			ampmНазвание = options.pmНазваниеs[0];
 		}
 
 		tmptime = tmptime.replace(/(?:HH?|hh?|mm?|ss?|[tT]{1,2}|[zZ]|[lc]|'.*?')/g, function (match) {
@@ -1386,13 +1386,13 @@
 			case 'Z':
 				return $.timepicker.timezoneOffsetString(time.timezone === null ? options.timezone : time.timezone, true);
 			case 'T':
-				return ampmName.charAt(0).toUpperCase();
+				return ampmНазвание.charAt(0).toUpperCase();
 			case 'TT':
-				return ampmName.toUpperCase();
+				return ampmНазвание.toUpperCase();
 			case 't':
-				return ampmName.charAt(0).toLowerCase();
+				return ampmНазвание.charAt(0).toLowerCase();
 			case 'tt':
-				return ampmName.toLowerCase();
+				return ampmНазвание.toLowerCase();
 			default:
 				return match.replace(/'/g, "");
 			}
@@ -1475,7 +1475,7 @@
 											" " + tp_inst._defaults.separator + 
 											tp_inst._defaults.timeSuffix + 
 											(tz ? tp_inst._defaults.timezoneList.join('') : '') + 
-											(tp_inst._defaults.amNames.join('')) + (tp_inst._defaults.pmNames.join('')) + 
+											(tp_inst._defaults.amНазваниеs.join('')) + (tp_inst._defaults.pmНазваниеs.join('')) +
 											dateChars,
 					chr = String.fromCharCode(event.charCode === undefined ? event.keyCode : event.charCode);
 				return event.ctrlKey || (chr < ' ' || !dateChars || datetimeChars.indexOf(chr) > -1);

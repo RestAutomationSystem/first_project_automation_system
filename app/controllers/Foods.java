@@ -58,6 +58,10 @@ public class Foods extends Controller{
 
     }
 
+    public static Result addingFoodPage(int id){
+        return ok(add_food.render(User.find.where().eq("email", request().username()).findUnique(),
+                Storage.find.byId(id),Supplier.findAll()));
+    }
 
     public static Result foodPage(int id) {
 

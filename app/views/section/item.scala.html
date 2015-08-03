@@ -4,6 +4,14 @@
 @main(null){
   <div class="container-fluid">
   <div class="row-fluid">
+      <div class="span2">
+          @form(routes.Places.index(section.id)) {
+          <button type="submit" class="btn btn-primary btn-medium courceCellButton">Столы</button>
+          }
+      </div>
+      <div class="span4">
+          <br/><br/>
+      </div>
     <div class="span9">
 	@form(routes.Sections.updateSection(section.id)){
         <input type="text" name="title" value="@section.title"/>
@@ -14,11 +22,10 @@
         <input type="submit" value="Удалить"/>
     }
     </div>
+      <div class="span4">
+          <br/><br/>
+      </div>
     <div class="span2">
-        @form(routes.Places.index(section.id)) {
-            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Столы</button>
-        }
-
         @form(routes.Sections.index(section.restaurant.id)) {
             <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
         }

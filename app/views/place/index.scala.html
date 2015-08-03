@@ -6,31 +6,39 @@
     <div class="announcements">
         @if(places.size()>0){
             <h3>Столы</h3>
-            <place class="place">
+
             @for(place<-places){
-                <tr>
-                <td>
-                <div class="row" style="margin-left: 20px;">
-                    <h4><span class="placesDescriptionTitle item">@place.getTitle()</span></h4>
-                    <div id="lecturecontent" class="nicTextContainer">
+                <div class="span10">
+             <span class="span2">
+                 <h4><span class="placesDescriptionTitle item">@place.getTitle()</h4>
+             </span>
+
+              <span class="span10">
                         @if(place.getDescription()!=null){
                             @Html(place.getDescription())
                         }
-                    </div>
-                </div>
-                </td>
-                <td style="padding: 30px;">
+                    </span>
+
+              <span class="span">
                     @form(routes.Places.placePage(place.getId())) {
-                        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Изменить</button>
                     }
-                </td>
-                </tr>
+                    </span>
+    </div>
             }
-            </place>
+
         }
+        <div class="span4">
+            <br/><br/>
+        </div>
+        <div class="span4">
+            @form(routes.Places.addingPlacePage(section.id)) {
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Добавить</button>
+            }
         @form(routes.Sections.sectionPage(section.id)) {
             <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
         }
+        </div>
     </div>
     </div>
 }

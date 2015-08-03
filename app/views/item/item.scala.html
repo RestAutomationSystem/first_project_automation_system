@@ -10,6 +10,7 @@
           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Модификаторы</button>
           }
       </div>
+      <br/>
     <div class="span9">
 	@form(routes.Items.updateItem(item.id)){
 <input type="text" name="title" value="@item.title"/>
@@ -26,14 +27,14 @@
                 }
                 }
             </select>
+
+            <input type="text" name="price_original" value="@item.price_original" placeholder="Себестоимость">
         </p>
         <p>
-            <input type="text" name="price_original" value="@item.price_original" placeholder="Original price">
-        </p>
-        <p>
-            <input type="text" name="price_for_sale" value="@item.price_for_sale" placeholder="Price for sale">
-        </p>
+            <input type="text" name="price_for_sale" value="@item.price_for_sale" placeholder="Розничная цена">
+
 <input type="submit" value="Сохранить"/>
+        </p>
 }
 
 </div>

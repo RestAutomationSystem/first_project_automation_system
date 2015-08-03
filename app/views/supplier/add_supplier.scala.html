@@ -1,23 +1,29 @@
+@(user:User,supplierForm:Form[Supplier])
+
+@import helper._
+@main(null){
 <fieldset>
-    <legend>Add new storage</legend>
+    <legend>Новый поставщик</legend>
     <div class="createForm">
-        @form(routes.Storages.newStorage(restaurant.id)){
+        @form(routes.Suppliers.newSupplier()){
         <p>
             <input type="text" name="title" placeholder="Название">
-        </p>
-        <p>
+
             <textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Описание"></textarea>
         </p>
         <p>
             <input id="startDate" type="text" class="datepicker" name="start_time">
-        </p>
-        <p>
+
             <input id="endDate" type="text" class="datepicker" name="end_time">
         </p>
-        <p>
+
             <button class="btn btn-primary" type="submit">Добавить</button>
-        </p>
+
+        }
+        @form(routes.AdminPanel.index()){
+        <button class="btn btn-primary" type="submit">Назад</button>
+
         }
     </div>
-
 </fieldset>
+        }

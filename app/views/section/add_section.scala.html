@@ -6,13 +6,12 @@
         <legend>Новая секция</legend>
         <div class="createForm">
             @form(routes.Sections.newSection(restaurant.id)){
-                <p><input type="text" name="title" placeholder="Name"></p>
-                <p><textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea></p>
-                <p><button class="btn btn-primary" type="submit">Создать</button></p>
+                <p><input type="text" name="title" placeholder="Название"><textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Описание"></textarea></p>
+                <button class="btn btn-primary" type="submit">Создать</button>
             }
 
             @form(routes.Sections.index(restaurant.id)){
-                <p><button class="btn btn-primary" type="submit">Назад</button></p>
+                <button class="btn btn-primary" type="submit">Назад</button>
             }
         </div>
     </fieldset>

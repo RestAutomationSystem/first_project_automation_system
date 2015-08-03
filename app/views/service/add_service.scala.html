@@ -6,13 +6,13 @@
         <legend>Новый сервис</legend>
         <div class="createForm">
             @form(routes.Services.newService(restaurant.id)){
-                <p><input type="text" name="title" placeholder="Name"></p>
-                <p><textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea></p>
-                <p><button class="btn btn-primary" type="submit">Создать</button></p>
+                <p><input type="text" name="title" placeholder="Название"></p>
+                <p><textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Описание"></textarea></p>
+                <button class="btn btn-primary" type="submit">Создать</button>
             }
 
             @form(routes.Services.index(restaurant.id)){
-                <p><button class="btn btn-primary" type="submit">Назад</button></p>
+                <button class="btn btn-primary" type="submit">Назад</button>
             }
         </div>
     </fieldset>
