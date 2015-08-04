@@ -165,6 +165,30 @@ create table place (
   constraint pk_place primary key (id))
 ;
 
+create table price_list_has_modificator (
+  id                        integer auto_increment not null,
+  title                     varchar(255),
+  description               TEXT,
+  status                    tinyint(1) default 0,
+  start_time                datetime,
+  end_time                  datetime,
+  price                     double,
+  modificator_id            integer,
+  constraint pk_price_list_has_modificator primary key (id))
+;
+
+create table price_list_has_product (
+  id                        integer auto_increment not null,
+  title                     varchar(255),
+  description               TEXT,
+  status                    tinyint(1) default 0,
+  start_time                datetime,
+  end_time                  datetime,
+  price                     double,
+  item_id                   integer,
+  constraint pk_price_list_has_product primary key (id))
+;
+
 create table restaurant (
   id                        integer auto_increment not null,
   title                     varchar(255),
@@ -296,12 +320,16 @@ alter table order_modificator add constraint fk_order_modificator_order_19 forei
 create index ix_order_modificator_order_19 on order_modificator (order_id);
 alter table place add constraint fk_place_section_20 foreign key (section_id) references restaurant_section (id) on delete restrict on update restrict;
 create index ix_place_section_20 on place (section_id);
-alter table restaurant_section add constraint fk_restaurant_section_restaurant_21 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_restaurant_section_restaurant_21 on restaurant_section (restaurant_id);
-alter table service add constraint fk_service_restaurant_22 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_service_restaurant_22 on service (restaurant_id);
-alter table storage add constraint fk_storage_restaurant_23 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_storage_restaurant_23 on storage (restaurant_id);
+alter table price_list_has_modificator add constraint fk_price_list_has_modificator_modificator_21 foreign key (modificator_id) references modificator (id) on delete restrict on update restrict;
+create index ix_price_list_has_modificator_modificator_21 on price_list_has_modificator (modificator_id);
+alter table price_list_has_product add constraint fk_price_list_has_product_item_22 foreign key (item_id) references item (id) on delete restrict on update restrict;
+create index ix_price_list_has_product_item_22 on price_list_has_product (item_id);
+alter table restaurant_section add constraint fk_restaurant_section_restaurant_23 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_restaurant_section_restaurant_23 on restaurant_section (restaurant_id);
+alter table service add constraint fk_service_restaurant_24 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_service_restaurant_24 on service (restaurant_id);
+alter table storage add constraint fk_storage_restaurant_25 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_storage_restaurant_25 on storage (restaurant_id);
 
 
 
@@ -336,6 +364,10 @@ drop table order_type;
 drop table payment_type;
 
 drop table place;
+
+drop table price_list_has_modificator;
+
+drop table price_list_has_product;
 
 drop table restaurant;
 

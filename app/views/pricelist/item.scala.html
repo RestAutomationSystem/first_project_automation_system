@@ -1,0 +1,59 @@
+@(user:User,item:Item,prices:List[PriceListHasProduct])
+
+
+@import helper._
+@main(user){
+<div class="container-fluid">
+    <div class="row-fluid">
+        @if(prices.size()>0){
+
+        <div class="span14">
+            @for(pricel<-prices){
+<span class="span2">
+<h4>@pricel.title</h4>
+    </span>
+<span class="span4">
+@if(pricel.description!=null){
+@Html(pricel.description)
+}</span>
+            <span class="span2">
+@if(pricel.start_time!=null){
+@pricel.start_time.format("dd/MM/yyyy HH:mm")
+}</span>
+
+     <span class="span2">
+@if(pricel.end_time!=null){
+@pricel.end_time.format("dd/MM/yyyy HH:mm")
+}</span>
+ <span class="span2">
+@if(pricel.price!=null){
+@pricel.price
+}</span>
+    <span class="span">
+    @form(routes.Items.itemPage(item.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Изменить</button>
+
+							}
+    </span>
+            }
+        </div>
+        }
+
+        <div class="span4">
+            <br/><br/>
+        </div>
+        <div class="span6">
+            @form(routes.Pricelist.addingItemPricePage(item.id)) {
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+                Добавить</button>
+            }
+
+            @form(routes.Pricelist.index()) {
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+                Назад</button>
+            }
+        </div>
+    </div>
+</div>
+
+}

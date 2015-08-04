@@ -20,11 +20,11 @@
     <file path="/Places.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438600492718" ignored="false" />
     <file path="/a.dummy" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665808853" ignored="false" />
     <file path="/Place.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438529031489" ignored="false" />
-    <file path="/index.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438670027258" ignored="false" />
-    <file path="/item.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438666147971" ignored="false" />
-    <file path="/routes" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438658848460" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_routing.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438603294853" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_reverseRouting.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438661207369" ignored="false" />
+    <file path="/index.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438684622249" ignored="false" />
+    <file path="/item.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688973244" ignored="false" />
+    <file path="/routes" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438687147018" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_routing.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688805014" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_reverseRouting.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688805014" ignored="false" />
     <file path="/Foods.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438601286812" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/food/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665826605" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/food/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665826605" ignored="false" />
@@ -34,7 +34,7 @@
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/restaurant/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438597046015" ignored="false" />
     <file path="/Restaurants.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438507766615" ignored="false" />
     <file path="/services.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438075108979" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/controllers/routes.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438661207369" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/controllers/routes.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688805014" ignored="false" />
     <file path="/Restaurant.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438506286846" ignored="false" />
     <file path="/Service.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438506751106" ignored="false" />
     <file path="/Menu.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438510241999" ignored="false" />
@@ -56,7 +56,7 @@
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/service/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438597659186" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/modificator/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438598401259" ignored="false" />
     <file path="/childs.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438593603498" ignored="false" />
-    <file path="/Application.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438158512077" ignored="false" />
+    <file path="/Application.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438680151707" ignored="false" />
     <file path="/add_user.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665888115" ignored="false" />
     <file path="/Users.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438581014251" ignored="false" />
     <file path="/User.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438484378338" ignored="false" />
@@ -138,7 +138,16 @@
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/food/add_food.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665826605" ignored="false" />
     <file path="/register.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665986258" ignored="false" />
     <file path="/registerSuccess.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438666001711" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/main.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438666120979" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/main.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438681967779" ignored="false" />
+    <file path="/Pricelist.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438689257515" ignored="false" />
+    <file path="/PriceListHasProduct.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438686508577" ignored="false" />
+    <file path="/PriceListHasModificator.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438686561697" ignored="false" />
+    <file path="/add_item_price.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438687541864" ignored="false" />
+    <file path="/modificator.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688986651" ignored="false" />
+    <file path="/add_modificator_price.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688513114" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/pricelist/modificator.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438689375344" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/pricelist/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438689375344" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/pricelist/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438689741725" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,91 +242,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="add_modificator.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/modificator/add_modificator.scala.html">
+      <file leaf-file-name="Pricelist.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Pricelist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="33" selection-start="121" selection-end="121" vertical-scroll-proportion="-4.576923">
+            <state line="151" column="250" selection-start="5192" selection-end="5192" vertical-scroll-proportion="-7.48">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Items.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Items.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="22" selection-end="267" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/routes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="28" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/item/index.scala.html">
+      <file leaf-file-name="PriceListHasProduct.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/pricelist/PriceListHasProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="16" selection-start="200" selection-end="200" vertical-scroll-proportion="-5.8846154">
-              <folding />
+            <state line="54" column="54" selection-start="1298" selection-end="1308" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PriceListHasModificator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/pricelist/PriceListHasModificator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="52" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="item.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/item/item.scala.html">
+        <entry file="file://$PROJECT_DIR$/app/views/pricelist/item.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="29" column="1" selection-start="657" selection-end="657" vertical-scroll-proportion="-18.961538">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_item.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/item/add_item.scala.html">
+      <file leaf-file-name="modificator.scala.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pricelist/modificator.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="48" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/AdminPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Roles.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Roles.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/index.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="24" selection-start="824" selection-end="824" vertical-scroll-proportion="-15.692307">
+            <state line="20" column="1" selection-start="465" selection-end="465" vertical-scroll-proportion="-4.4736843">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.scala.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/role/index.scala.html">
+        <entry file="file://$PROJECT_DIR$/app/views/pricelist/index.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="128" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.807396">
+            <state line="129" column="78" selection-start="3132" selection-end="3132" vertical-scroll-proportion="1.7024794">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/restaurant/index.scala.html">
+      <file leaf-file-name="add_item_price.scala.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pricelist/add_item_price.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="5" selection-start="1141" selection-end="1290" vertical-scroll-proportion="-24.846153">
+            <state line="13" column="35" selection-start="312" selection-end="312" vertical-scroll-proportion="-8.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_modificator_price.scala.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pricelist/add_modificator_price.scala.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="35" selection-start="340" selection-end="340" vertical-scroll-proportion="-2.9078948">
               <folding />
             </state>
           </provider>
@@ -340,22 +357,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/user/item.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/user/add_user.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/event/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/controllers/Events.java" />
-        <option value="$PROJECT_DIR$/app/views/register.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/registerSuccess.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/restaurant/item.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/unitType/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/category/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/modificator/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/modificator/add_modificator.scala.html" />
         <option value="$PROJECT_DIR$/app/views/item/index.scala.html" />
         <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/app/views/admin/index.scala.html" />
         <option value="$PROJECT_DIR$/app/views/role/index.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/admin/index.scala.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
+        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/item/modificator.scala.html" />
+        <option value="$PROJECT_DIR$/conf/routes" />
+        <option value="$PROJECT_DIR$/app/models/pricelist/PriceListHasProduct.java" />
+        <option value="$PROJECT_DIR$/app/models/pricelist/PriceListHasModificator.java" />
+        <option value="$PROJECT_DIR$/app/views/pricelist/add_item_price.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/pricelist/add_modificator_price.scala.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Pricelist.java" />
+        <option value="$PROJECT_DIR$/app/views/pricelist/modificator.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/pricelist/item.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/pricelist/index.scala.html" />
       </list>
     </option>
   </component>
@@ -643,6 +660,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="pricelist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="modificator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -666,6 +705,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="item" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="food" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -750,6 +811,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restaurant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="first_project_automation_system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pricelist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -982,24 +1087,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.86540604" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.134594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134594" sideWeight="0.49786553" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.86540604" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22024472" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134594" sideWeight="0.49839914" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24922119" sideWeight="0.86540604" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.7793345" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19530416" sideWeight="0.7797553" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19530416" sideWeight="0.86540604" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1086,114 +1191,115 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/unitType/item.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/models/restaurant/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="84" column="4" selection-start="661" selection-end="2248" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/unitType/add_unitType.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/views/unitType/index.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/category/item.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/category/childs.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="161" selection-end="161" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/category/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="197" selection-end="215" vertical-scroll-proportion="-6.5384617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/modificator/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="229" selection-end="229" vertical-scroll-proportion="-5.8846154">
+        <state line="33" column="0" selection-start="642" selection-end="1072" vertical-scroll-proportion="-18.192308">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/modificator/add_modificator.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="121" selection-end="121" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/item/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="200" selection-end="200" vertical-scroll-proportion="-5.8846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/item/item.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="38" column="7" selection-start="1106" selection-end="1268" vertical-scroll-proportion="-24.846153">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/item/add_item.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="50" selection-start="50" selection-end="50" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
+    <entry file="file://$PROJECT_DIR$/app/views/item/index.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="48" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.0">
+        <state line="29" column="9" selection-start="206" selection-end="623" vertical-scroll-proportion="-18.961538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AdminPanel.java">
+    <entry file="file://$PROJECT_DIR$/app/models/pricelist/PriceListHasModificator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+        <state line="55" column="52" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/pricelist/PriceListHasProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="54" selection-start="1298" selection-end="1308" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pricelist/add_item_price.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="35" selection-start="312" selection-end="312" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Roles.java">
+    <entry file="file://$PROJECT_DIR$/app/views/pricelist/add_modificator_price.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+        <state line="13" column="35" selection-start="340" selection-end="340" vertical-scroll-proportion="-2.9078948">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/index.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Items.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="824" selection-end="824" vertical-scroll-proportion="-15.692307">
+        <state line="2" column="0" selection-start="22" selection-end="267" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Pricelist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="250" selection-start="5192" selection-end="5192" vertical-scroll-proportion="-7.48">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pricelist/modificator.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="1" selection-start="465" selection-end="465" vertical-scroll-proportion="-4.4736843">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/restaurant/index.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/views/pricelist/item.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="5" selection-start="1141" selection-end="1290" vertical-scroll-proportion="-24.846153">
+        <state line="29" column="1" selection-start="657" selection-end="657" vertical-scroll-proportion="-18.961538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/role/index.scala.html">
+    <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="128" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.807396">
+        <state line="51" column="28" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pricelist/index.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="78" selection-start="3132" selection-end="3132" vertical-scroll-proportion="1.7024794">
           <folding />
         </state>
       </provider>

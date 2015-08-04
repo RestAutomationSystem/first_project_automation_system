@@ -1,0 +1,136 @@
+@(user:User,restaurants:List[Restaurant])
+
+@import helper._
+@main(user){
+
+
+       <select id="restaurants">
+           <option>Рестораны</option>
+           @for(restaurant<-restaurants){
+
+           <option value="@restaurant.id">@restaurant.title</option>
+
+           }
+       </select>
+
+<select id="services">
+    <option>Сервисы</option>
+</select>
+
+<select id="menus">
+    <option>Меню</option>
+</select>
+
+<select id="categories">
+    <option>Категории</option>
+</select>
+<select id="items">
+    <option>Продукты</option>
+</select>
+<select id="modificators">
+    <option>Модификаторы</option>
+</select>
+
+        <div id="actionContainer">
+
+        </div>
+        }
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    $('#restaurants').on('change', function() {
+    var r_id=$(this).val();
+    myJsRoutes.controllers.Pricelist.serviceList(r_id).ajax({
+    success : function(data) {
+    result=data;
+    var services = $('#services');
+    services.empty().append('<option>Сервисы</option>');
+    $.each(data, function() {
+    services.append('<option value="'+this.id+'">'+this.title+'</option>');
+    });
+}
+    });
+    });
+
+
+    $('#services').on('change', function() {
+    var r_id=$(this).val();
+    myJsRoutes.controllers.Pricelist.menuList(r_id).ajax({
+    success : function(data) {
+    result=data;
+    var menus = $('#menus');
+    menus.empty().append('<option>Меню</option>');
+    $.each(data, function() {
+    menus.append('<option value="'+this.id+'">'+this.title+'</option>');
+    });
+    }
+    });
+    });
+
+
+    $('#menus').on('change', function() {
+    var r_id=$(this).val();
+    myJsRoutes.controllers.Pricelist.categoryList(r_id).ajax({
+    success : function(data) {
+    result=data;
+    var categories = $('#categories');
+    categories.empty().append('<option>Категории</option>');
+    $.each(data, function() {
+    categories.append('<option value="'+this.id+'">'+this.title+'</option>');
+    });
+    }
+    });
+    });
+
+
+    $('#categories').on('change', function() {
+    var r_id=$(this).val();
+    myJsRoutes.controllers.Pricelist.itemList(r_id).ajax({
+    success : function(data) {
+    result=data;
+    var items = $('#items');
+    items.empty().append('<option>Продукты</option>');
+    $.each(data, function() {
+    items.append('<option value="'+this.id+'">'+this.title+'</option>');
+    });
+    }
+    });
+    });
+
+    $('#items').on('change', function() {
+    var r_id=$(this).val();
+    if(r_id>0){
+    myJsRoutes.controllers.Pricelist.modificatorList(r_id).ajax({
+    success : function(data) {
+    result=data;
+    var modificators = $('#modificators');
+    modificators.empty().append('<option>Модификаторы</option>');
+    $.each(data, function() {
+    modificators.append('<option value="'+this.id+'">'+this.title+'</option>');
+    });
+    }
+    });
+
+    $('#actionContainer').html('<form action="/pricelist/item/'+r_id+'/"><input type="submit" value="Открыть прайслист"></form>');
+    }
+
+    });
+
+
+    $('#modificators').on('change', function() {
+    var r_id=$(this).val();
+    if(r_id>0){
+
+
+    $('#actionContainer').html('<form action="/pricelist/modificator/'+r_id+'/"><input type="submit" value="Открыть прайслист"></form>');
+    }
+
+    });
+
+    });
+</script>

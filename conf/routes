@@ -24,6 +24,9 @@ GET		/logout								controllers.AdminPanel.logout()
 #GET		/journals_main						controllers.AdminPanel.journalsMain()
 #GET		/discounts_main						controllers.AdminPanel.discountsMain()
 
+
+GET     /javascriptRoutes     				controllers.Application.javascriptRoutes()
+
 #Users
 GET     /users                        controllers.Users.index()
 GET     /new_user                     controllers.Users.addingUserPage()
@@ -38,6 +41,20 @@ POST    /roles                        controllers.Roles.newRole()
 GET     /roles/:id/delete             controllers.Roles.deleteRole(id: Integer)
 POST    /roles/:id                    controllers.Roles.updateRole(id: Integer)
 GET     /roles/:id                    controllers.Roles.rolePage(id: Integer)
+
+#Pricelist
+GET     /pricelist                          controllers.Pricelist.index()
+GET     /pricelist/:id/services/            controllers.Pricelist.serviceList(id: Integer)
+GET     /pricelist/:id/menus/               controllers.Pricelist.menuList(id: Integer)
+GET     /pricelist/:id/categories/          controllers.Pricelist.categoryList(id: Integer)
+GET     /pricelist/:id/items/               controllers.Pricelist.itemList(id: Integer)
+GET     /pricelist/:id/modificators/         controllers.Pricelist.modificatorList(id: Integer)
+GET     /pricelist/item/:id/               controllers.Pricelist.itemPrice(id: Integer)
+GET     /pricelist/modificator/:id/         controllers.Pricelist.modificatorPrice(id: Integer)
+GET    /pricelist/item/:id/new_price         controllers.Pricelist.addingItemPricePage(id: Integer)
+POST   /pricelist/item/:id/prices            controllers.Pricelist.addItemPrice(id: Integer)
+GET    /pricelist/modificator/:id/new_price         controllers.Pricelist.addingModificatorPricePage(id: Integer)
+POST   /pricelist/modificator/:id/prices            controllers.Pricelist.addModificatorPrice(id: Integer)
 
 
 #Restaurants

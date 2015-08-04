@@ -86,6 +86,23 @@ public class Application extends Controller {
 		flash("success", "You've been logged out");
 		return redirect(routes.Application.login());
 	}
+
+
+    public static Result javascriptRoutes() {
+        response().setContentType("text/javascript");
+        return ok(
+                Routes.javascriptRouter("myJsRoutes",
+                        controllers.routes.javascript.Pricelist.index(),
+                        controllers.routes.javascript.Pricelist.serviceList(),
+                        controllers.routes.javascript.Pricelist.menuList(),
+                        controllers.routes.javascript.Pricelist.categoryList(),
+                        controllers.routes.javascript.Pricelist.itemList(),
+                        controllers.routes.javascript.Pricelist.modificatorList()
+
+                )
+        );
+    }
+
 }
 
 //TODO: index method: email parameter must be login
