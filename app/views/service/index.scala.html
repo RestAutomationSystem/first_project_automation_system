@@ -1,7 +1,7 @@
 @(user:User,restaurant:Restaurant,services:List[Service],serviceForm:Form[Service])
 
 @import helper._
-@main(null){
+@main(user){
 
     @if(services.size()>0){
         <h3>Сервисы</h3>

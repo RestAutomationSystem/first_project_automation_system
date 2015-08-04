@@ -1,7 +1,7 @@
-@(user:User,emps:List[User],userForm:Form[User])
+@(admin:User,emps:List[User],userForm:Form[User])
 
 @import helper._
-@main(null){
+@main(admin){
   <div class="contentBar">
   <div class="announcements">
       @if(emps.size()>0) {

@@ -1,17 +1,13 @@
 @(user:User)
 
 @import helper._
-@main(null){
+@main(user){
     <div class="row">
-        <h3>@user.email</h3>
-        <div class="span4">
+
+
+        <div class="span20">
             <div class="announcements">
-                @form(routes.AdminPanel.logout()) {
-                <button class="btn action-btn btn-success" type="submit">
-                    Выход
-                </button>
-                    <br/>
-                }
+
                 @form(routes.Restaurants.index()) {
                 <button class="btn action-btn btn-success" type="submit">
                     Ресторан</button>
@@ -23,6 +19,10 @@
                 @form(routes.Storages.all()) {
                 <button class="btn action-btn btn-success" type="submit">
                     Склад</button>
+                }
+                @form(routes.Roles.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Роли</button>
                 }
                 @form(routes.Users.index()) {
                 <button class="btn action-btn btn-success" type="submit">
@@ -44,7 +44,7 @@
                 <button class="btn action-btn btn-success" type="submit">
                     Отчеты</button>
                 }
-                @form(routes.AdminPanel.index()) {
+                @form(routes.Events.index()) {
                 <button class="btn action-btn btn-success" type="submit">
                     Журналы событий</button>
                 }

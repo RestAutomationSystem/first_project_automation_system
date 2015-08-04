@@ -1,0 +1,117 @@
+@(user:User,currentPage: com.avaje.ebean.Page[Event], currentSortBy: String, currentOrder: String, currentFilter: String)
+
+@import helper._
+
+@****************************************
+* Helper generating navigation links    *
+****************************************@
+@link(newPage:Int, newSortBy:String) = @{
+
+var sortBy = currentSortBy
+var order = currentOrder
+
+if(newSortBy != null) {
+sortBy = newSortBy
+if(currentSortBy == newSortBy) {
+if(currentOrder == "asc") {
+order = "desc"
+} else {
+order = "asc"
+}
+} else {
+order = "asc"
+}
+}
+
+// Generate the link
+routes.Events.index(newPage, sortBy, order, currentFilter)
+
+}
+
+@**********************************
+* Helper generating table headers *
+***********************************@
+@header(key:String, title:String) = {
+<th class="@key.replace(".","_") header @if(currentSortBy == key) @{if(currentOrder == "asc") "headerSortDown" else "headerSortUp"}">
+<a href="@link(0, key)">@title</a>
+</th>
+}
+
+@main(user){
+
+@if(currentPage.getTotalRowCount > 0){
+<h3>Журнал событий</h3>
+
+    <table class="computers zebra-striped">
+        <thead>
+        <tr>
+            @header("event_type", "Тип события")
+            @header("description", "Описание")
+            @header("event_time", "Дата")
+            @header("author.email", "Автор")
+        </tr>
+        </thead>
+        <tbody>
+@for(event<- currentPage.getList){
+
+<tr>
+      <td>
+<h4>@event.getEvent_type()</h4>
+</td>
+
+
+<td>
+@if(event.getDescription()!=null){
+@Html(event.getDescription())
+}
+</td>
+<td>
+    @event.getEvent_time().format("dd/MM/yyyy HH:mm:ss")
+</td>
+    <td>
+        @event.getAuthor().email
+    </td>
+
+</tr>
+}
+        </tbody>
+</table>
+
+
+<div id="pagination" class="pagination">
+    <ul>
+        @if(currentPage.hasPrev) {
+        <li class="prev">
+            <a href="@link(currentPage.getPageIndex - 1, null)">&larr; Предыдущая</a>
+        </li>
+        } else {
+        <li class="prev disabled">
+            <a>&larr; Предыдущая</a>
+        </li>
+        }
+        <li class="current">
+            <a>Показаны @currentPage.getDisplayXtoYofZ(" по "," из ")</a>
+        </li>
+        @if(currentPage.hasNext) {
+        <li class="next">
+            <a href="@link(currentPage.getPageIndex + 1, null)">Следующая &rarr;</a>
+        </li>
+        } else {
+        <li class="next disabled">
+            <a>Следующая &rarr;</a>
+        </li>
+        }
+    </ul>
+</div>
+}
+
+
+@form(routes.AdminPanel.index()) {
+<button type="submit" class="btn btn-primary btn-medium courceCellButton">
+    Назад</button>
+}
+
+
+
+
+}

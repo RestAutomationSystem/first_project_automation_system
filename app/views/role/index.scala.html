@@ -3,12 +3,13 @@
 
 
 @import helper._
-@main(null){
+@main(user){
 
       <div class="contentBar">  
-<div class="announcements"> 
+<div class="announcements">
+    <h3>Роли</h3>
 @if(roles.size()>0){
-<h3>My Roles</h3>
+
 <place class="place">
 @for(role<-roles){
 <tr>
@@ -47,7 +48,7 @@
 }
 
 <fieldset>
-<legend>Add new role</legend>
+<legend>Создание роля</legend>
 <div class="createForm">
 @form(routes.Roles.newRole()){
 <p>
@@ -66,6 +67,10 @@
 <button class="btn btn-primary" type="submit">Добавить</button>
 </p>
 }
+    @form(routes.AdminPanel.index()) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+        Назад</button>
+    }
 </div>
 </fieldset>
 </div>

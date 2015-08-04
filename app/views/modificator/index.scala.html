@@ -3,12 +3,13 @@
 
 
 @import helper._
-@main(null){
+@main(user){
 
       <div class="contentBar">  
-<div class="announcements"> 
+<div class="announcements">
+    <h3>Модификаторы</h3>
 @if(modificators.size()>0){
-<h3>My Modificators</h3>
+
 <div class="span8">
 @for(modificator<-modificators){
 <span class=span2">

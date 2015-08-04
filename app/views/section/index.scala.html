@@ -1,7 +1,7 @@
 @(user:User,restaurant:Restaurant,sections:List[RestaurantSection],sectionForm:Form[RestaurantSection])
 
 @import helper._
-@main(null){
+@main(user){
   <div class="contentBar">
   <div class="announcements">
     @if(sections.size()>0){
