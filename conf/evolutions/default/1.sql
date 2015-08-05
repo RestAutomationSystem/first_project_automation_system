@@ -276,7 +276,7 @@ create table user (
   email                     varchar(40) not null,
   password                  varchar(255),
   name                      varchar(255),
-  role                      integer,
+  role_id                   integer,
   constraint pk_user primary key (email))
 ;
 
@@ -330,6 +330,8 @@ alter table service add constraint fk_service_restaurant_24 foreign key (restaur
 create index ix_service_restaurant_24 on service (restaurant_id);
 alter table storage add constraint fk_storage_restaurant_25 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
 create index ix_storage_restaurant_25 on storage (restaurant_id);
+alter table user add constraint fk_user_role_26 foreign key (role_id) references role_table (id) on delete restrict on update restrict;
+create index ix_user_role_26 on user (role_id);
 
 
 

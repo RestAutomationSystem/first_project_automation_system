@@ -1,4 +1,4 @@
-@(admin:User,userForm:Form[User])
+@(admin:User,userForm:Form[User],roles:List[Role])
 
 @import helper._
 @main(admin){
@@ -19,6 +19,16 @@
             <p>
                 <input type="password" name="password2" placeholder="Confirm password"/>
             </p>
+             <p>
+                 <select  name="role_id">
+                     @for(role<-roles){
+
+                     <option value="@role.id">@role.title</option>
+
+                     }
+                 </select>
+             </p>
+
                 <p><button class="btn btn-primary" type="submit">Создать</button></p>
             }
             @form(routes.AdminPanel.index()){

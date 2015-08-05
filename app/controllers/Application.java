@@ -4,7 +4,7 @@ import play.*;
 import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
-import models.User;
+import models.*;
 import play.data.*;
 import static play.data.Form.*;
 
@@ -23,6 +23,7 @@ public class Application extends Controller {
 
     public static class Register {
         public String name, email, password, password2;
+        public int role_id;
 
         public String validate() {
             if (!password.equals(password2)) { return "Invalid password repeated"; }
@@ -55,7 +56,9 @@ public class Application extends Controller {
     	Form<Register> regForm = form(Register.class).bindFromRequest();
         if(regForm.hasErrors()) { return ok(register.render(form(Register.class))); }
         else {
-    		User newUser=User.create(regForm.get().name,regForm.get().email,regForm.get().password);
+            Role role=Role.find.byId(regForm.get().role_id);
+
+            User newUser=User.create(regForm.get().name,regForm.get().email,regForm.get().password,role);
     		JsonNode personJson = Json.toJson(newUser); 
     		Logger.debug("User created: "+regForm.get().name+" "+regForm.get().email);
     		return ok(personJson);

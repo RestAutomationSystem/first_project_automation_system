@@ -29,6 +29,18 @@ public class Secured extends Security.Authenticator{
 	        Context.current().request().username()
 	    );
 	}
+
+    public static boolean isOficiant() {
+        return User.isOficiant(
+                Context.current().request().username()
+        );
+    }
+
+    public static boolean isCashier() {
+        return User.isCashier(
+                Context.current().request().username()
+        );
+    }
 	
 
 }

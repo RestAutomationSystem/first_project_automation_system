@@ -1,4 +1,4 @@
-@(admin:User,emp:User)
+@(admin:User,emp:User,roles:List[Role])
 
 @import helper._
 @main(admin) {
@@ -18,7 +18,18 @@
             <p>
                 <input type="password" name="password2" placeholder="Confirm password"/>
             </p>
+            <p>
+                <select  name="role_id">
+                    @for(role<-roles){
+                    @if(emp.role.id==role.id){
+                    <option value="@role.id" selected="selected">@role.title</option>
+                    }else{
+                    <option value="@role.id">@role.title</option>
+                    }
+                    }
+                </select>
 
+            </p>
 
                 <input type="submit" value="Сохранить"/>
             }

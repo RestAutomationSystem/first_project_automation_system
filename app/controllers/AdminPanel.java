@@ -4,7 +4,7 @@ import models.User;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
-import views.html.admin.index;
+import views.html.admin.*;
 
 @Security.Authenticated(Secured.class)
 public class AdminPanel extends Controller {
@@ -13,7 +13,12 @@ public class AdminPanel extends Controller {
         if(Secured.isAdmin()) {
         return ok(index.render(User.find.where().eq("email", request().username()).findUnique()));
         }else{
-            return ok("Officiant page");
+            if(Secured.isOficiant())
+                return ok(oficiant.render(User.find.where().eq("email", request().username()).findUnique()));
+            else if(Secured.isCashier())
+                return ok(cashier.render(User.find.where().eq("email", request().username()).findUnique()));
+            else
+                return forbidden();
         }
     }
 

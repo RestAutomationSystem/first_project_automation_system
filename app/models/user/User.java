@@ -24,20 +24,29 @@ public class User extends Model{
 
     public String password;
     public String name;
-    
-	public int role;
+
+    @ManyToOne
+	public Role role;
 	
 
-    public User(String name,String email,String password){
+    public User(String name,String email,String password,Role role){
         this.email=email;
         this.name=name;
         this.password=password;
-        this.role=2;
+        this.role=role;
     }
 	
 	public static boolean isAdmin(String email){
-		return (find.byId(email).role==1);
+		return (find.byId(email).role.id==1);
 	}
+
+    public static boolean isOficiant(String email){
+        return (find.byId(email).role.id==2);
+    }
+
+    public static boolean isCashier(String email){
+        return (find.byId(email).role.id==3);
+    }
 
     public static Finder<String, User> find=new Finder<String, User>(String.class, User.class);
 
@@ -46,25 +55,25 @@ public class User extends Model{
     }
 
     public static List<User> findAllEmployee(){
-        return find.where().eq("role", 2).findList();
+        return find.where().ne("role.id", 1).findList();
     }
 
     public static User authenticate(String email,String password){
         return find.where().eq("email", email).eq("password", password).findUnique();
     }
 
-    public static User create(String name,String email,String password){
-        User newUser=new User(name, email, password);
+    public static User create(String name,String email,String password,Role role){
+        User newUser=new User(name, email, password,role);
 
         newUser.save();
 		return newUser;
     }
 
-    public static void update(String o_email,String name,String password){
+    public static void update(String o_email,String name,String password,Role role){
         User user=User.find.byId(o_email);
         user.name=name;
         user.password=password;
-
+        user.role=role;
         user.update();
     }
 

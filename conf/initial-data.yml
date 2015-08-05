@@ -1,8 +1,30 @@
+  
+        
+# Roles
+
+roles:
+
+    - !!models.Role
+        id:         1
+        title:       Админ
+        
+    - !!models.Role
+        id:         2
+        title:       Официант  
+        
+                
+    - !!models.Role
+        id:         3
+        title:       Кассир  
+        
+
+
 users:
 
     - !!models.User
         email:      admin@sample.com
         name:       Admin Main
         password:   admin
-        role:       1
+        role:       !!models.Role
+                       id: 1
                        

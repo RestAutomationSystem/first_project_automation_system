@@ -17,96 +17,132 @@ public class Places extends Controller{
 	public static Form<Place> placeForm = form(Place.class);
 	
 	public static Result index(int id) {
-		return ok(
-			index.render(
-			User.find.where().eq("email", request().username()).findUnique(),
-					RestaurantSection.find.byId(id),
-					Place.findAll(),
-					placeForm
-					)
-			);
+        if(Secured.isAdmin()) {
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            RestaurantSection.find.byId(id),
+                            Place.findAll(),
+                            placeForm
+                    )
+            );
+        }else{
+            return forbidden();
+        }
+
+
     }
 
 	public static Result newPlace(int id) throws ParseException{
-		//Form<Places> filledForm=form(Places.class).bindFromRequest();
-		DynamicForm filledForm=form().bindFromRequest();
-		DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
-		 sdf2.setLenient(false);
+        if(Secured.isAdmin()) {
+            //Form<Places> filledForm=form(Places.class).bindFromRequest();
+            DynamicForm filledForm=form().bindFromRequest();
+            DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            sdf2.setLenient(false);
 
-		int p_id=Place.create(filledForm.get("title"), filledForm.get("description"), "", RestaurantSection.find.byId(id), sdf2.parse(filledForm.get("start_time")), sdf2.parse(filledForm.get("end_time")));
+            int p_id=Place.create(filledForm.get("title"), filledForm.get("description"), "", RestaurantSection.find.byId(id), sdf2.parse(filledForm.get("start_time")), sdf2.parse(filledForm.get("end_time")));
 
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
-        String desc="Создано новое место:"+p_id+" внутри секции:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
-        Event event=new Event("PLACE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
-        event.save();
-        Logger.info(desc);
-			return ok(
-				index.render(
-				User.find.where().eq("email", request().username()).findUnique(),
-					RestaurantSection.find.byId(id),
-					Place.findAll(),
-						placeForm
-					)
-				);
+            String desc="Создано новое место:"+p_id+" внутри секции:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
+            Event event=new Event("PLACE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+            event.save();
+            Logger.info(desc);
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            RestaurantSection.find.byId(id),
+                            Place.findAll(),
+                            placeForm
+                    )
+            );
+        }else{
+            return forbidden();
+        }
+
+
 
 	}
 
     public static Result addingPlacePage(int id){
-        return ok(add_place.render(User.find.where().eq("email", request().username()).findUnique(),
-                RestaurantSection.find.byId(id)));
+        if(Secured.isAdmin()) {
+            return ok(add_place.render(User.find.where().eq("email", request().username()).findUnique(),
+                    RestaurantSection.find.byId(id)));
+        }else{
+            return forbidden();
+        }
+
+
     }
 
 	public static Result placePage(int id) {
-		session("place",id+"");
-			return ok(
-				item.render(
-				User.find.where().eq("email", request().username()).findUnique(),
-						Place.find.byId(id)
-						)
-				);
+        if(Secured.isAdmin()) {
+            session("place",id+"");
+            return ok(
+                    item.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Place.find.byId(id)
+                    )
+            );
+        }else{
+            return forbidden();
+        }
+
+
 	}
 
 	public static Result updatePlace(int id) throws ParseException{
-		//Form<Places> filledForm=form(Places.class).bindFromRequest();
-		DynamicForm filledForm=form().bindFromRequest();
-		SimpleDateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
-		sdf2.setLenient(false);
-        Place place=Place.find.ref(id);
+        if(Secured.isAdmin()) {
+            //Form<Places> filledForm=form(Places.class).bindFromRequest();
+            DynamicForm filledForm=form().bindFromRequest();
+            SimpleDateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            sdf2.setLenient(false);
+            Place place=Place.find.ref(id);
 
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
-        String desc="Изменено меню:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ place.getTitle()+"\nОписание:"+ place.getDescription()+"\nСтатус:\nНачало:"+ place.getStart_time()+"\nКонец:"+ place.getEnd_time()
-                +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description");
+            String desc="Изменено меню:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ place.getTitle()+"\nОписание:"+ place.getDescription()+"\nСтатус:\nНачало:"+ place.getStart_time()+"\nКонец:"+ place.getEnd_time()
+                    +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description");
 
-        Event event=new Event("PLACE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
-        Place.update(id, filledForm.get("title"), filledForm.get("description"), "", sdf2.parse(filledForm.get("start_time")), sdf2.parse(filledForm.get("end_time")));
-        event.save();
-        Logger.info(desc);
+            Event event=new Event("PLACE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+            Place.update(id, filledForm.get("title"), filledForm.get("description"), "", sdf2.parse(filledForm.get("start_time")), sdf2.parse(filledForm.get("end_time")));
+            event.save();
+            Logger.info(desc);
 
-		return ok(
-			index.render(
-			User.find.where().eq("email", request().username()).findUnique(),
-				Place.find.byId(id).section, Place.findAll(), placeForm)
-			);
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Place.find.byId(id).section, Place.findAll(), placeForm)
+            );
+        }else{
+            return forbidden();
+        }
+
+
 	}
 
 	public static Result deletePlace(int id) {
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-        Place place=Place.find.ref(id);
+        if(Secured.isAdmin()) {
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+            Place place=Place.find.ref(id);
 
-        String desc="Удалено место:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ place.getTitle()+"\nОписание:"+ place.getDescription()+"\nСтатус:\nНачало:"+ place.getStart_time()+"\nКонец:"+ place.getEnd_time();
+            String desc="Удалено место:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ place.getTitle()+"\nОписание:"+ place.getDescription()+"\nСтатус:\nНачало:"+ place.getStart_time()+"\nКонец:"+ place.getEnd_time();
 
-        Event event=new Event("PLACE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+            Event event=new Event("PLACE",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
 
-        Place.delete(id);
-        event.save();
-        Logger.info(desc);
-		return ok(
-			index.render(
-			User.find.where().eq("email", request().username()).findUnique(),
-				Place.find.byId(id).section, Place.findAll(), placeForm)
-			);
+            Place.delete(id);
+            event.save();
+            Logger.info(desc);
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Place.find.byId(id).section, Place.findAll(), placeForm)
+            );
+        }else{
+            return forbidden();
+        }
+
+
 
 	}
 }

@@ -19,13 +19,18 @@ import views.html.event.*;
 public class Events  extends Controller {
 
     public static Result index(int page, String sortBy, String order, String filter) {
-        return ok(
-                index.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Event.page(page, 10, "event_time", "desc", filter),
-                        sortBy, order, filter
-                )
-        );
+        if(Secured.isAdmin()) {
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Event.page(page, 10, "event_time", "desc", filter),
+                            sortBy, order, filter
+                    )
+            );
+        }else{
+            return forbidden();
+        }
+
     }
 
 }

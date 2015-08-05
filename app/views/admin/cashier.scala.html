@@ -1,0 +1,27 @@
+@(user:User)
+
+@import helper._
+@main(user){
+<div class="row">
+
+
+    <div class="span20">
+        <div class="announcements">
+
+            @form(routes.AdminPanel.index()) {
+            <button class="btn action-btn btn-success" type="submit">
+                Касса</button><br/>
+            }
+            @form(routes.AdminPanel.index()) {
+            <button class="btn action-btn btn-success" type="submit">
+                Отчеты</button>
+            }
+
+            @form(routes.AdminPanel.index()) {
+            <button class="btn action-btn btn-success" type="submit">
+                Система скидок</button>
+            }
+        </div>
+    </div>
+</div>
+}

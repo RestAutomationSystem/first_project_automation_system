@@ -18,124 +18,154 @@ public class Foods extends Controller{
     public static Form<Food> foodForm=form(Food.class);
 
     public static Result index(int id) {
-        return ok(
-                index.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Storage.find.byId(id),
-                        Food.findAll(),
-                        foodForm,
-                        Supplier.findAll()
-                )
-        );
+        if(Secured.isAdmin()) {
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Storage.find.byId(id),
+                            Food.findAll(),
+                            foodForm,
+                            Supplier.findAll()
+                    )
+            );
+        }else{
+            return forbidden();
+        }
+
     }
 
 
     public static Result newFood(int id) throws ParseException{
-        //Form<Food> filledForm=form(Food.class).bindFromRequest();
-        DynamicForm filledForm=form().bindFromRequest();
-        DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        sdf2.setLenient(false);
-       Supplier supplier=Supplier.find.byId(Integer.parseInt(filledForm.get("supplier_id")));
-        int f_id=Food.create(filledForm.get("title"), filledForm.get("description"),"",Storage.find.byId(id),sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),
-                Double.parseDouble(filledForm.get("price")),supplier);
+        if(Secured.isAdmin()) {
+            //Form<Food> filledForm=form(Food.class).bindFromRequest();
+            DynamicForm filledForm=form().bindFromRequest();
+            DateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            sdf2.setLenient(false);
+            Supplier supplier=Supplier.find.byId(Integer.parseInt(filledForm.get("supplier_id")));
+            int f_id=Food.create(filledForm.get("title"), filledForm.get("description"),"",Storage.find.byId(id),sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),
+                    Double.parseDouble(filledForm.get("price")),supplier);
 
 
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-        String desc="Создан новый продукт:"+f_id+" внутри склада:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nЦена:"+ filledForm.get("price")+"\nПоставщик:"+ supplier.title+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
-        Event event=new Event("FOOD",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
-        event.save();
-        Logger.info(desc);
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+            String desc="Создан новый продукт:"+f_id+" внутри склада:"+id+" в:"+df.format(new Date())+" пользователем:"+request().username()+"\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nЦена:"+ filledForm.get("price")+"\nПоставщик:"+ supplier.title+"\nСтатус:\nНачало:"+ filledForm.get("start_time")+"\nКонец:"+ filledForm.get("end_time");
+            Event event=new Event("FOOD",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+            event.save();
+            Logger.info(desc);
 
-        return ok(
-                index.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Storage.find.byId(id),
-                        Food.findAll(),
-                        foodForm,
-                        Supplier.findAll()
-                )
-        );
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Storage.find.byId(id),
+                            Food.findAll(),
+                            foodForm,
+                            Supplier.findAll()
+                    )
+            );
+        }else{
+            return forbidden();
+        }
+
+
 
     }
 
     public static Result addingFoodPage(int id){
-        return ok(add_food.render(User.find.where().eq("email", request().username()).findUnique(),
-                Storage.find.byId(id),Supplier.findAll()));
+        if(Secured.isAdmin()) {
+            return ok(add_food.render(User.find.where().eq("email", request().username()).findUnique(),
+                    Storage.find.byId(id),Supplier.findAll()));
+        }else{
+            return forbidden();
+        }
+
+
     }
 
     public static Result foodPage(int id) {
 
+        if(Secured.isAdmin()) {
+            session("food",id+"");
+            return ok(
+                    item.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Food.find.byId(id),
+                            Supplier.findAll()
+                    )
+            );
 
-        session("food",id+"");
-        return ok(
-                item.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Food.find.byId(id),
-                        Supplier.findAll()
-                )
-        );
+        }else{
+            return forbidden();
+        }
 
 
     }
 
 
     public static Result updateFood(int id) throws ParseException{
-        //Form<Food> filledForm=form(Food.class).bindFromRequest();
-        DynamicForm filledForm=form().bindFromRequest();
+        if(Secured.isAdmin()) {
+            //Form<Food> filledForm=form(Food.class).bindFromRequest();
+            DynamicForm filledForm=form().bindFromRequest();
 
-        SimpleDateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        sdf2.setLenient(false);
+            SimpleDateFormat sdf2=new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            sdf2.setLenient(false);
 
-        Food food=Food.find.ref(id);
-        Supplier supplier=Supplier.find.byId(Integer.parseInt(filledForm.get("supplier_id")));
+            Food food=Food.find.ref(id);
+            Supplier supplier=Supplier.find.byId(Integer.parseInt(filledForm.get("supplier_id")));
 
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
-        String desc="Изменен продукт:"+id+" из склада в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ food.getTitle()+"\nОписание:"+ food.getDescription()+"\nЦена:"+ food.getPrice()+"\nПоставщик:"+ food.getSupplier().title+"\nСтатус:\nНачало:"+ food.getStart_time()+"\nКонец:"+ food.getEnd_time()
-                +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСебестоимость:"+"\nЦена:"+ filledForm.get("price")+"\nПоставщик:"+ supplier.title;
+            String desc="Изменен продукт:"+id+" из склада в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ food.getTitle()+"\nОписание:"+ food.getDescription()+"\nЦена:"+ food.getPrice()+"\nПоставщик:"+ food.getSupplier().title+"\nСтатус:\nНачало:"+ food.getStart_time()+"\nКонец:"+ food.getEnd_time()
+                    +"\nНовые значения:\nНазвание:"+ filledForm.get("title")+"\nОписание:"+ filledForm.get("description")+"\nСебестоимость:"+"\nЦена:"+ filledForm.get("price")+"\nПоставщик:"+ supplier.title;
 
-        Event event=new Event("FOOD",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
-        Food.update(id, filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),Double.parseDouble(filledForm.get("price")),Supplier.find.byId(Integer.parseInt(filledForm.get("supplier_id"))));
-        event.save();
-        Logger.info(desc);
+            Event event=new Event("FOOD",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+            Food.update(id, filledForm.get("title"), filledForm.get("description"),"",sdf2.parse(filledForm.get("start_time")),sdf2.parse(filledForm.get("end_time")),Double.parseDouble(filledForm.get("price")),Supplier.find.byId(Integer.parseInt(filledForm.get("supplier_id"))));
+            event.save();
+            Logger.info(desc);
 
 
-        return ok(
-                index.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Food.find.byId(id).getStorage(),
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Food.find.byId(id).getStorage(),
 
-                        Food.findAll(),
-                        foodForm,
-                        Supplier.findAll()
-                )
-        );
+                            Food.findAll(),
+                            foodForm,
+                            Supplier.findAll()
+                    )
+            );
+        }else{
+            return forbidden();
+        }
+
 
     }
 
     public static Result deleteFood(int id) {
+        if(Secured.isAdmin()) {
+            DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+            Food food=Food.find.ref(id);
 
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-        Food food=Food.find.ref(id);
+            String desc="Удален продукт:"+id+" из склада в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ food.getTitle()+"\nОписание:"+ food.getDescription()+"\nСтатус:\nНачало:"+ food.getStart_time()+"\nКонец:"+ food.getEnd_time();
 
-        String desc="Удален продукт:"+id+" из склада в:"+df.format(new Date())+" пользователем:"+request().username()+"\nСтарые значения:\nНазвание:"+ food.getTitle()+"\nОписание:"+ food.getDescription()+"\nСтатус:\nНачало:"+ food.getStart_time()+"\nКонец:"+ food.getEnd_time();
-
-        Event event=new Event("FOOD",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
+            Event event=new Event("FOOD",desc,"","",new Date(),User.find.where().eq("email", request().username()).findUnique());
 
 
-        Food.delete(id);
-        event.save();
-        Logger.info(desc);
-        return ok(
-                index.render(
-                        User.find.where().eq("email", request().username()).findUnique(),
-                        Food.find.byId(id).getStorage(),
+            Food.delete(id);
+            event.save();
+            Logger.info(desc);
+            return ok(
+                    index.render(
+                            User.find.where().eq("email", request().username()).findUnique(),
+                            Food.find.byId(id).getStorage(),
 
-                        Food.findAll(),
-                        foodForm,
-                        Supplier.findAll()
-                )
-        );
+                            Food.findAll(),
+                            foodForm,
+                            Supplier.findAll()
+                    )
+            );
+        }else{
+            return forbidden();
+        }
+
 
     }
 

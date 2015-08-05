@@ -32,7 +32,7 @@ public class Pricelist extends Controller {
 
                     ));
         }else{
-            return ok("Officiant page");
+            return forbidden();
         }
     }
 
@@ -42,7 +42,7 @@ public class Pricelist extends Controller {
             return ok(Json.toJson(Service.findByRestaurant(id)));
 
         }else{
-            return ok("Officiant page");
+            return forbidden();
         }
     }
 
@@ -52,7 +52,7 @@ public class Pricelist extends Controller {
             return ok(Json.toJson(Menu.findByService(id)));
 
         }else{
-            return ok("Officiant page");
+            return forbidden();
         }
     }
 
@@ -62,7 +62,7 @@ public class Pricelist extends Controller {
             return ok(Json.toJson(Category.findByMenu(id)));
 
         }else{
-            return ok("Officiant page");
+            return forbidden();
         }
     }
 
@@ -72,7 +72,7 @@ public class Pricelist extends Controller {
             return ok(Json.toJson(Item.findByCategory(id)));
 
         }else{
-            return ok("Officiant page");
+            return forbidden();
         }
     }
 
@@ -82,7 +82,7 @@ public class Pricelist extends Controller {
             return ok(Json.toJson(Modificator.findByItem(id)));
 
         }else{
-            return ok("Officiant page");
+            return forbidden();
         }
     }
 
@@ -94,7 +94,7 @@ public class Pricelist extends Controller {
             ));
 
         }else{
-            return ok("Officiant page");
+            return forbidden();
         }
     }
 
@@ -106,7 +106,7 @@ public class Pricelist extends Controller {
             ));
 
         }else{
-            return ok("Officiant page");
+            return forbidden();
         }
     }
 

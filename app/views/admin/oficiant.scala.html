@@ -1,0 +1,19 @@
+@(user:User)
+
+@import helper._
+@main(user){
+<div class="row">
+
+
+    <div class="span20">
+        <div class="announcements">
+
+            @form(routes.Pricelist.index()) {
+            <button class="btn action-btn btn-success" type="submit">
+                Проайслист</button>
+            }
+
+        </div>
+    </div>
+</div>
+}

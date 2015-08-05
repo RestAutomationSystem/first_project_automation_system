@@ -7,25 +7,17 @@
       @if(emps.size()>0) {
         <h3>Сотрудники</h3>
         @for(emp<-emps){
-            <tr>
-            <td>
-            <div  >
-                <div class="row" style="margin-left: 3px;">
-                    <h4><span class="userDescriptionTitle item">
-                        @emp.name</span></h4>
-                    <span class="action" style="margin-left:5px;">
-                    <a href="@routes.Users.deleteUser(emp.email)">
-                        <i class="icon-remove"></i></a></span>
+
+                <div class="span8">
+                    <span class="span2"><h4>
+                        @emp.name</h4></span>
+                    <span class="span2">
+                     @form(routes.Users.userPage(emp.email)) {
+                <button type="submit" class="btn btn-primary btn-medium courceCellButton">Изменить</button>
+                }</span>
                 </div>
 
-            </div>
-            </td>
-            <td style="padding: 30px;">
-                @form(routes.Users.userPage(emp.email)) {
-                <button type="submit" class="btn btn-primary btn-medium courceCellButton">Изменить</button>
-                }
-            </td>
-            </tr>
+
         }
       }
       @form(routes.Users.addingUserPage()) {

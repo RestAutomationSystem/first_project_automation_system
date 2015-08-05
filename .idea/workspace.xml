@@ -20,8 +20,8 @@
     <file path="/Places.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438600492718" ignored="false" />
     <file path="/a.dummy" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665808853" ignored="false" />
     <file path="/Place.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438529031489" ignored="false" />
-    <file path="/index.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438684622249" ignored="false" />
-    <file path="/item.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688973244" ignored="false" />
+    <file path="/index.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749524112" ignored="false" />
+    <file path="/item.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749466541" ignored="false" />
     <file path="/routes" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438687147018" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_routing.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688805014" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/routes_reverseRouting.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438688805014" ignored="false" />
@@ -56,15 +56,15 @@
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/service/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438597659186" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/modificator/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438598401259" ignored="false" />
     <file path="/childs.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438593603498" ignored="false" />
-    <file path="/Application.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438680151707" ignored="false" />
-    <file path="/add_user.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665888115" ignored="false" />
-    <file path="/Users.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438581014251" ignored="false" />
-    <file path="/User.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438484378338" ignored="false" />
+    <file path="/Application.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749235022" ignored="false" />
+    <file path="/add_user.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749393166" ignored="false" />
+    <file path="/Users.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749555176" ignored="false" />
+    <file path="/User.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438748949527" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/admin/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438669993642" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/user/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438584926930" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/user/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438590044834" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/user/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749646698" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/user/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749608812" ignored="false" />
     <file path="/fragment.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438598410597" ignored="false" />
-    <file path="/AdminPanel.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438337142146" ignored="false" />
+    <file path="/AdminPanel.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749163759" ignored="false" />
     <file path="/Session.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438484383780" ignored="false" />
     <file path="/Role.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438582195672" ignored="false" />
     <file path="/Order.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438580945834" ignored="false" />
@@ -88,7 +88,7 @@
     <file path="/Roles.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438582214443" ignored="false" />
     <file path="/OrderTypes.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438581738681" ignored="false" />
     <file path="/PaymentTypes.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438582100416" ignored="false" />
-    <file path="/OrderStatuses.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438581802128" ignored="false" />
+    <file path="/OrderStatuses.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438751311703" ignored="false" />
     <file path="/OrderStatus.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438582034947" ignored="false" />
     <file path="/OrderItem.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438582026491" ignored="false" />
     <file path="/OrderModificator.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438576297123" ignored="false" />
@@ -101,7 +101,7 @@
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/unitType/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438596992915" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/supplier/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438603208180" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/place/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438600735227" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/user/add_user.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438596629032" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/user/add_user.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438749646698" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/role/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438670086806" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/role/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438582561943" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/orderStatus/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438582561943" ignored="false" />
@@ -139,7 +139,7 @@
     <file path="/register.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438665986258" ignored="false" />
     <file path="/registerSuccess.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438666001711" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/main.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438681967779" ignored="false" />
-    <file path="/Pricelist.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438689257515" ignored="false" />
+    <file path="/Pricelist.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438751591713" ignored="false" />
     <file path="/PriceListHasProduct.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438686508577" ignored="false" />
     <file path="/PriceListHasModificator.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438686561697" ignored="false" />
     <file path="/add_item_price.scala.html" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438687541864" ignored="false" />
@@ -148,6 +148,7 @@
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/pricelist/modificator.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438689375344" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/pricelist/item.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438689375344" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/pricelist/index.template.scala" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438689741725" ignored="false" />
+    <file path="/Secured.java" changelist="b21b33c8-6513-4587-990c-daca8b083d41" time="1438748815301" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,36 +168,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/app/controllers/Application.java" line="2" class="Application.java" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/controllers/Modificators.java" line="2" class="Modificators.java" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -231,7 +203,36 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/app/controllers/Application.java" line="2" class="Application.java" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/app/controllers/Modificators.java" line="2" class="Modificators.java" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -242,10 +243,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Pricelist.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Pricelist.java">
+      <file leaf-file-name="Restaurants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Restaurants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="250" selection-start="5192" selection-end="5192" vertical-scroll-proportion="-7.48">
+            <state line="14" column="13" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Roles.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Roles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="8" selection-start="502" selection-end="855" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sections.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Sections.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="8" selection-start="489" selection-end="794" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Secured.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Secured.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Services.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Services.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="8" selection-start="474" selection-end="767" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Storages.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Storages.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="8" selection-start="467" selection-end="728" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Suppliers.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Suppliers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="7" selection-start="470" selection-end="828" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitTypes.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/UnitTypes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="7" selection-start="521" selection-end="879" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Users.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Users.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="14" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -253,88 +326,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Items.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Items.java">
+      <file leaf-file-name="Categories.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Categories.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="22" selection-end="267" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/routes">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="28" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PriceListHasProduct.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/pricelist/PriceListHasProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="54" selection-start="1298" selection-end="1308" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PriceListHasModificator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/pricelist/PriceListHasModificator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="52" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pricelist/item.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="1" selection-start="657" selection-end="657" vertical-scroll-proportion="-18.961538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modificator.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pricelist/modificator.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="1" selection-start="465" selection-end="465" vertical-scroll-proportion="-4.4736843">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.scala.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/pricelist/index.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="78" selection-start="3132" selection-end="3132" vertical-scroll-proportion="1.7024794">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_item_price.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pricelist/add_item_price.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="312" selection-end="312" vertical-scroll-proportion="-8.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_modificator_price.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pricelist/add_modificator_price.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="340" selection-end="340" vertical-scroll-proportion="-2.9078948">
+            <state line="151" column="14" selection-start="5647" selection-end="5647" vertical-scroll-proportion="0.8845109">
               <folding />
             </state>
           </provider>
@@ -357,22 +352,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/item/index.scala.html" />
-        <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/app/views/role/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/admin/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
-        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/item/modificator.scala.html" />
-        <option value="$PROJECT_DIR$/conf/routes" />
-        <option value="$PROJECT_DIR$/app/models/pricelist/PriceListHasProduct.java" />
-        <option value="$PROJECT_DIR$/app/models/pricelist/PriceListHasModificator.java" />
-        <option value="$PROJECT_DIR$/app/views/pricelist/add_item_price.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/pricelist/add_modificator_price.scala.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Items.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Kitchens.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Modificators.java" />
+        <option value="$PROJECT_DIR$/app/controllers/OrderStatuses.java" />
+        <option value="$PROJECT_DIR$/app/controllers/OrderTypes.java" />
+        <option value="$PROJECT_DIR$/app/controllers/PaymentTypes.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Places.java" />
         <option value="$PROJECT_DIR$/app/controllers/Pricelist.java" />
-        <option value="$PROJECT_DIR$/app/views/pricelist/modificator.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/pricelist/item.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/pricelist/index.scala.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Roles.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Sections.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Services.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Storages.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Suppliers.java" />
+        <option value="$PROJECT_DIR$/app/controllers/UnitTypes.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Users.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Categories.java" />
       </list>
     </option>
   </component>
@@ -416,8 +411,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -528,356 +521,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unitType" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="section" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="role" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pricelist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modificator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="item" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="food" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="category" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pricelist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="first_project_automation_system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -894,12 +545,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -938,6 +589,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -964,19 +628,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1088,23 +739,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.86540604" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134594" sideWeight="0.49786553" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.86540604" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134594" sideWeight="0.49839914" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13793103" sideWeight="0.49839914" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24922119" sideWeight="0.86540604" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.7793345" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19530416" sideWeight="0.86540604" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19530416" sideWeight="0.86206895" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1115,9 +765,10 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37745097" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134594" sideWeight="0.49786553" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1191,115 +842,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/restaurant/Category.java">
+    <entry file="file://$PROJECT_DIR$/app/controllers/OrderStatuses.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="4" selection-start="661" selection-end="2248" vertical-scroll-proportion="0.0">
+        <state line="22" column="8" selection-start="538" selection-end="901" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/unitType/index.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/OrderTypes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="642" selection-end="1072" vertical-scroll-proportion="-18.192308">
+        <state line="22" column="7" selection-start="526" selection-end="886" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/modificator/add_modificator.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/PaymentTypes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="1106" selection-end="1268" vertical-scroll-proportion="-24.846153">
+        <state line="22" column="8" selection-start="537" selection-end="900" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/item/add_item.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Places.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="50" selection-start="50" selection-end="50" vertical-scroll-proportion="-0.0">
+        <state line="74" column="8" selection-start="2458" selection-end="2700" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/item/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="9" selection-start="206" selection-end="623" vertical-scroll-proportion="-18.961538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/pricelist/PriceListHasModificator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="52" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/pricelist/PriceListHasProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="54" selection-start="1298" selection-end="1308" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pricelist/add_item_price.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="312" selection-end="312" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pricelist/add_modificator_price.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="340" selection-end="340" vertical-scroll-proportion="-2.9078948">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Items.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="22" selection-end="267" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Pricelist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="250" selection-start="5192" selection-end="5192" vertical-scroll-proportion="-7.48">
+        <state line="109" column="8" selection-start="2581" selection-end="2581" vertical-scroll-proportion="-31.64">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pricelist/modificator.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Restaurants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="1" selection-start="465" selection-end="465" vertical-scroll-proportion="-4.4736843">
+        <state line="14" column="13" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pricelist/item.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Roles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="1" selection-start="657" selection-end="657" vertical-scroll-proportion="-18.961538">
+        <state line="22" column="8" selection-start="502" selection-end="855" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Sections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.0">
+        <state line="20" column="8" selection-start="489" selection-end="794" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pricelist/index.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Secured.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="78" selection-start="3132" selection-end="3132" vertical-scroll-proportion="1.7024794">
+        <state line="7" column="13" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Services.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="474" selection-end="767" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Storages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="467" selection-end="728" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Suppliers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="7" selection-start="470" selection-end="828" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UnitTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="7" selection-start="521" selection-end="879" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_51/src.zip!/java/text/DateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="22" selection-start="5574" selection-end="5574" vertical-scroll-proportion="0.33244327">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="14" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Categories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="14" selection-start="5647" selection-end="5647" vertical-scroll-proportion="0.8845109">
           <folding />
         </state>
       </provider>
