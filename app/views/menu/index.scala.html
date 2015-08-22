@@ -1,0 +1,76 @@
+@(user:User,service:Service,menus:List[Menu],menuForm:Form[Menu])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(menus.size()>0){
+<h3>My Menus</h3>
+<place class="place">
+@for(menu<-menus){
+<tr>
+<td>
+<div id="menu@menu.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="menuDescriptionTitle item" id="@menu.id">@menu.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.Menus.deleteMenu(menu.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="menuNicPanel@menu.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@menu.id" style="width: 525px;">
+@if(menu.description!=null){
+@Html(menu.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.Menus.menuPage(menu.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</place>
+}
+
+<fieldset>
+<legend>Add new menu</legend>
+<div class="createForm">
+@form(routes.Menus.newMenu(service.id)){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<input id="startDate" type="text" class="datepicker" name="start_time">
+</p>
+<p>
+<input id="endDate" type="text" class="datepicker" name="end_time">
+</p>
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+    @form(routes.Services.servicePage(service.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к сервису</button>
+    }
+</div>
+</div>
+}

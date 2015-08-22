@@ -1,0 +1,50 @@
+@(user:User,category:Category,categorys:List[Category],child_cats:List[Category])
+@import category._
+
+@import helper._
+@main(null){
+
+     <hr/>
+        @childs(category,child_cats)
+<hr/>
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="span3">
+          @form(routes.Items.index(category.id)) {
+          <button type="submit" class="btn btn-primary btn-medium courceCellButton">Продукты</button>
+          }
+      </div>
+    <div class="span9">
+	@form(routes.Categories.updateCategory(category.id)){
+<input type="text" name="title" value="@category.title"/>
+<textarea name="description">@category.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@category.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@category.end_time.format("dd/MM/yyyy HH:mm")">
+        <p>
+            <select  name="category_id">
+                <option value="0">Вверхний уровень</option>
+                @for(cat<-categorys){
+                    @if(category.parent_category!=null){
+                        @if(category.parent_category.id==cat.id){
+                        <option value="@cat.id" selected="selected">@cat.title</option>
+                        }else{
+                        <option value="@cat.id">@cat.title</option>
+                        }
+                    }else{
+                    <option value="@cat.id">@cat.title</option>
+                    }
+                }
+            </select>
+        </p>
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.Categories.index(category.menu.id)) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к категориям</button>
+
+      }
+</div>
+</div>
+
+}

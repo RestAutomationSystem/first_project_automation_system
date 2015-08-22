@@ -1,0 +1,73 @@
+@(user:User,suppliers:List[Supplier],supplierForm:Form[Supplier])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(suppliers.size()>0){
+<h3>My Suppliers</h3>
+<place class="place">
+@for(supplier<-suppliers){
+<tr>
+<td>
+<div id="supplier@supplier.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="supplierDescriptionTitle item" id="@supplier.id">@supplier.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.Suppliers.deleteSupplier(supplier.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="supplierNicPanel@supplier.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@supplier.id" style="width: 525px;">
+@if(supplier.description!=null){
+@Html(supplier.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.Suppliers.supplierPage(supplier.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</place>
+}
+
+<fieldset>
+<legend>Add new supplier</legend>
+<div class="createForm">
+@form(routes.Suppliers.newSupplier()){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<input id="startDate" type="text" class="datepicker" name="start_time">
+</p>
+<p>
+<input id="endDate" type="text" class="datepicker" name="end_time">
+</p>
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+</div>
+</div>
+}

@@ -1,0 +1,22 @@
+@(user:User,kitchen:Kitchen)
+
+@import helper._
+@main(null){
+  <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span9">
+	    @form(routes.Kitchens.updateKitchen(kitchen.id)){
+            <input type="text" name="title" value="@kitchen.title"/>
+            <textarea name="description">@kitchen.description</textarea>
+            <input type="submit" value="Сохранить"/>
+            <input type="submit" value="Удалить"/>
+        }
+    </div>
+      <div class="span2">
+        @form(routes.Kitchens.index(kitchen.restaurant.id)) {
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
+        }
+      </div>
+  </div>
+  </div>
+}

@@ -1,0 +1,94 @@
+@(user:User,category:Category,items:List[Item],itemForm:Form[Item],units:List[UnitType])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(items.size()>0){
+<h3>My Items</h3>
+<place class="place">
+@for(item<-items){
+<tr>
+<td>
+<div id="item@item.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="itemDescriptionTitle item" id="@item.id">@item.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.Items.deleteItem(item.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="itemNicPanel@item.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@item.id" style="width: 525px;">
+@if(item.description!=null){
+@Html(item.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.Items.itemPage(item.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</place>
+}
+
+<fieldset>
+<legend>Add new item</legend>
+<div class="createForm">
+@form(routes.Items.newItem(category.id)){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<input id="startDate" type="text" class="datepicker" name="start_time">
+</p>
+<p>
+<input id="endDate" type="text" class="datepicker" name="end_time">
+</p>
+
+    <p>
+        <select  name="unit_type">
+            @for(unit<-units){
+
+            <option value="@unit.id">@unit.title</option>
+
+            }
+        </select>
+    </p>
+
+
+    <p>
+        <input type="text" name="price_original" placeholder="Original price">
+    </p>
+    <p>
+        <input type="text" name="price_for_sale" placeholder="Price for sale">
+    </p>
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+    @form(routes.Categories.categoryPage(category.id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к категории</button>
+    }
+</div>
+</div>
+}

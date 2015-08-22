@@ -1,0 +1,27 @@
+@(user:User,orderType:OrderType)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="span3">
+
+      </div>
+    <div class="span9">
+	@form(routes.OrderTypes.updateOrderType(orderType.id)){
+<input type="text" name="title" value="@orderType.title"/>
+<textarea name="description">@orderType.description</textarea>
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.OrderTypes.index()) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к типам заказов</button>
+
+      }
+</div>
+</div>
+
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Play2ExcludedModulesSettings">
+    <option name="INFO">
+      <map>
+        <entry key="first_project_automation_system-uali">
+          <value>
+            <ProjectSettingsEntry>
+              <option name="version" value="2.2.5" />
+              <option name="sourceDir" value="C:\Users\Sultan\Desktop\first_project_automation_system-uali\app" />
+              <option name="confDir" value="C:\Users\Sultan\Desktop\first_project_automation_system-uali\conf" />
+              <option name="routesImports">
+                <list>
+                  <option value="play.libs.F" />
+                </list>
+              </option>
+              <option name="uri" value="C:\Users\Sultan\Desktop\first_project_automation_system-uali" />
+            </ProjectSettingsEntry>
+          </value>
+        </entry>
+        <entry key="forms">
+          <value>
+            <ProjectSettingsEntry>
+              <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.10/jars/play_2.10-2.2.5.jar" />
+            </ProjectSettingsEntry>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

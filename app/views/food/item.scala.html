@@ -1,0 +1,53 @@
+@(user:User,food:Food,suppliers:List[Supplier])
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+     
+    </div>
+    <div class="span9">
+	@form(routes.Foods.updateFood(food.getId())){
+<input type="text" name="title" value="@food.getTitle()"/>
+<textarea name="description">@food.getDescription()</textarea>
+@if(food.getStart_time()!=null){
+<input  type="text" class="datepicker" name="start_time" value="@food.getStart_time().format("dd/MM/yyyy HH:mm")">
+ }else{
+        <input type="text" class="datepicker" name="start_time" >
+}
+@if(food.getEnd_time()!=null){
+<input  type="text" class="datepicker" name="end_time" value="@food.getEnd_time().format("dd/MM/yyyy HH:mm")">
+}else{
+        <input  type="text" class="datepicker" name="end_time" >
+ }
+        <p>
+            <input  type="text" name="price" value="@food.getPrice()">
+        </p>
+        <p>
+            <select  name="supplier_id">
+                @for(supplier<-suppliers){
+                @if(food.getSupplier().id==supplier.id){
+                <option value="@supplier.id" selected="selected">@supplier.title</option>
+                }else{
+                <option value="@supplier.id">@supplier.title</option>
+                }
+                }
+            </select>
+        </p>
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+<div class="span2">
+
+    @form(routes.Foods.index(food.getStorage().id)) {
+    <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к продуктам</button>
+    }
+							</div>
+</div>
+</div>
+
+}

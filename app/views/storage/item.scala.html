@@ -1,0 +1,30 @@
+@(user:User,storage:Storage)
+
+@import helper._
+@main(null){
+  <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span9">
+        @form(routes.Storages.updateStorage(storage.id)) {
+            <input type="text" name="title" value="@storage.title"/>
+            <textarea name="description">@storage.description</textarea>
+            <input type="submit" value="Сохранить"/>
+            <input type="submit" value="Удалить"/>
+        }
+    </div>
+    <div class="span2">
+        @form(routes.Foods.index(storage.id)) {
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Продовольствия</button>
+        }
+
+        @form(routes.Suppliers.index()) {
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Поставщики</button>
+        }
+
+        @form(routes.Storages.index(storage.restaurant.id)) {
+            <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад</button>
+        }
+    </div>
+  </div>
+  </div>
+}

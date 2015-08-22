@@ -1,0 +1,31 @@
+@(user:User,menu:Menu)
+
+
+@import helper._
+@main(null){
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+        @form(routes.Categories.index(menu.id)) {
+        <button type="submit" class="btn btn-primary btn-medium courceCellButton">Категории</button>
+        }
+    </div>
+    <div class="span9">
+	@form(routes.Menus.updateMenu(menu.id)){
+<input type="text" name="title" value="@menu.title"/>
+<textarea name="description">@menu.description</textarea>
+<input id="startDate" type="text" class="datepicker" name="start_time" value="@menu.start_time.format("dd/MM/yyyy HH:mm")">
+<input id="endDate" type="text" class="datepicker" name="end_time" value="@menu.end_time.format("dd/MM/yyyy HH:mm")">
+
+<input type="submit" value="Сохранить"/>
+}
+
+</div>
+      @form(routes.Menus.index(menu.service.id)) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">Назад к списку меню</button>
+
+      }
+</div>
+</div>
+
+}

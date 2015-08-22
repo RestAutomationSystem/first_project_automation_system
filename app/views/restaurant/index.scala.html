@@ -1,0 +1,48 @@
+@(user:User,restaurants:List[Restaurant],restaurantForm:Form[Restaurant])
+
+@import helper._
+@main(null){
+  <div class="contentBar">
+  <div class="announcements">
+      @if(restaurants.size()>0) {
+        <h3>Рестораны</h3>
+        @for(restaurant<-restaurants){
+            <tr>
+            <td>
+            <div id="restaurant@restaurant.id" >
+                <div class="row" style="margin-left: 3px;">
+                    <h4><span class="restaurantDescriptionTitle item" id="@restaurant.id">
+                        @restaurant.title</span></h4>
+                    <span class="action" style="margin-left:5px;">
+                    <a href="@routes.Restaurants.deleteRestaurant(restaurant.id)">
+                        <i class="icon-remove"></i></a></span>
+                </div>
+                <div class="nicPanels" id="restaurantNicPanel@restaurant.id" style="width: 525px;"></div>
+                <div id="lecturecontent" class="nicTextContainer">
+                <div id="cdContent@restaurant.id" style="width: 525px;">
+                    @if(restaurant.description!=null) {
+                        @Html(restaurant.description)
+                    }
+                </div>
+                </div>
+            </div>
+            </td>
+            <td style="padding: 30px;">
+                @form(routes.Restaurants.restaurantPage(restaurant.id)) {
+                <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                }
+            </td>
+            </tr>
+        }
+      }
+      @form(routes.Restaurants.addingRestaurantPage()) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+          Добавить</button>
+      }
+      @form(routes.AdminPanel.index()) {
+      <button type="submit" class="btn btn-primary btn-medium courceCellButton">
+          Назад</button>
+      }
+  </div>
+  </div>
+}

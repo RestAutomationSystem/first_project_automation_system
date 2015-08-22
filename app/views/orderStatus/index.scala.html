@@ -1,0 +1,68 @@
+@(user:User,orderStatuss:List[OrderStatus],orderStatusForm:Form[OrderStatus])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(orderStatuss.size()>0){
+<h3>My OrderStatuses</h3>
+<place class="place">
+@for(orderStatus<-orderStatuss){
+<tr>
+<td>
+<div id="orderStatus@orderStatus.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="orderStatusDescriptionTitle item" id="@orderStatus.id">@orderStatus.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.OrderStatuses.deleteOrderStatus(orderStatus.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="orderStatusNicPanel@orderStatus.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@orderStatus.id" style="width: 525px;">
+@if(orderStatus.description!=null){
+@Html(orderStatus.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.OrderStatuses.orderStatusPage(orderStatus.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</place>
+}
+
+<fieldset>
+<legend>Add new orderStatus</legend>
+<div class="createForm">
+@form(routes.OrderStatuses.newOrderStatus()){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+</div>
+</div>
+}

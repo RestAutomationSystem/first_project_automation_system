@@ -1,0 +1,27 @@
+@(form:Form[Application.Login])
+
+@main(null) {
+    <div class="row">
+        <div class="span4">
+            <div class="announcements">
+                @helper.form(routes.Application.authenticate) {
+
+                    <div class="span-authentication"><h1>Авторизация</h1></div>
+                    @if(form.hasGlobalErrors) {
+                        <div class="error"><p class="error">@form.globalError.message</p></div>
+                    }
+                    <p><input type="email" name="email" placeholder="Логин" /></p>
+                    <p><input type="password" name="password" placeholder="Пароль"/></p>
+                    <p>
+                        <button class="btn action-btn btn-success" type="submit">
+                        <div class="span-button">Вход</div></button>
+                    </p>
+                }
+            </div>
+            <p>
+                <button class="btn action-btn btn-success" type="submit">
+                    <div class="span-button">Выключить систему</div></button>
+            </p>
+        </div>
+    </div>
+}

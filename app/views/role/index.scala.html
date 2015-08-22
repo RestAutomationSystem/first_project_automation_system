@@ -1,0 +1,73 @@
+@(user:User,roles:List[Role],roleForm:Form[Role])
+
+
+
+@import helper._
+@main(null){
+
+      <div class="contentBar">  
+<div class="announcements"> 
+@if(roles.size()>0){
+<h3>My Roles</h3>
+<place class="place">
+@for(role<-roles){
+<tr>
+<td>
+<div id="role@role.id" >
+
+  <div class="row" style="margin-left: 20px;">
+  <div class="row" style="margin-left: 20px;">
+<h4><span class="roleDescriptionTitle item" id="@role.id">@role.title</span></h4>
+<span class="action" style="margin-left:5px;">
+<a href="@routes.Roles.deleteRole(role.id)"><i class="icon-remove"></i></a>
+</span>
+</div>
+<br/>
+
+<div class="nicPanels" id="roleNicPanel@role.id" style="width: 525px;"></div>
+<div id="lecturecontent" class="nicTextContainer">
+<div id="cdContent@role.id" style="width: 525px;">
+@if(role.description!=null){
+@Html(role.description)
+}
+</div>
+</div>
+</div>
+</div>
+</td>
+<td style="padding: 30px;">
+@form(routes.Roles.rolePage(role.id)) {
+                           <button type="submit" class="btn btn-primary btn-medium courceCellButton">Edit</button>
+                          
+							}
+</td>
+</tr>
+}
+</place>
+}
+
+<fieldset>
+<legend>Add new role</legend>
+<div class="createForm">
+@form(routes.Roles.newRole()){
+<p>
+<input type="text" name="title" placeholder="Name">
+</p>
+<p>
+<textarea rows="10" cols="30" class="ckeditor" name="description" placeholder="Description"></textarea>
+</p>
+<p>
+<input id="startDate" type="text" class="datepicker" name="start_time">
+</p>
+<p>
+<input id="endDate" type="text" class="datepicker" name="end_time">
+</p>
+<p>
+<button class="btn btn-primary" type="submit">Create</button>
+</p>
+}
+</div>
+</fieldset>
+</div>
+</div>
+}

@@ -1,0 +1,58 @@
+@(user:User)
+
+@import helper._
+@main(null){
+    <div class="row">
+        <h3>@user.email</h3>
+        <div class="span4">
+            <div class="announcements">
+                @form(routes.AdminPanel.logout()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Выход
+                </button>
+                    <br/>
+                }
+                @form(routes.Restaurants.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Ресторан</button>
+                }
+                @form(routes.AdminPanel.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Меню и товары</button>
+                }
+                @form(routes.Storages.all()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Склад</button>
+                }
+                @form(routes.Users.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Сотрудники</button>
+                }
+                @form(routes.UnitTypes.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Единицы измерения</button>
+                }
+                @form(routes.AdminPanel.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Оборудование</button>
+                }
+                @form(routes.AdminPanel.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Касса</button><br/>
+                }
+                @form(routes.AdminPanel.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Отчеты</button>
+                }
+                @form(routes.AdminPanel.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Журналы событий</button>
+                }
+                @form(routes.AdminPanel.index()) {
+                <button class="btn action-btn btn-success" type="submit">
+                    Система скидок</button>
+                }
+            </div>
+        </div>
+    </div>
+}

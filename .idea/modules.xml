@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/first_project_automation_system-uali.iml" filepath="$PROJECT_DIR$/.idea/modules/first_project_automation_system-uali.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/first_project_automation_system-uali-build.iml" filepath="$PROJECT_DIR$/.idea/modules/first_project_automation_system-uali-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/forms.iml" filepath="$PROJECT_DIR$/.idea_modules/forms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea_modules/forms-build.iml" filepath="$PROJECT_DIR$/.idea_modules/forms-build.iml" />
+    </modules>
+  </component>
+</project>

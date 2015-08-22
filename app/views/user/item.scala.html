@@ -1,0 +1,29 @@
+@(user:User,emp:User)
+
+@import helper._
+@main(null) {
+    <div class="container-fluid">
+      <div class="row-fluid">
+          <p>@emp.email</p>
+        <div class="span9">
+            @form(routes.Users.updateUser(emp.email)) {
+
+            <p>
+                <input type="text" name="name" placeholder="Name" value="@emp.name" />
+            </p>
+
+            <p>
+                <input type="password" name="password" placeholder="Password"/>
+            </p>
+            <p>
+                <input type="password" name="password2" placeholder="Confirm password"/>
+            </p>
+
+
+                <input type="submit" value="Сохранить"/>
+            }
+        </div>
+
+      </div>
+    </div>
+}
